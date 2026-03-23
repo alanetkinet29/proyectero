@@ -1,0 +1,5 @@
+# Ignore database connection files
+databases/*
+
+# Ignore app's bytecode files
+__pycache__/*
