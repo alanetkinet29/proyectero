@@ -1,0 +1,104 @@
+{
+    " (active)": {
+        "0": "\ufeff (active)",
+        "1": "\ufeff (active)",
+        "2": "\ufeff (active)"
+    },
+    "Actions": {
+        "0": "\ufeffActions",
+        "1": "\ufeffActions",
+        "2": "\ufeffActions"
+    },
+    "Budget: %s": {
+        "0": "\ufeffBudget: %s",
+        "1": "\ufeffBudget: %s",
+        "2": "\ufeffBudget: %s"
+    },
+    "Budget: not available": {
+        "0": "\ufeffBudget: not available",
+        "1": "\ufeffBudget: not available",
+        "2": "\ufeffBudget: not available"
+    },
+    "Choose a project": {
+        "0": "\ufeffChoose a project",
+        "1": "\ufeffChoose a project",
+        "2": "\ufeffChoose a project"
+    },
+    "Deadline: %s": {
+        "0": "\ufeffDeadline: %s",
+        "1": "\ufeffDeadline: %s",
+        "2": "\ufeffDeadline: %s"
+    },
+    "For admins": {
+        "0": "\ufeffFor admins",
+        "1": "\ufeffFor admins",
+        "2": "\ufeffFor admins"
+    },
+    "For team members": {
+        "0": "\ufeffFor team members",
+        "1": "\ufeffFor team members",
+        "2": "\ufeffFor team members"
+    },
+    "Hello World from {name}": {
+        "0": "Salve Mondo da {name}"
+    },
+    "Managed": {
+        "0": "\ufeffManaged",
+        "1": "\ufeffManaged",
+        "2": "\ufeffManaged"
+    },
+    "New": {
+        "0": "\ufeffNew",
+        "1": "\ufeffNew",
+        "2": "\ufeffNew"
+    },
+    "Not available": {
+        "0": "\ufeffNot available",
+        "1": "\ufeffNot available",
+        "2": "\ufeffNot available"
+    },
+    "Progress: %s": {
+        "0": "\ufeffProgress: %s",
+        "1": "\ufeffProgress: %s",
+        "2": "\ufeffProgress: %s"
+    },
+    "Progress: not available": {
+        "0": "\ufeffProgress: not available",
+        "1": "\ufeffProgress: not available",
+        "2": "\ufeffProgress: not available"
+    },
+    "Project status: %s": {
+        "0": "\ufeffProject status: %s",
+        "1": "\ufeffProject status: %s",
+        "2": "\ufeffProject status: %s"
+    },
+    "Project: %s": {
+        "0": "\ufeffProject: %s",
+        "1": "\ufeffProject: %s",
+        "2": "\ufeffProject: %s"
+    },
+    "Start a project": {
+        "0": "\ufeffStart a project",
+        "1": "\ufeffStart a project",
+        "2": "\ufeffStart a project"
+    },
+    "Start date: %s": {
+        "0": "\ufeffStart date: %s",
+        "1": "\ufeffStart date: %s",
+        "2": "\ufeffStart date: %s"
+    },
+    "Team member": {
+        "0": "\ufeffTeam member",
+        "1": "\ufeffTeam member",
+        "2": "\ufeffTeam member"
+    },
+    "dog": {
+        "0": "\ufeffdog",
+        "1": "\ufeffdog",
+        "2": "\ufeffdog"
+    },
+    "thing": {
+        "0": "cosa",
+        "1": "cose"
+    }
+}

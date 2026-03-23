@@ -1,0 +1,98 @@
+[[extend 'layout.html']]
+
+[[block page_head]]
+<style>
+    span#picker, span#dashboard, span#actions {
+        font-size: 0.8em;
+        vertical-align: top;
+        display: inline-block;
+    }
+    span#dashboard, span#actions{
+      padding-left: 3em;
+    }
+</style>
+[[end]]
+
+[[if message:]]
+  <div class="section">
+    <div class="vars">
+        [[=message]]
+    </div>
+  </div>
+[[pass]]
+
+[[if user:]]
+  <span id="picker">
+  <h3>[[=T("Choose a project")]]</h3>
+  [[if as_admin:]]
+    <h5>[[=T("Managed")]]</h5>
+    <ul>
+      [[for row in as_admin:]]
+        [[if session.project == row.id:]]
+          [[content = row.name + T(" (active)")]]
+        [[else:]]
+          [[content = row.name]]
+        [[pass]]
+        <li>
+          [[=A(content, _href=URL("project_select", row.id))]]
+        </li>
+      [[pass]]
+    </ul>
+  [[pass]]
+
+  [[if as_team:]]
+    <h5>[[=T("Team member")]]</h5>
+      <ul>
+      [[for row in as_team:]]
+        [[if session.project == row.id:]]
+          [[content = row.name + T(" (active)")]]
+        [[else:]]
+          [[content = row.name]]
+        [[pass]]
+        <li>
+          [[=A(content, _href=URL("project_select", row.id))]]
+        </li>
+      [[pass]]
+      </ul>
+  [[pass]]
+
+  <h4>[[=T("New")]]</h4>
+  [[=A(T("Start a project"), _href=URL("project_create"))]]  
+  </span>
+
+  [[if project:]]
+    <span id="dashboard">
+      <h3>[[=T("Project: %s") % project.name]]</h3>
+      <p>Admins: [[=", ".join(admin.username for admin in admins)]]</p>
+      <p>Team: [[=", ".join(t.username for t in team)]]</p>
+      [[if project.budget != None:]]
+        <p>[[=T("Budget: %s") % project.budget]]</p>
+      [[else:]]
+        <p>[[=T("Budget: not available")]]</p>
+      [[pass]]
+      <p>[[=T("Start date: %s") % (project.start or T("Not available"))]]</p>
+      <p>[[=T("Project status: %s") % project.status]]</p>
+      <p>[[=T("Deadline: %s") % (project.deadline or T("Not available"))]]</p>
+      [[if project.progress != None:]]
+        <p>[[=T("Progress: %s") % project.progress]]</p>
+      [[else:]]
+        <p>[[=T("Progress: not available")]]</p>
+      [[pass]]
+    </span>
+    <span id="actions">
+      <h3>[[=T("Actions")]]</h3>
+      <h5>[[=T("For team members")]]</h5>
+      <ul>
+        [[for key in team_actions:]]
+          <li>[[=A(team_actions[key], _href=URL(key))]]</li>
+        [[pass]]
+      </ul>
+      <h5>[[=T("For admins")]]</h5>
+      <ul>
+        [[for key in admin_actions:]]
+          <li>[[=A(admin_actions[key], _href=URL(key))]]</li>
+        [[pass]]
+      </ul>
+    </span>
+  [[pass]]
+[[pass]]

@@ -1,0 +1,79 @@
+[[extend 'layout.html']]
+
+<h5>[[="Wideband-delphi sessions"]]</h5>
+[[if is_admin:]]
+  [[=A("Update project estimations", _href=URL("delphi_update"))]] | 
+  [[=A("Estimations grid", _href=URL("estimations"))]]
+[[pass]]
+<table>
+  <head>
+    <th>[[="Delphi for"]]</th>
+    <th>[[="Phase"]]</th>
+    <th>[[="Stage"]]</th>
+    <th>[[="Round/total"]]</th>
+    <th>[[="Completed"]]</th>    
+    <th>[[="Time remaining"]]</th>    
+    <th>[[="Estimations"]]</th>
+  </head>
+  <body>
+    [[for k in delphi_data:]]
+      [[dd = delphi_data[k] ]]
+      [[task = task_data[dd["task"] ] ]]
+      [[stage = stages_data[task["stage"] ] ]]
+      [[phase = phases_data[stage["phase"] ] ]]
+      <tr>
+        [[if is_admin:]]
+          <td>[[=A(task["label"] or task["name"], _href=URL("delphi/%d" % dd["task"])) ]]</td>
+        [[else:]]
+          <td>[[=task["label"] or task["name"] ]]</td>
+        [[pass]]
+        <td>[[=phase["label"] or phase["name"] ]]</td>
+        <td>[[=stage["label"] or stage["name"] ]]</td>
+        
+        [[if dd["round"] <= dd["rounds"]:]]
+          <td>[[="%d out of %d" % (dd["round"], dd["rounds"]) ]]</td>
+          
+          [[if dd["expert"] and (not dd["completed"]):]]
+            <td>[[=A(dd["completed"], _href=URL("estimate/%d" % dd["task"]))]]</td>
+          [[else:]]  
+            <td>[[=dd["completed"] ]]</td>
+          [[pass]]
+            <td>[[=dd["remaining"] ]]</td>
+          <td>[[="%d out of %d" % (dd["estimations"], dd["experts"]) ]]</td>
+        [[else:]]
+          <td>[[="Done"]]</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+        [[pass]]
+      </tr>        
+    [[pass]]
+  </body>
+</table>
+
+[[if is_admin:]]
+  <h5>[[="Project tasks (no delphi)"]]</h5>
+  <table>
+    <head>
+      <th>[[="Task"]]</th>
+      <th>[[="Stage"]]</th>
+      <th>[[="Phase"]]</th>
+      <th>[[="New delphi session"]]</th>
+    </head>
+    <body>
+      [[for task in task_data:]]
+        [[td = task_data[task] ]]
+        [[if not (task in delphi_tasks):]]
+          [[stage = stages_data[td["stage"] ] ]]
+          [[phase = phases_data[stage["phase"] ] ]]
+          <tr>
+            <td>[[=td["label"] or td["name"] ]]</td>
+            <td>[[=stage["label"] or stage["name"] ]]</td>
+            <td>[[=phase["label"] or phase["name"] ]]</td>
+            <td>[[=A("Start", _href=URL("delphi/%d" % task))]]</td>
+          </tr>        
+        [[pass]]
+      [[pass]]
+    </body>
+  </table>  
+[[pass]]

@@ -1,0 +1,42 @@
+[[extend 'layout.html']]
+
+[[block page_head]]
+<link
+    rel="stylesheet"
+    href="[[=URL('static/css/frappe-gantt.css')]]"
+/>
+<script src="[[=URL('static/js/frappe-gantt.umd.js')]]"></script>
+[[end]]
+
+<style>
+.vars { padding: 5px 20px; text-align: center; }
+.vars th:after { content: ": " }
+.vars th, .vars td, .vars li { padding: 2px 5px; }
+</style>
+
+<div class="section">
+  <div class="vars">
+    [[# =BEAUTIFY(__vars__)]]
+  </div>
+  <div id="gantt"></div>
+</div>
+
+[[block page_scripts]]
+<script>
+let tasks = [
+[[counter=0]]
+[[for task in items:]]
+    [[counter += 1]]
+  {
+    id: "[[=task.get('id')]]",
+    name: "[[ =task.get('name')]]",
+    start: "[[=task.get('start')]]",
+    end: "[[=task.get('end')]]",
+    progress: [[=task.get('progress')]]
+  }
+  [[if not (counter >= len(items)):]],[[pass]]
+[[pass]]
+];
+let gantt = new Gantt("#gantt", tasks);
+</script>
+[[end]]

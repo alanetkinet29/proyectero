@@ -1,0 +1,73 @@
+{
+    " (active)": {
+        "0": "(activo)"
+    },
+    "Actions": {
+        "0": "Acciones"
+    },
+    "Budget: %s": {
+        "0": "Presupuesto: %s"
+    },
+    "Budget: not available": {
+        "0": "Presupuesto: no disponible"
+    },
+    "Choose a project": {
+        "0": "Seleccionar un proyecto"
+    },
+    "Deadline: %s": {
+        "0": "Plazo de entrega: %s"
+    },
+    "For admins": {
+        "0": "Para administradores"
+    },
+    "For team members": {
+        "0": "Para integrantes del equipo"
+    },
+    "Hello World from {name}": {
+        "0": "Hola mundo de {name}"
+    },
+    "Managed": {
+        "0": "Administrado",
+        "1": "Administrado",
+        "2": "Administrados"
+    },
+    "New": {
+        "0": "Nuevo",
+        "1": "Nuevo",
+        "2": "Nuevos"
+    },
+    "Not available": {
+        "0": "No disponible"
+    },
+    "Progress: %s": {
+        "0": "Avance: %s"
+    },
+    "Progress: not available": {
+        "0": "Avance: no disponible"
+    },
+    "Project status: %s": {
+        "0": "Estado del proyecto: %s"
+    },
+    "Project: %s": {
+        "0": "Proyecto: %s"
+    },
+    "Start a project": {
+        "0": "Crear un proyecto"
+    },
+    "Start date: %s": {
+        "0": "Fecha de inicio: %s"
+    },
+    "Team member": {
+        "0": "Miembro del equipo"
+    },
+    "dog": {
+        "0": "Perro",
+        "1": "Perro",
+        "2": "Perros"
+    },
+    "thing": {
+        "0": "cosa",
+        "1": "cosa",
+        "2": "cosas"
+    }
+}

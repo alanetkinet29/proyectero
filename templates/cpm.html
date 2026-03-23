@@ -1,0 +1,131 @@
+[[extend 'layout.html']]
+
+[[block page_head]]
+<script src="[[=URL('static/js/cytoscape.min.js')]]"></script>
+<script src="[[=URL('static/js/dagre-2.0.0/dist/dagre.min.js')]]"></script>
+<script src="[[=URL('static/js/cytoscape.js-dagre-2.5.0/cytoscape-dagre.js')]]"></script>
+
+<style>
+.vars { padding: 5px 20px; text-align: center; }
+.vars th:after { content: ": " }
+.vars th, .vars td, .vars li { padding: 2px 5px; }
+
+#cy {
+  width: 600px;
+  height: 300px;
+  display: block;
+}
+.critical{
+  background-color: red;
+}
+</style>
+[[end]]
+
+<div class="section">
+  <div id="cy"></div>
+  <div class="vars">
+    <table>
+      <head>
+        <th>Node</th><th>ES</th><th>EF</th><th>LS</th>
+        <th>LF</th><th>Slack</th>
+      </head>
+      <body>
+        [[for i in ordered:]]
+          [[node = nodes[ indexes[i] ] ]]
+          <tr>
+            <td>[[=node["label"] ]]</td>
+            <td>[[=node["ES"] ]]</td>
+            <td>[[=node["EF"] ]]</td>
+            <td>[[=node["LS"] ]]</td>
+            <td>[[=node["LF"] ]]</td>
+            <td>[[=node["Slack"] ]]</td>
+          </tr>
+        [[pass]]
+      </body>
+    </table>
+    [[#=BEAUTIFY(__vars__)]]
+  </div>
+</div>
+
+[[block page_scripts]]
+<script>
+
+/* THIS CODE WAS EXTRACTED FROM AN EXAMPLE IN https://js.cytoscape.org/ */
+
+var cy = cytoscape({
+  container: document.getElementById('cy'), // container to render in
+  elements:
+  [
+
+  [[for index in ordered:]]
+    [[key = indexes[index]]]
+    [[node = nodes[key]]]
+    [[label=node["label"] ]]
+    {data:
+      {id:'[[=key]]', label:'[[=label]]', order: [[=index]]}
+    },
+  [[pass]] 
+
+  [[for key in nodes:]]
+    [[for d in nodes[key]["dependencies"]:]]
+      [[e="%s__%s" % (d, key)]]
+      // edge ab
+      {data:{id:'[[=e]]', source:'[[=d]]', target:'[[=key]]'} 
+      },
+    [[pass]]
+  [[pass]]
+  ],
+
+  style: [ // the stylesheet for the graph
+    {
+      selector: 'node',
+      style: {
+        'background-color': '#666',
+        'label': 'data(label)',
+      }
+    },
+    {
+      selector: 'edge',
+      style: {
+        'width': 3,
+        'line-color': '#ccc',
+        'target-arrow-color': '#ccc',
+        'target-arrow-shape': 'triangle',
+        'curve-style': 'bezier'
+      }
+    }
+  ],
+  layout: {
+
+    // cytoscape.js-dagre:
+    // extension library for cytoscape that supports DAG graphs
+    name: 'dagre', // The Dagre layout is good for directed graphs
+    rankDir: 'LR', // Optional: Left-to-Right orientation
+    ranker: 'longest-path',
+    padding: 30
+
+    // Other types of layout not suitable for CPM diagrams
+
+    // name: 'grid',
+    // cols: 6,
+    // rows: 6
+
+    // name: 'breadthfirst',
+    // direction: 'rightward',
+    //circle: true,
+    // grid: true,
+    // TODO: autopopulate the list with root nodes
+    // roots: ['task_35'],
+    // depthSort: function(a, b){
+    // return b.data('order') - a.data('order');}
+   }
+});
+
+[[for n in nodes:]]
+  [[if nodes[n]["Critical"]:]]
+    cy.$('#[[=n]]').style('background-color', 'red');
+  [[pass]]
+[[pass]]
+
+</script>
+[[end]]

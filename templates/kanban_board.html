@@ -1,0 +1,222 @@
+[[extend 'layout.html']]
+
+<!-- This Kanban board code was taken from a MDN resource
+ https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board -->
+
+<style>
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-column {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.task-column h2 {
+  text-align: center;
+}
+
+.task {
+  background-color: #f9f9f9;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  padding: 8px;
+  cursor: grab;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+@media (width < 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.placeholder {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+#dragged-task {
+  opacity: 0.2;
+}
+
+/* custom options (not included in MDN example) */
+div#todo {
+background-color: red;
+}
+div#inprogress {
+background-color: yellow;
+}
+div#done {
+background-color: green;
+}
+</style>
+
+<style>
+.vars { padding: 5px 20px; text-align: center; }
+.vars th:after { content: ": " }
+.vars th, .vars td, .vars li { padding: 2px 5px; }
+</style>
+
+<div class="section">
+  <div class="vars">
+  </div>
+</div>
+
+[[if form.accepted:]]
+<div class="container">
+  <div id="todo" class="task-column">
+    <h2>To Do</h2>
+    <ul class="tasks">
+      [[for t in data:]]
+        [[task=data[t] ]]
+          [[if task["progress"] <= 0:]]
+            <li class="task" draggable="true">[[=task["label"] ]]</li>
+          [[pass]]
+      [[pass]]
+    </ul>
+  </div>
+  <div id="inprogress" class="task-column">
+    <h2>In Progress</h2>
+    <ul class="tasks">
+      [[for t in data:]]
+        [[task=data[t] ]]
+          [[if 0 < task["progress"] < 100:]]
+            <li class="task" draggable="true">[[=task["label"] ]]</li>
+          [[pass]]
+      [[pass]]
+    </ul>
+  </div>
+  <div id="done" class="task-column">
+    <h2>Done</h2>
+    <ul class="tasks">
+      [[for t in data:]]
+        [[task=data[t] ]]
+          [[if task["progress"] >= 100:]]
+            <li class="task" draggable="true">[[=task["label"] ]]</li>
+          [[pass]]
+      [[pass]]
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+const columns = document.querySelectorAll(".task-column");
+columns.forEach((column) => {
+  column.addEventListener("dragover", (event) => {
+    // Test a custom type we will set later
+    if (event.dataTransfer.types.includes("task")) {
+      event.preventDefault();
+    }
+  });
+});
+const tasks = document.querySelectorAll(".task");
+
+tasks.forEach((task) => {
+  task.addEventListener("dragstart", (event) => {
+    task.id = "dragged-task";
+    event.dataTransfer.effectAllowed = "move";
+    // Custom type to identify a task drag
+    event.dataTransfer.setData("task", "");
+  });
+
+  task.addEventListener("dragend", (event) => {
+    task.removeAttribute("id");
+  });
+});
+columns.forEach((column) => {
+  column.addEventListener("drop", (event) => {
+    event.preventDefault();
+
+    const draggedTask = document.getElementById("dragged-task");
+    draggedTask.remove();
+    column.children[1].appendChild(draggedTask);
+  });
+});
+function makePlaceholder(draggedTask) {
+  const placeholder = document.createElement("li");
+  placeholder.classList.add("placeholder");
+  placeholder.style.height = `${draggedTask.offsetHeight}px`;
+  return placeholder;
+}
+function movePlaceholder(event) {
+  if (!event.dataTransfer.types.includes("task")) {
+    return;
+  }
+  event.preventDefault();
+  // Must exist because the ID is added for all drag events with a "task" data entry
+  const draggedTask = document.getElementById("dragged-task");
+  const column = event.currentTarget;
+  const tasks = column.children[1];
+  const existingPlaceholder = column.querySelector(".placeholder");
+
+  if (existingPlaceholder) {
+  const placeholderRect = existingPlaceholder.getBoundingClientRect();
+  if (
+    placeholderRect.top <= event.clientY &&
+    placeholderRect.bottom >= event.clientY
+  ) {
+    return;
+  }
+}
+
+for (const task of tasks.children) {
+  if (task.getBoundingClientRect().bottom >= event.clientY) {
+    if (task === existingPlaceholder) return;
+    existingPlaceholder?.remove();
+    if (task === draggedTask || task.previousElementSibling === draggedTask)
+      return;
+    tasks.insertBefore(
+      existingPlaceholder ?? makePlaceholder(draggedTask),
+      task,
+    );
+    return;
+  }
+}
+existingPlaceholder?.remove();
+  if (tasks.lastElementChild === draggedTask) return;
+  tasks.append(existingPlaceholder ?? makePlaceholder(draggedTask));
+}
+columns.forEach((column) => {
+  column.addEventListener("dragover", movePlaceholder);
+  column.addEventListener("dragleave", (event) => {
+    // If we are moving into a child element,
+    // we aren't actually leaving the column
+    if (column.contains(event.relatedTarget)) return;
+    const placeholder = column.querySelector(".placeholder");
+    placeholder?.remove();
+  });
+  column.addEventListener("drop", (event) => {
+    event.preventDefault();
+
+    const draggedTask = document.getElementById("dragged-task");
+    const placeholder = column.querySelector(".placeholder");
+    if (!placeholder) return;
+    draggedTask.remove();
+    column.children[1].insertBefore(draggedTask, placeholder);
+    placeholder.remove();
+  });
+});
+</script>
+
+[[else:]]
+  [[=form]]
+[[pass]]

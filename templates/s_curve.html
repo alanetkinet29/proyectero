@@ -1,0 +1,90 @@
+[[extend 'layout.html']]
+
+[[block page_head]]
+<script src="[[=URL('static/js/chart.js')]]"></script>
+[[end]]
+
+<style>
+.vars { padding: 5px 20px; text-align: center; }
+.vars th:after { content: ": " }
+.vars th, .vars td, .vars li { padding: 2px 5px; }
+</style>
+
+<div class="section">
+  <div class="vars">
+    [[#BEAUTIFY(__vars__)]]
+  </div>
+
+  [[if form.accepted:]]
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  [[else:]]
+      [[=form]]
+  [[pass]]
+
+</div>
+
+[[block page_scripts]]
+
+[[if form.accepted:]]
+<script>
+/*
+This code was taken from a prompt to Gemini about using
+chart.js to render a multiline "line" chart
+*/    
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line', // Specifies a line chart type
+    data: {
+        labels: [
+            [[for l in labels:]]
+                '[[=l]]',
+            [[pass]]
+            ], // Shared x-axis labels
+        datasets: [
+            {
+                label: 'Actual curve (Red Line)', // Label for the first line
+                data: [
+                    [[for a in actual:]]
+                        '[[=a]]',
+                    [[pass]]
+                ], // Data points for the first line
+                borderColor: 'rgb(255, 99, 132)', // Line color
+                backgroundColor: 'rgba(255, 99, 132, 0.5)', // Area fill color (optional)
+                fill: false, // Set to false to avoid filling the area under the line by default
+                // You can add more styling options here
+            },
+            {
+                label: 'Projected curve (Blue Line)', // Label for the second line
+                data: [
+                    [[for p in projected:]]
+                        '[[=p]]',
+                    [[pass]]                    
+                ], // Data points for the second line
+                borderColor: 'rgb(54, 162, 235)', // Line color
+                backgroundColor: 'rgba(54, 162, 235, 0.5)', // Area fill color (optional)
+                fill: false, // Set to false to avoid filling the area under the line
+            }
+            // Add more dataset objects for additional lines
+        ]
+    },
+    options: {
+        // Additional chart options can be configured here, such as scales and titles
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'S-curve graph'
+            }
+        }
+    }
+});
+</script>
+[[pass]]
+[[end]]
