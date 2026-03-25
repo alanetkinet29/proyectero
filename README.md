@@ -9,3 +9,5 @@ How to try this project
 - To manage the app you can use the py4web built-in dashboard at http://localhost:8000/_dashboard
 
 Note: py4web requires a Python interpreter to run
+
+Released under AGPLv3. See https://github.com/alanetkinet29/proyectero/blob/main/LICENSE
