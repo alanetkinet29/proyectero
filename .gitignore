@@ -3,3 +3,6 @@ databases/*
 
 # Ignore app's bytecode files
 __pycache__/*
+
+# Ignore uploaded files
+uploads/*
