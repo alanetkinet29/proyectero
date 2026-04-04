@@ -5,17 +5,51 @@
     "Actions": {
         "0": "Acciones"
     },
+    "Actual curve (Red Line)": {
+        "0": "Curva real (l\u00ednea roja)"
+    },
     "Budget: %s": {
         "0": "Presupuesto: %s"
     },
     "Budget: not available": {
         "0": "Presupuesto: no disponible"
     },
+    "Change Password": {
+        "0": "Cambiar contrase\u00f1a"
+    },
     "Choose a project": {
         "0": "Seleccionar un proyecto"
     },
+    "Completed": {
+        "0": "Finalizada"
+    },
     "Deadline: %s": {
         "0": "Plazo de entrega: %s"
+    },
+    "Delphi for": {
+        "0": "Delphi para"
+    },
+    "Done": {
+        "0": "Hecho"
+    },
+    "EF": {
+        "0": "\ufeffEF",
+        "1": "\ufeffEF",
+        "2": "\ufeffEF"
+    },
+    "ES": {
+        "0": "\ufeffES",
+        "1": "\ufeffES",
+        "2": "\ufeffES"
+    },
+    "Edit Profile": {
+        "0": "Editar perfil"
+    },
+    "Estimations": {
+        "0": "Estimaciones"
+    },
+    "Estimations grid": {
+        "0": "Grilla de estimaciones"
     },
     "For admins": {
         "0": "Para administradores"
@@ -25,6 +59,25 @@
     },
     "Hello World from {name}": {
         "0": "Hola mundo de {name}"
+    },
+    "LF": {
+        "0": "\ufeffLF",
+        "1": "\ufeffLF",
+        "2": "\ufeffLF"
+    },
+    "LS": {
+        "0": "\ufeffLS",
+        "1": "\ufeffLS",
+        "2": "\ufeffLS"
+    },
+    "Log in": {
+        "0": "Ingresar"
+    },
+    "Login": {
+        "0": "Autenticaci\u00f3n"
+    },
+    "Logout": {
+        "0": "Cerrar sesi\u00f3n"
     },
     "Managed": {
         "0": "Administrado",
@@ -36,8 +89,17 @@
         "1": "Nuevo",
         "2": "Nuevos"
     },
+    "New delphi session": {
+        "0": "Nueva sesi\u00f3n Wideband-delphi"
+    },
+    "Node": {
+        "0": "Nodo"
+    },
     "Not available": {
         "0": "No disponible"
+    },
+    "Phase": {
+        "0": "Fase"
     },
     "Progress: %s": {
         "0": "Avance: %s"
@@ -48,8 +110,32 @@
     "Project status: %s": {
         "0": "Estado del proyecto: %s"
     },
+    "Project tasks (no delphi)": {
+        "0": "Tareas del proyecto (sin delphi)"
+    },
     "Project: %s": {
         "0": "Proyecto: %s"
+    },
+    "Projected curve (Blue Line)": {
+        "0": "Curva proyectada (l\u00ednea azul)"
+    },
+    "Round/total": {
+        "0": "Ruedas/total"
+    },
+    "S-curve graph": {
+        "0": "Curva de avance"
+    },
+    "Sign up": {
+        "0": "Registro"
+    },
+    "Slack": {
+        "0": "Holgura"
+    },
+    "Stage": {
+        "0": "Etapa"
+    },
+    "Start": {
+        "0": "Inicio"
     },
     "Start a project": {
         "0": "Crear un proyecto"
@@ -57,8 +143,20 @@
     "Start date: %s": {
         "0": "Fecha de inicio: %s"
     },
+    "Task": {
+        "0": "Tarea"
+    },
     "Team member": {
         "0": "Miembro del equipo"
+    },
+    "Time remaining": {
+        "0": "Tiempo restante"
+    },
+    "To Do": {
+        "0": "Por hacer"
+    },
+    "Update project estimations": {
+        "0": "Actualizar estimaciones del proyecto"
     },
     "dog": {
         "0": "Perro",

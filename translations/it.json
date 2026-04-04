@@ -9,6 +9,11 @@
         "1": "\ufeffActions",
         "2": "\ufeffActions"
     },
+    "Actual curve (Red Line)": {
+        "0": "\ufeffActual curve (Red Line)",
+        "1": "\ufeffActual curve (Red Line)",
+        "2": "\ufeffActual curve (Red Line)"
+    },
     "Budget: %s": {
         "0": "\ufeffBudget: %s",
         "1": "\ufeffBudget: %s",
@@ -19,15 +24,60 @@
         "1": "\ufeffBudget: not available",
         "2": "\ufeffBudget: not available"
     },
+    "Change Password": {
+        "0": "\ufeffChange Password",
+        "1": "\ufeffChange Password",
+        "2": "\ufeffChange Password"
+    },
     "Choose a project": {
         "0": "\ufeffChoose a project",
         "1": "\ufeffChoose a project",
         "2": "\ufeffChoose a project"
     },
+    "Completed": {
+        "0": "\ufeffCompleted",
+        "1": "\ufeffCompleted",
+        "2": "\ufeffCompleted"
+    },
     "Deadline: %s": {
         "0": "\ufeffDeadline: %s",
         "1": "\ufeffDeadline: %s",
         "2": "\ufeffDeadline: %s"
+    },
+    "Delphi for": {
+        "0": "\ufeffDelphi for",
+        "1": "\ufeffDelphi for",
+        "2": "\ufeffDelphi for"
+    },
+    "Done": {
+        "0": "\ufeffDone",
+        "1": "\ufeffDone",
+        "2": "\ufeffDone"
+    },
+    "EF": {
+        "0": "\ufeffEF",
+        "1": "\ufeffEF",
+        "2": "\ufeffEF"
+    },
+    "ES": {
+        "0": "\ufeffES",
+        "1": "\ufeffES",
+        "2": "\ufeffES"
+    },
+    "Edit Profile": {
+        "0": "\ufeffEdit Profile",
+        "1": "\ufeffEdit Profile",
+        "2": "\ufeffEdit Profile"
+    },
+    "Estimations": {
+        "0": "\ufeffEstimations",
+        "1": "\ufeffEstimations",
+        "2": "\ufeffEstimations"
+    },
+    "Estimations grid": {
+        "0": "\ufeffEstimations grid",
+        "1": "\ufeffEstimations grid",
+        "2": "\ufeffEstimations grid"
     },
     "For admins": {
         "0": "\ufeffFor admins",
@@ -42,6 +92,31 @@
     "Hello World from {name}": {
         "0": "Salve Mondo da {name}"
     },
+    "LF": {
+        "0": "\ufeffLF",
+        "1": "\ufeffLF",
+        "2": "\ufeffLF"
+    },
+    "LS": {
+        "0": "\ufeffLS",
+        "1": "\ufeffLS",
+        "2": "\ufeffLS"
+    },
+    "Log in": {
+        "0": "\ufeffLog in",
+        "1": "\ufeffLog in",
+        "2": "\ufeffLog in"
+    },
+    "Login": {
+        "0": "\ufeffLogin",
+        "1": "\ufeffLogin",
+        "2": "\ufeffLogin"
+    },
+    "Logout": {
+        "0": "\ufeffLogout",
+        "1": "\ufeffLogout",
+        "2": "\ufeffLogout"
+    },
     "Managed": {
         "0": "\ufeffManaged",
         "1": "\ufeffManaged",
@@ -52,10 +127,25 @@
         "1": "\ufeffNew",
         "2": "\ufeffNew"
     },
+    "New delphi session": {
+        "0": "\ufeffNew delphi session",
+        "1": "\ufeffNew delphi session",
+        "2": "\ufeffNew delphi session"
+    },
+    "Node": {
+        "0": "\ufeffNode",
+        "1": "\ufeffNode",
+        "2": "\ufeffNode"
+    },
     "Not available": {
         "0": "\ufeffNot available",
         "1": "\ufeffNot available",
         "2": "\ufeffNot available"
+    },
+    "Phase": {
+        "0": "\ufeffPhase",
+        "1": "\ufeffPhase",
+        "2": "\ufeffPhase"
     },
     "Progress: %s": {
         "0": "\ufeffProgress: %s",
@@ -72,10 +162,50 @@
         "1": "\ufeffProject status: %s",
         "2": "\ufeffProject status: %s"
     },
+    "Project tasks (no delphi)": {
+        "0": "\ufeffProject tasks (no delphi)",
+        "1": "\ufeffProject tasks (no delphi)",
+        "2": "\ufeffProject tasks (no delphi)"
+    },
     "Project: %s": {
         "0": "\ufeffProject: %s",
         "1": "\ufeffProject: %s",
         "2": "\ufeffProject: %s"
+    },
+    "Projected curve (Blue Line)": {
+        "0": "\ufeffProjected curve (Blue Line)",
+        "1": "\ufeffProjected curve (Blue Line)",
+        "2": "\ufeffProjected curve (Blue Line)"
+    },
+    "Round/total": {
+        "0": "\ufeffRound/total",
+        "1": "\ufeffRound/total",
+        "2": "\ufeffRound/total"
+    },
+    "S-curve graph": {
+        "0": "\ufeffS-curve graph",
+        "1": "\ufeffS-curve graph",
+        "2": "\ufeffS-curve graph"
+    },
+    "Sign up": {
+        "0": "\ufeffSign up",
+        "1": "\ufeffSign up",
+        "2": "\ufeffSign up"
+    },
+    "Slack": {
+        "0": "\ufeffSlack",
+        "1": "\ufeffSlack",
+        "2": "\ufeffSlack"
+    },
+    "Stage": {
+        "0": "\ufeffStage",
+        "1": "\ufeffStage",
+        "2": "\ufeffStage"
+    },
+    "Start": {
+        "0": "\ufeffStart",
+        "1": "\ufeffStart",
+        "2": "\ufeffStart"
     },
     "Start a project": {
         "0": "\ufeffStart a project",
@@ -87,10 +217,30 @@
         "1": "\ufeffStart date: %s",
         "2": "\ufeffStart date: %s"
     },
+    "Task": {
+        "0": "\ufeffTask",
+        "1": "\ufeffTask",
+        "2": "\ufeffTask"
+    },
     "Team member": {
         "0": "\ufeffTeam member",
         "1": "\ufeffTeam member",
         "2": "\ufeffTeam member"
+    },
+    "Time remaining": {
+        "0": "\ufeffTime remaining",
+        "1": "\ufeffTime remaining",
+        "2": "\ufeffTime remaining"
+    },
+    "To Do": {
+        "0": "\ufeffTo Do",
+        "1": "\ufeffTo Do",
+        "2": "\ufeffTo Do"
+    },
+    "Update project estimations": {
+        "0": "\ufeffUpdate project estimations",
+        "1": "\ufeffUpdate project estimations",
+        "2": "\ufeffUpdate project estimations"
     },
     "dog": {
         "0": "\ufeffdog",

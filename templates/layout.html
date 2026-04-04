@@ -33,17 +33,17 @@
               [[=globals().get('user',{}).get('email')]]
             </a>
             <ul>
-              <li><a href="[[=URL('auth/profile')]]">Edit Profile</a></li>
-              <li><a href="[[=URL('auth/change_password')]]">Change Password</a></li>
-              <li><a href="[[=URL('auth/logout')]]">Logout</a></li>
+              <li><a href="[[=URL('auth/profile')]]">[[=T("Edit Profile")]]</a></li>
+              <li><a href="[[=URL('auth/change_password')]]">[[=T("Change Password")]]</a></li>
+              <li><a href="[[=URL('auth/logout')]]">[[=T("Logout")]]</a></li>
             </ul>
           </li>
           [[else:]]
           <li>
-            Login
+            [[=T("Login")]]
             <ul>
-              <li><a href="[[=URL('auth/register')]]">Sign up</a></li>
-              <li><a href="[[=URL('auth/login')]]">Log in</a></li>
+              <li><a href="[[=URL('auth/register')]]">[[=T("Sign up")]]</a></li>
+              <li><a href="[[=URL('auth/login')]]">[[=T("Log in")]]</a></li>
             </ul>
           </li>
           [[pass]]

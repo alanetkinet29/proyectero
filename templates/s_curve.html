@@ -44,7 +44,7 @@ const myChart = new Chart(ctx, {
             ], // Shared x-axis labels
         datasets: [
             {
-                label: 'Actual curve (Red Line)', // Label for the first line
+                label: '[[=T("Actual curve (Red Line)")]]', // Label for the first line
                 data: [
                     [[for a in actual:]]
                         '[[=a]]',
@@ -56,7 +56,7 @@ const myChart = new Chart(ctx, {
                 // You can add more styling options here
             },
             {
-                label: 'Projected curve (Blue Line)', // Label for the second line
+                label: '[[=T("Projected curve (Blue Line)")]]', // Label for the second line
                 data: [
                     [[for p in projected:]]
                         '[[=p]]',
@@ -80,7 +80,7 @@ const myChart = new Chart(ctx, {
         plugins: {
             title: {
                 display: true,
-                text: 'S-curve graph'
+                text: '[[=T("S-curve graph")]]'
             }
         }
     }

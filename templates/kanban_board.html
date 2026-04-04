@@ -84,7 +84,7 @@ background-color: green;
 [[if form.accepted:]]
 <div class="container">
   <div id="todo" class="task-column">
-    <h2>To Do</h2>
+    <h2>[[=T("To Do")]]</h2>
     <ul class="tasks">
       [[for t in data:]]
         [[task=data[t] ]]
@@ -95,7 +95,7 @@ background-color: green;
     </ul>
   </div>
   <div id="inprogress" class="task-column">
-    <h2>In Progress</h2>
+    <h2>[[=("In Progress")]]</h2>
     <ul class="tasks">
       [[for t in data:]]
         [[task=data[t] ]]
@@ -106,7 +106,7 @@ background-color: green;
     </ul>
   </div>
   <div id="done" class="task-column">
-    <h2>Done</h2>
+    <h2>[[=T("Done")]]</h2>
     <ul class="tasks">
       [[for t in data:]]
         [[task=data[t] ]]
