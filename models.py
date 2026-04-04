@@ -10,6 +10,7 @@ from .common import Field, db
 from yatl.helpers import XML
 import datetime
 from decimal import Decimal
+from .common import T
 
 ### Define your table below
 #
@@ -207,13 +208,13 @@ db.task.hours.default = 0
 db.task.minutes.requires = IS_INT_IN_RANGE(0, 60)
 db.task.minutes.default = 0
 db.task.estimated.writable = False
-db.task.tags.comment = "Type as much tags as you want here, press TAB key to add the to the list"
-db.task.estimated.label = "Estimated (hours)"
+db.task.tags.comment = T("Type as much tags as you want here, press TAB key to add the to the list")
+db.task.estimated.label = T("Estimated (hours)")
 db.task.estimated.compute = estimated_compute
-db.task.stage.comment = "Stage. This field is mandatory"
+db.task.stage.comment = T("Stage. This field is mandatory")
 db.task.stage.represent = task_stage_represent
-db.task.status.requires = IS_IN_SET({"pending": "Pending", "in_progress": "In progress",
-                                     "done": "Done"})
+db.task.status.requires = IS_IN_SET({"pending": T("Pending"), "in_progress": T("In progress"),
+                                     "done": T("Done")})
 db.task.status.default = "pending"
 
 db.delphi.days.requires = IS_INT_IN_RANGE(0, 31)
@@ -225,7 +226,7 @@ db.delphi.minutes.default = 0
 db.delphi.rounds.requires=IS_INT_IN_RANGE(1, 20)
 db.delphi.rounds.default = 1
 db.delphi.window.compute = estimated_compute
-db.delphi.estimated.label = "Estimated (hours)"
+db.delphi.estimated.label = T("Estimated (hours)")
 
 db.estimation.months.requires = IS_INT_IN_RANGE(0, 12)
 db.estimation.months.default = 0
@@ -236,18 +237,18 @@ db.estimation.hours.default = 0
 db.estimation.minutes.requires = IS_INT_IN_RANGE(0, 60)
 db.estimation.minutes.default = 0
 db.estimation.estimated.compute = estimated_compute
-db.estimation.estimated.label = "Estimated (hours)"
+db.estimation.estimated.label = T("Estimated (hours)")
 
-db.stage.phase.comment = "Phase. This field is mandatory"
+db.stage.phase.comment = T("Phase. This field is mandatory")
 
 db.link.id.represent = link_id_represent
 
-db.delphi.days.label = "(window) days"
-db.delphi.hours.label = "(window) hours"
-db.delphi.minutes.label = "(window) minutes"
-db.delphi.days.comment = "Time window between rounds in days"
-db.delphi.hours.comment = "Time window between rounds in hours"
-db.delphi.minutes.comment = "Time window between rounds in minutes"
+db.delphi.days.label = T("(window) days")
+db.delphi.hours.label = T("(window) hours")
+db.delphi.minutes.label = T("(window) minutes")
+db.delphi.days.comment = T("Time window between rounds in days")
+db.delphi.hours.comment = T("Time window between rounds in hours")
+db.delphi.minutes.comment = T("Time window between rounds in minutes")
 
 db.estimation.expert.writable = False
 db.estimation.task.writable = False

@@ -53,22 +53,22 @@ from apps.proyectero.models import (task_stage_format,
                                     estimated_compute)
 import statistics
 
-TEAM_ACTIONS = {"tasks": "Tasks", "gantt": "Gantt chart",
-                "delphi_panel": "Wideband-delphi",
-                "cpm": "Critical Path Method (CPM)",
-                "s_curve": "S-curve",
-                "kanban_board": "Kanban board",
-                "log": "Project's log"}
+TEAM_ACTIONS = {"tasks": T("Tasks"), "gantt": T("Gantt chart"),
+                "delphi_panel": T("Wideband-delphi"),
+                "cpm": T("Critical Path Method (CPM)"),
+                "s_curve": T("S-curve"),
+                "kanban_board": T("Kanban board"),
+                "log": T("Project's log")}
 
-ADMIN_ACTIONS = {"project_edit": "Edit project",
-                 "admins_add": "Add admins",
-                 "team_add": "Add team members",
-                 "admins_remove": "Remove admins",
-                 "team_remove": "Remove team members",
-                 "phases": "Project phases",
-                 "stages": "Project stages",
-                 "link": "Link tasks",
-                 "budget": "Project budget"}
+ADMIN_ACTIONS = {"project_edit": T("Edit project"),
+                 "admins_add": T("Add admins"),
+                 "team_add": T("Add team members"),
+                 "admins_remove": T("Remove admins"),
+                 "team_remove": T("Remove team members"),
+                 "phases": T("Project phases"),
+                 "stages": T("Project stages"),
+                 "link": T("Link tasks"),
+                 "budget": T("Project budget")}
 
 @action("index")
 @action.uses("index.html", auth, T)
@@ -78,7 +78,7 @@ def index():
     # Has access to different actions for the current project
     # Both for admins and team
 
-    message = "You must be logged-in to view the dashboard"
+    message = T("You must be logged-in to view the dashboard")
     user = auth.get_user()
     as_admin = as_team = elapsed = team = admins = phases = \
         stages = tasks = project = None
@@ -124,15 +124,15 @@ def project_create():
     form = Form(db.project)
 
     if form.accepted:
-        flash.set("Project created")
+        flash.set(T("Project created"))
         redirect(URL("index"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 @action("project_select/<project:int>")
 @action.uses("generic.html", auth.user, T)
 def project_select(project):
     session.project = project
-    flash.set("Project selected")
+    flash.set(T("Project selected"))
     redirect(URL("index"))
 
 @action("project_edit")
@@ -140,7 +140,7 @@ def project_select(project):
 def project_edit():
     project = db(db.project.id==session.project).select().first()
     if not auth.user_id in (project.admins or []):
-        flash.set("You need admin privileges to update project properties")
+        flash.set(T("You need admin privileges to update project properties"))
         redirect(URL("index"))
     else:
         db.project.budget.writable = db.project.progress.writable = \
@@ -148,9 +148,9 @@ def project_edit():
         db.project.budget.writable = db.project.progress.writable = False
         form = Form(db.project, project.id)
         if form.accepted:
-            flash.set("Updated project properties")
+            flash.set(T("Updated project properties"))
             redirect(URL("index"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 @action("admins_add")
 @action.uses("generic.html", auth.user, T)
@@ -160,8 +160,8 @@ def admins_add():
         project.admins = list()
     if auth.user_id in (project.admins or []):
         field = Field("users", "text")
-        field.comment = 'Type a list of user emails separated by ";"'
-        field.label = "Add admin users to %s" % project.name
+        field.comment = T('Type a list of user emails separated by ";"')
+        field.label = T("Add admin users to %s") % project.name
         form = Form([field,]) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
@@ -180,15 +180,15 @@ def admins_add():
                     project.admins.append(user.id)
                     count += 1
             if count > 0:
-                flash.set("%s users added" % count)
+                flash.set(T("%s users added") % count)
                 project.update_record()                
             else:
-                flash.set("No users added")
+                flash.set(T("No users added"))
             redirect(URL("index"))
     else:
-        flash.set("You need project admin rights for this action")
+        flash.set(T("You need project admin rights for this action"))
         redirect(URL("index"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 @action("team_add")
 @action.uses("generic.html", auth.user, T)
@@ -198,8 +198,8 @@ def team_add():
         project.team = list()    
     if auth.user_id in (project.admins or []):
         field = Field("users", "text")
-        field.comment = 'Type a list of user emails separated by ";"'
-        field.label = "Add team users to %s" % project.name
+        field.comment = T('Type a list of user emails separated by ";"')
+        field.label = T("Add team users to %s") % project.name
         form = Form([field,]) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
@@ -218,15 +218,15 @@ def team_add():
                     project.team.append(user.id)
                     count += 1
             if count > 0:
-                flash.set("%s users added" % count)
+                flash.set(T("%s users added") % count)
                 project.update_record()                
             else:
-                flash.set("No users added")
+                flash.set(T("No users added"))
             redirect(URL("index"))
     else:
-        flash.set("You need project admin rights for this action")
+        flash.set(T("You need project admin rights for this action"))
         redirect(URL("index"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 
 @action("admins_remove")
@@ -237,8 +237,8 @@ def admins_remove():
         project.admins = list()    
     if auth.user_id in (project.admins or []):
         field = Field("users", "text")
-        field.comment = 'Type a list of user emails separated by ";"'
-        field.label = "Remove admin users from %s" % project.name
+        field.comment = T('Type a list of user emails separated by ";"')
+        field.label = T("Remove admin users from %s") % project.name
         form = Form([field,]) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
@@ -257,15 +257,15 @@ def admins_remove():
                     project.admins.pop(project.admins.index(user.id))
                     count += 1
             if count > 0:
-                flash.set("%s admins removed" % count)
+                flash.set(T("%s admins removed") % count)
                 project.update_record()                
             else:
-                flash.set("No admins removed")
+                flash.set(T("No admins removed"))
                 redirect(URL("index"))
     else:
-        flash.set("You need project admin rights for this action") # forbidden
+        flash.set(T("You need project admin rights for this action")) # forbidden
         redirect(URL("index"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 @action("team_remove")
 @action.uses("generic.html", auth.user, T)
@@ -275,8 +275,8 @@ def team_remove():
         project.team = list()    
     if auth.user_id in (project.admins or []):
         field = Field("users", "text")
-        field.comment = 'Type a list of user emails separated by ";"'
-        field.label = "Remove team users from %s" % project.name
+        field.comment = T('Type a list of user emails separated by ";"')
+        field.label = T("Remove team users from %s") % project.name
         form = Form([field,]) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
@@ -295,15 +295,15 @@ def team_remove():
                     project.team.pop(project.team.index(user.id))
                     count += 1
             if count > 0:
-                flash.set("%s team members removed" % count)
+                flash.set(T("%s team members removed") % count)
                 project.update_record()
             else:
-                flash.set("No team members removed")
+                flash.set(T("No team members removed"))
             redirect(URL("index"))                
     else:
-        flash.set("You need project admin rights for this action") # forbidden
+        flash.set(T("You need project admin rights for this action")) # forbidden
         redirect(URL("index"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 @action("phases")
 @action.uses("generic.html", auth.user, T)
@@ -314,12 +314,12 @@ def phases():
             db.phase.project.default = session.project
             db.phase.project.writable = False
             grid = Grid(query=db.phase.project==project.id)
-            return dict(grid=grid)
+            return dict(grid=grid, T=T)
         else:
-            flash.set("You need project admin rights for managing phases")
+            flash.set(T("You need project admin rights for managing phases"))
             redirect(URL("index"))
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
 @action("stages")
@@ -331,12 +331,12 @@ def stages():
         phase_list = [phase.id for phase in phases]
         if auth.user_id in (project.admins or []):
             grid = Grid(query=db.stage.phase.belongs(phase_list))
-            return dict(grid=grid)
+            return dict(grid=grid, T=T)
         else:
-            flash.set("You need project admin rights for managing stages")
+            flash.set(T("You need project admin rights for managing stages"))
             redirect(URL("index"))
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
 @action("tasks")
@@ -357,7 +357,7 @@ def tasks():
                          multiple=True)]
         else:
             db.task.team.writable = False
-            db.task.team.comment = "You must choose a team for the project before asigning the task"
+            db.task.team.comment = T("You must choose a team for the project before asigning the task")
         if is_admin or is_team:
             # too many columns makes the grid go out of
             # the browser's bounds
@@ -369,7 +369,7 @@ def tasks():
             columns = [db.task.id, db.task.name, db.task.tags,
                        db.task.stage, db.task.status,
                        db.task.team,
-                       Column("Progress", lambda row: A("Report",
+                       Column("Progress", lambda row: A(T("Report"),
                               _href=URL("progress/%d" % row.id)) \
                                 if auth.user_id in (row.team or [])\
                                 else "-"),
@@ -386,12 +386,12 @@ def tasks():
                         create=is_admin,
                         editable=is_admin,
                         deletable=is_admin)
-            return dict(grid=grid)
+            return dict(grid=grid, T=T)
         else:
-            flash.set("You need project rights for managing tasks")
+            flash.set(T("You need project rights for managing tasks"))
             redirect(URL("index"))
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
 @action("links")
@@ -406,12 +406,12 @@ def links():
                         editable=False)
             return dict(new_link=A("Add link",
                                    _href=URL("link")),
-                        grid=grid)
+                        grid=grid, T=T)
         else:
-            flash.set("You need project admin rights for managing links")
+            flash.set(T("You need project admin rights for managing links"))
             redirect(URL("index"))
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
 @action("link")
@@ -420,11 +420,11 @@ def link():
     if session.project:
         project = db(db.project.id == session.project).select().first()
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
     if not auth.user_id in (project.admins or []):
-        flash.set("Only admins can link tasks")
+        flash.set(T("Only admins can link tasks"))
         redirect(URL("index"))
 
     # retrieve all phases from project
@@ -451,16 +451,16 @@ def link():
 
     parent = Field("parent")
     parent.requires = IS_IN_SET(options)
-    parent.label = "Link from parent"
+    parent.label = T("Link from parent")
     child = Field("child")
     child.requires = IS_IN_SET(options)
-    child.label = "Link to child"
+    child.label = T("Link to child")
     form = Form([parent, child])
 
     if form.accepted:
         # a node cannot link to himself
         if form.vars["parent"] == form.vars["child"]:
-            flash.set("Both fields cannot be the same node!")
+            flash.set(T("Both fields cannot be the same node!"))
         else:
             # you cannot link again two nodes
             # (no matter inwhich way) retrieve current links and
@@ -487,9 +487,9 @@ def link():
                     parent_id=int(parent_tuple[1]),
                     child_table=child_tuple[0],
                     child_id=int(child_tuple[1]))
-                flash.set("Link stored with record id #%d" % link_id)
+                flash.set(T("Link stored with record id #%d") % link_id)
                 redirect(URL("links"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 @action("delphi/<task_id:int>")
 @action.uses("generic.html", auth.user, T)
@@ -513,13 +513,13 @@ def delphi(task_id):
     db.delphi.window.writable = False
 
     if not (project.id == phase.project):
-        flash.set("The task you choosed does not belong to the current project")
+        flash.set(T("The task you chose does not belong to the current project"))
         redirect(URL("index"))
     elif not (auth.user_id in (project.admins or [])):
-        flash.set("You must have project admin rights for this action")
+        flash.set(T("You must have project admin rights for this action"))
         redirect(URL("index"))
     elif project.team in (None, []):
-        flash.set("Your project has no team members")
+        flash.set(T("Your project has no team members"))
         redirect(URL("index"))
     # check if there is a delphi process already stored
     # if there is no record, return a form
@@ -547,16 +547,16 @@ def delphi(task_id):
 
     if form.accepted:
         if form.record == None:
-            flash.set("New delphi estimation started")
+            flash.set(T("New delphi estimation started"))
         elif form.deleted:
             db(db.estimation.task==task_id).delete()
-            flash.set("Delphi session and related estimations deleted")
+            flash.set(T("Delphi session and related estimations deleted"))
         else:
             # Edit submission without delete option check
             # BUG: the action does not update the window field
             db.rollback()
         redirect(URL("delphi_panel"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 @action("estimate/<task_id:int>")
 @action.uses("generic.html", auth.user, T)
@@ -564,11 +564,11 @@ def estimate(task_id):
     # get the delphi record
     delphi = db(db.delphi.task == task_id).select().first()
     if not delphi:
-        flash.set("No delphi session configured for this task")
+        flash.set(T("No delphi session configured for this task"))
         redirect(URL("index"))
     # check that the user has team rights
     elif not auth.user_id in (delphi.experts or ()):
-        flash.set("You do not belong to the estimation team")
+        flash.set(T("You do not belong to the estimation team"))
         redirect(URL("index"))        
     else:
         # test for which round the team is at
@@ -579,7 +579,7 @@ def estimate(task_id):
         rounds_theoretical = int(rounds_elapsed)
         # in case the delphi is old, exit and notify the user
         if rounds_theoretical > delphi.rounds:
-            flash.set("The estimation session for this task is over")
+            flash.set(T("The estimation session for this task is over"))
             redirect(URL("index"))
         else:
             rounds_current = rounds_theoretical
@@ -609,7 +609,7 @@ def estimate(task_id):
 
                 # Warn about the threshold in hours
                 db.estimation.round.comment = \
-                "Estimation must not exceed %f hours" % (maximum.total_seconds()/3600)
+                T("Estimation must not exceed %f hours") % (maximum.total_seconds()/3600)
 
         # retrieve de task record to visualize it
         task = db(db.task.id == task_id).select().first()
@@ -629,22 +629,22 @@ def estimate(task_id):
                 # if remaining_window.total_seconds()
 
                 if db.estimation.round.default < rounds_theoretical:
-                    flash.set("Hold on... The time for this round is up!")
+                    flash.set(T("Hold on... The time for this round is up!"))
                     redirect(URL("delphi_panel"))
                 elif (maximum != None) and (computed > maximum):
-                    flash.set("Estimation is beyond the maximum")
+                    flash.set(T("Estimation is beyond the maximum"))
                     redirect(URL("estimate/%s" % task_id))
                 else:
                     # register estimation
                     db.estimation.insert(**form.vars)
-                    flash.set("Estimation submitted")
+                    flash.set(T("Estimation submitted"))
                     redirect(URL("delphi_panel"))
         else:
             # There is an estimation for this round already,
             # so just show the contents
             form = Form(db.estimation, estimation.id, readonly=True)
         return dict(form=form, maximum=maximum,
-                    remaining_window=remaining_window, task=task)
+                    remaining_window=remaining_window, task=task, T=T)
 
 @action("estimations")
 @action.uses("generic.html", auth.user, T)
@@ -661,13 +661,13 @@ def estimations():
     query = db.estimation.task.belongs([task.id for task in tasks])
     db.estimation.expert.readable=False
     grid = Grid(query=query, create=False, editable=False, deletable=False)
-    return dict(grid=grid)
+    return dict(grid=grid, T=T)
 
 @action("budget")
 @action.uses("generic.html", auth.user, T)
 def budget():
     if not session.project:
-        flash.set("Choose a project first")
+        flash.set(T("Choose a project first"))
         redirect(URL("index"))
     else:
         project = db(db.project.id == session.project).select().first()
@@ -678,7 +678,7 @@ def budget():
         budget_set = db(db.budget.project == project.id).select()
         total = sum([row.amount for row in budget_set])
         grid = Grid(query=db.budget.project==project.id)
-    return dict(grid=grid, total=total)
+    return dict(grid=grid, total=total, T=T)
 
 @action("gantt")
 @action.uses("gantt.html", auth.user, T)
@@ -711,7 +711,7 @@ def gantt():
                 progress = 0.0
             items.append(dict(id=id, start=start, name=name, end=end,
                 progress=progress))
-    return dict(items=items)
+    return dict(items=items, T=T)
 
 @action("cpm")
 @action.uses("cpm.html", auth.user, T)
@@ -738,7 +738,7 @@ def cpm():
     from apps.proyectero.dagsort import Graph
 
     if not session.project:
-        flash.set("Choose a project first")
+        flash.set(T("Choose a project first"))
         redirect(URL("index"))
     else:
         project = db(db.project.id == session.project).select().first()
@@ -799,7 +799,7 @@ def cpm():
     # In case there is not enough information
     # stop processing the view
     if not dataset:
-        flash.set("No data to build the graph")
+        flash.set(T("No data to build the graph"))
         redirect(URL("index"))
 
     # process the cpm and get the results
@@ -838,7 +838,7 @@ def cpm():
 
     # return the cytoscape data and other stuff
     return dict(nodes=nodes, ordered=reordered,
-                indexes=indexes_swapped)
+                indexes=indexes_swapped, T=T)
 
 @action("delphi_update")
 @action.uses("generic.html", auth.user, T)
@@ -849,11 +849,11 @@ def delphi_update():
     project = db(db.project.id==session.project).select().first()
 
     if not project:
-        flash.set("Choose a project first")
+        flash.set(T("Choose a project first"))
         redirect(URL("index"))
 
     if not(auth.user_id in (project.admins or [])):
-        flash.set("Only admins can update delphi")
+        flash.set(T("Only admins can update delphi"))
         redirect(URL("index"))
 
     # - retrieve any delphi session finished
@@ -908,9 +908,9 @@ def delphi_update():
 
     # return a message notifying the results
     if counter > 0:
-        flash.set("%s task estimations updated" % counter)
+        flash.set(T("%s task estimations updated") % counter)
     else:
-        flash.set("No task estimations updated")
+        flash.set(T("No task estimations updated"))
     redirect(URL("delphi_panel"))
 
 @action("s_curve")
@@ -931,13 +931,13 @@ def s_curve():
     if session.project:
         project = db(db.project.id==session.project).select().first()
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
     # Check if the project start time is set
     # and if not, redirect with a warning
     if not project.start:
-        flash.set("Set a project start time before checking advance")
+        flash.set(T("Set a project start time before checking advance"))
         redirect(URL("index"))
 
     # set projected and actual curve data objects
@@ -977,23 +977,23 @@ def s_curve():
     deadline_string = "%04d-%02d-%02d" % (deadline.year, deadline.month, deadline.day)
 
     if estimated_total <= 0:
-        flash.set("Project must extend in time to build the s-curve")
+        flash.set(T("Project must extend in time to build the s-curve"))
         redirect(URL("index"))
 
     # ask the user for some options
     form = Form([Field("step",
-                      requires=IS_IN_SET({"day": "Days",
-                          "week": "Weeks", "month": "Months"}),
+                      requires=IS_IN_SET({"day": T("Days"),
+                          "week": T("Weeks"), "month": T("Months")}),
                       default="week",
-                      label="Choose a time rate"),
+                      label=T("Choose a time rate")),
                 Field("date_from", "datetime",
                       default=project.start,
-                      comment="Defaults to project's start",
-                      label="From"),
+                      comment=T("Defaults to project's start"),
+                      label=T("From")),
                 Field("date_to", "datetime",
                       default=project_end,
-                      comment="Defaults to project's end",
-                      label="To")])
+                      comment=T("Defaults to project's end"),
+                      label=T("To"))])
 
     if form.accepted:
         # set the time boundaries
@@ -1119,7 +1119,7 @@ def s_curve():
 
     return dict(form=form, labels=labels,
                 projected=projected_dataset,
-                actual=actual_dataset)
+                actual=actual_dataset, T=T)
 
 @action("kanban_board")
 @action.uses("kanban_board.html", auth.user, T)
@@ -1139,7 +1139,7 @@ def kanban_board():
     if session.project:
         project = db(db.project.id==session.project).select().first()
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
     data = dict()
@@ -1155,7 +1155,7 @@ def kanban_board():
         options[stage.id] = "%s -> %s" % (phase_label, stage_label)
 
     form = Form([Field("stage", "integer", requires=IS_IN_SET(options),
-                       label="Choose a stage"),])
+                       label=T("Choose a stage")),])
 
     if form.accepted:
         tasks = db(db.task.stage==form.vars["stage"]).select().as_dict()
@@ -1168,7 +1168,7 @@ def kanban_board():
                 progress = 0.0
             data[task] = dict(progress=progress, id=task,
                               label=tasks[task]["label"] or tasks[task]["name"])
-    return dict(form=form, data=data)
+    return dict(form=form, data=data, T=T)
 
 
 @action("log")
@@ -1178,7 +1178,7 @@ def log():
     if session.project:
         project = db(db.project.id==session.project).select().first()
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
     phase_set = db(db.phase.project==project.id)
@@ -1211,7 +1211,7 @@ def log():
                   create=True, editable=change_log,
                   deletable=change_log)
 
-    return dict(grid=grid)
+    return dict(grid=grid, T=T)
 
 @action("delphi_panel")
 @action.uses("delphi_panel.html", auth.user, T)
@@ -1226,7 +1226,7 @@ def delphi_panel():
     if session.project:
         project = db(db.project.id==session.project).select().first()
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
     is_admin = auth.user_id in (project.admins or [])
@@ -1299,7 +1299,7 @@ def delphi_panel():
                 task_data=task_data,
                 is_admin=is_admin,
                 is_team=is_team,
-                delphi_tasks=delphi_tasks)
+                delphi_tasks=delphi_tasks, T=T)
 
 @action("progress/<task_id:int>")
 @action.uses("generic.html", auth.user, T)
@@ -1308,7 +1308,7 @@ def progress(task_id):
     if session.project:
         project = db(db.project.id==session.project).select().first()
     else:
-        flash.set("No project selected")
+        flash.set(T("No project selected"))
         redirect(URL("index"))
 
     task = db(db.task.id==task_id).select().first()
@@ -1325,11 +1325,11 @@ def progress(task_id):
 
     # Restrict fields for different roles
     db.task.status.default = task.status or "pending"
-    db.log.title.comment = "Name the task report"
-    db.log.body.comment = "Write some comment on the progress"
+    db.log.title.comment = T("Name the task report")
+    db.log.body.comment = T("Write some comment on the progress")
     # Possibly DAL does not support microsencods in datetime
     db.task.end.default = now.replace(microsecond=0)
-    db.task.end.comment="Only applies for done status; defaults to current time"    
+    db.task.end.comment=T("Only applies for done status; defaults to current time")
 
     # Autopopulate form with task status and other stuff
 
@@ -1358,9 +1358,9 @@ def progress(task_id):
             date=datetime.datetime.now(),
             project=project.id,
             tags=form.vars["tags"])
-        flash.set("New status update recorded")
+        flash.set(T("New status update recorded"))
         redirect(URL("tasks"))
-    return dict(form=form)
+    return dict(form=form, T=T)
 
 # auxiliar function of s_curve
 # returns the sum of anything in obj before or as to date
@@ -1380,3 +1380,4 @@ def acumulated_lookup(date, obj):
         if ((k < date) and (obj[k] > value)):
             value = obj[k]
     return value
+

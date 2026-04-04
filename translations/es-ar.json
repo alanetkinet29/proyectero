@@ -2,11 +2,47 @@
     " (active)": {
         "0": "(activo)"
     },
+    "%s admins removed": {
+        "0": "Se eliminaron %s administradores"
+    },
+    "%s task estimations updated": {
+        "0": "Se actualizaron %s tareas"
+    },
+    "%s team members removed": {
+        "0": "%s miembros del equipo eliminados"
+    },
+    "%s users added": {
+        "0": "Se agregaron %s usuarios"
+    },
+    "(window) days": {
+        "0": "D\u00edas de la ventana"
+    },
+    "(window) hours": {
+        "0": "Horas de la ventana"
+    },
+    "(window) minutes": {
+        "0": "minutos de la ventana"
+    },
     "Actions": {
         "0": "Acciones"
     },
     "Actual curve (Red Line)": {
         "0": "Curva real (l\u00ednea roja)"
+    },
+    "Add admin users to %s": {
+        "0": "Agregar usuarios administradores a %s"
+    },
+    "Add admins": {
+        "0": "Agregar administradores"
+    },
+    "Add team members": {
+        "0": "Agregar miembros al equipo"
+    },
+    "Add team users to %s": {
+        "0": "Agregar miembros del equipo a %s"
+    },
+    "Both fields cannot be the same node!": {
+        "0": "\u00a1Ambos campos no pueden ser el mismo nodo!"
     },
     "Budget: %s": {
         "0": "Presupuesto: %s"
@@ -20,14 +56,38 @@
     "Choose a project": {
         "0": "Seleccionar un proyecto"
     },
+    "Choose a project first": {
+        "0": "Primero debes seleccionar un proyecto"
+    },
+    "Choose a stage": {
+        "0": "Selecciona una etapa"
+    },
+    "Choose a time rate": {
+        "0": "Seleccionar una frecuencia de tiempo"
+    },
     "Completed": {
         "0": "Finalizada"
+    },
+    "Critical Path Method (CPM)": {
+        "0": "M\u00e9todo de la Ruta Cr\u00edtica (CPM)"
+    },
+    "Days": {
+        "0": "D\u00edas"
     },
     "Deadline: %s": {
         "0": "Plazo de entrega: %s"
     },
+    "Defaults to project's end": {
+        "0": "Por defecto es el final del proyecto"
+    },
+    "Defaults to project's start": {
+        "0": "Por defecto es el comienzo del proyecto"
+    },
     "Delphi for": {
         "0": "Delphi para"
+    },
+    "Delphi session and related estimations deleted": {
+        "0": "Se eliminaron las sesiones Delphi y sus estimaciones"
     },
     "Done": {
         "0": "Hecho"
@@ -45,6 +105,21 @@
     "Edit Profile": {
         "0": "Editar perfil"
     },
+    "Edit project": {
+        "0": "Editar proyecto"
+    },
+    "Estimated (hours)": {
+        "0": "Tiempo estimado (en horas)"
+    },
+    "Estimation is beyond the maximum": {
+        "0": "La estimaci\u00f3n est\u00e1 por arriba del m\u00e1ximo"
+    },
+    "Estimation must not exceed %f hours": {
+        "0": "La estimaci\u00f3n no debe superar las %f horas"
+    },
+    "Estimation submitted": {
+        "0": "Se envi\u00f3 la estimaci\u00f3n"
+    },
     "Estimations": {
         "0": "Estimaciones"
     },
@@ -57,8 +132,23 @@
     "For team members": {
         "0": "Para integrantes del equipo"
     },
+    "From": {
+        "0": "Desde"
+    },
+    "Gantt chart": {
+        "0": "Diagrama de Gantt"
+    },
     "Hello World from {name}": {
         "0": "Hola mundo de {name}"
+    },
+    "Hold on... The time for this round is up!": {
+        "0": "Un momento... \u00a1Termin\u00f3 el tiempo de esta ronda!"
+    },
+    "In progress": {
+        "0": "En curso"
+    },
+    "Kanban board": {
+        "0": "Tablero Kanban"
     },
     "LF": {
         "0": "\ufeffLF",
@@ -69,6 +159,18 @@
         "0": "\ufeffLS",
         "1": "\ufeffLS",
         "2": "\ufeffLS"
+    },
+    "Link from parent": {
+        "0": "V\u00ednculo desde nodo padre"
+    },
+    "Link stored with record id #%d": {
+        "0": "Se almacen\u00f3 el v\u00ednculo con id de registro #%d"
+    },
+    "Link tasks": {
+        "0": "Vincula tareas"
+    },
+    "Link to child": {
+        "0": "V\u00ednculo con nodo hijo"
     },
     "Log in": {
         "0": "Ingresar"
@@ -84,13 +186,46 @@
         "1": "Administrado",
         "2": "Administrados"
     },
+    "Months": {
+        "0": "Meses"
+    },
+    "Name the task report": {
+        "0": "Nombre para el reporte de la tarea"
+    },
     "New": {
         "0": "Nuevo",
         "1": "Nuevo",
         "2": "Nuevos"
     },
+    "New delphi estimation started": {
+        "0": "Se inici\u00f3 una nueva sesi\u00f3n Wideband-delphi"
+    },
     "New delphi session": {
         "0": "Nueva sesi\u00f3n Wideband-delphi"
+    },
+    "New status update recorded": {
+        "0": "Se almacen\u00f3 la actualizaci\u00f3n de estado"
+    },
+    "No admins removed": {
+        "0": "No se eliminaron administradores"
+    },
+    "No data to build the graph": {
+        "0": "No hay datos para construir el gr\u00e1fico"
+    },
+    "No delphi session configured for this task": {
+        "0": "No se configuraron sesiones delphi para esta tarea"
+    },
+    "No project selected": {
+        "0": "No se seleccion\u00f3 un proyecto"
+    },
+    "No task estimations updated": {
+        "0": "No se actualizaron estimaciones"
+    },
+    "No team members removed": {
+        "0": "No se eliminaron miembros del equipo"
+    },
+    "No users added": {
+        "0": "No se agregaron usuarios"
     },
     "Node": {
         "0": "Nodo"
@@ -98,8 +233,23 @@
     "Not available": {
         "0": "No disponible"
     },
+    "Only admins can link tasks": {
+        "0": "S\u00f3lo los administradores pueden vincular tareas"
+    },
+    "Only admins can update delphi": {
+        "0": "Solo administrativos pueden actualizar delphi"
+    },
+    "Only applies for done status; defaults to current time": {
+        "0": "S\u00f3lo aplica a estado finalizado; por defecto es el tiempo actual"
+    },
+    "Pending": {
+        "0": "Pendiente"
+    },
     "Phase": {
         "0": "Fase"
+    },
+    "Phase. This field is mandatory": {
+        "0": "Fase. Este campo es obligatorio"
     },
     "Progress: %s": {
         "0": "Avance: %s"
@@ -107,11 +257,32 @@
     "Progress: not available": {
         "0": "Avance: no disponible"
     },
+    "Project budget": {
+        "0": "Presupuesto del proyecto"
+    },
+    "Project created": {
+        "0": "Proyecto creado"
+    },
+    "Project must extend in time to build the s-curve": {
+        "0": "El proyecto se debe extender en el tiempo para generar la curva de avance"
+    },
+    "Project phases": {
+        "0": "Fases del proyecto"
+    },
+    "Project selected": {
+        "0": "Proyecto seleccionado"
+    },
+    "Project stages": {
+        "0": "Etapas del proyecto"
+    },
     "Project status: %s": {
         "0": "Estado del proyecto: %s"
     },
     "Project tasks (no delphi)": {
         "0": "Tareas del proyecto (sin delphi)"
+    },
+    "Project's log": {
+        "0": "Bit\u00e1cora del proyecto"
     },
     "Project: %s": {
         "0": "Proyecto: %s"
@@ -119,11 +290,32 @@
     "Projected curve (Blue Line)": {
         "0": "Curva proyectada (l\u00ednea azul)"
     },
+    "Remove admin users from %s": {
+        "0": "Eliminar usuarios adminstrativos de %s"
+    },
+    "Remove admins": {
+        "0": "Eliminar administradores"
+    },
+    "Remove team members": {
+        "0": "Eliminar miembros del equipo"
+    },
+    "Remove team users from %s": {
+        "0": "Eliminar miembros del equipo de %s"
+    },
+    "Report": {
+        "0": "Reporte"
+    },
     "Round/total": {
         "0": "Ruedas/total"
     },
+    "S-curve": {
+        "0": "Curva de avance"
+    },
     "S-curve graph": {
         "0": "Curva de avance"
+    },
+    "Set a project start time before checking advance": {
+        "0": "Debes establecer un tiempo de inicio del proyecto antes de hacer seguimiento"
     },
     "Sign up": {
         "0": "Registro"
@@ -133,6 +325,9 @@
     },
     "Stage": {
         "0": "Etapa"
+    },
+    "Stage. This field is mandatory": {
+        "0": "Etapa. Este campo es obligatorio"
     },
     "Start": {
         "0": "Inicio"
@@ -146,17 +341,89 @@
     "Task": {
         "0": "Tarea"
     },
+    "Tasks": {
+        "0": "Tareas"
+    },
     "Team member": {
         "0": "Miembro del equipo"
+    },
+    "The estimation session for this task is over": {
+        "0": "Se termin\u00f3 el tiempo de esta sesi\u00f3n de estimaciones"
+    },
+    "The task you chose does not belong to the current project": {
+        "0": "Has seleccionado una tarea que no corresponde al proyecto"
     },
     "Time remaining": {
         "0": "Tiempo restante"
     },
+    "Time window between rounds in days": {
+        "0": "Ventana de tiempo entre rondas en d\u00edas"
+    },
+    "Time window between rounds in hours": {
+        "0": "Ventana de tiempo en horas entre rondas"
+    },
+    "Time window between rounds in minutes": {
+        "0": "Ventana de tiempo entre rondas en minutos"
+    },
+    "To": {
+        "0": "Hasta"
+    },
     "To Do": {
         "0": "Por hacer"
     },
+    "Type a list of user emails separated by \";\"": {
+        "0": "Ingresa una lista de email de usuarios separados por \";\""
+    },
+    "Type as much tags as you want here, press TAB key to add the to the list": {
+        "0": "Puedes agregar tantas etiquetas como quieras, presiona la tecla TAB para agregarlas a la lista"
+    },
     "Update project estimations": {
         "0": "Actualizar estimaciones del proyecto"
+    },
+    "Updated project properties": {
+        "0": "Actualizar las propiedades del proyecto"
+    },
+    "Weeks": {
+        "0": "Semanas"
+    },
+    "Wideband-delphi": {
+        "0": "Wideband-delphi"
+    },
+    "Write some comment on the progress": {
+        "0": "Escribe un comentario sobre el avance"
+    },
+    "You do not belong to the estimation team": {
+        "0": "No perteneces al equipo de estimaciones"
+    },
+    "You must be logged-in to view the dashboard": {
+        "0": "Se requiere ingreso como usuario para ver el panel de control"
+    },
+    "You must choose a team for the project before asigning the task": {
+        "0": "Antes de asignar una tarea el proyecto debe tener un equipo"
+    },
+    "You must have project admin rights for this action": {
+        "0": "Se requieren permisos de administrador para esta acci\u00f3n"
+    },
+    "You need admin privileges to update project properties": {
+        "0": "Se requieren permisos de administrador para actualizar propiedades de proyecto"
+    },
+    "You need project admin rights for managing links": {
+        "0": "Se requieren permisos de admnistrador para vincular tareas"
+    },
+    "You need project admin rights for managing phases": {
+        "0": "Se requieren permisos de administrador para editar fases"
+    },
+    "You need project admin rights for managing stages": {
+        "0": "Necesitas derechos de administrador para editar etapas"
+    },
+    "You need project admin rights for this action": {
+        "0": "Se requieren permisos administrativos para esta acci\u00f3n"
+    },
+    "You need project rights for managing tasks": {
+        "0": "Se requieren derechos sobre el proyecto para administrar las tareas"
+    },
+    "Your project has no team members": {
+        "0": "Tu proyecto no tiene equipo"
     },
     "dog": {
         "0": "Perro",

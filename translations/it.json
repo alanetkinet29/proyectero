@@ -4,6 +4,41 @@
         "1": "\ufeff (active)",
         "2": "\ufeff (active)"
     },
+    "%s admins removed": {
+        "0": "\ufeff%s admins removed",
+        "1": "\ufeff%s admins removed",
+        "2": "\ufeff%s admins removed"
+    },
+    "%s task estimations updated": {
+        "0": "\ufeff%s task estimations updated",
+        "1": "\ufeff%s task estimations updated",
+        "2": "\ufeff%s task estimations updated"
+    },
+    "%s team members removed": {
+        "0": "\ufeff%s team members removed",
+        "1": "\ufeff%s team members removed",
+        "2": "\ufeff%s team members removed"
+    },
+    "%s users added": {
+        "0": "\ufeff%s users added",
+        "1": "\ufeff%s users added",
+        "2": "\ufeff%s users added"
+    },
+    "(window) days": {
+        "0": "\ufeff(window) days",
+        "1": "\ufeff(window) days",
+        "2": "\ufeff(window) days"
+    },
+    "(window) hours": {
+        "0": "\ufeff(window) hours",
+        "1": "\ufeff(window) hours",
+        "2": "\ufeff(window) hours"
+    },
+    "(window) minutes": {
+        "0": "\ufeff(window) minutes",
+        "1": "\ufeff(window) minutes",
+        "2": "\ufeff(window) minutes"
+    },
     "Actions": {
         "0": "\ufeffActions",
         "1": "\ufeffActions",
@@ -13,6 +48,31 @@
         "0": "\ufeffActual curve (Red Line)",
         "1": "\ufeffActual curve (Red Line)",
         "2": "\ufeffActual curve (Red Line)"
+    },
+    "Add admin users to %s": {
+        "0": "\ufeffAdd admin users to %s",
+        "1": "\ufeffAdd admin users to %s",
+        "2": "\ufeffAdd admin users to %s"
+    },
+    "Add admins": {
+        "0": "\ufeffAdd admins",
+        "1": "\ufeffAdd admins",
+        "2": "\ufeffAdd admins"
+    },
+    "Add team members": {
+        "0": "\ufeffAdd team members",
+        "1": "\ufeffAdd team members",
+        "2": "\ufeffAdd team members"
+    },
+    "Add team users to %s": {
+        "0": "\ufeffAdd team users to %s",
+        "1": "\ufeffAdd team users to %s",
+        "2": "\ufeffAdd team users to %s"
+    },
+    "Both fields cannot be the same node!": {
+        "0": "\ufeffBoth fields cannot be the same node!",
+        "1": "\ufeffBoth fields cannot be the same node!",
+        "2": "\ufeffBoth fields cannot be the same node!"
     },
     "Budget: %s": {
         "0": "\ufeffBudget: %s",
@@ -34,20 +94,60 @@
         "1": "\ufeffChoose a project",
         "2": "\ufeffChoose a project"
     },
+    "Choose a project first": {
+        "0": "\ufeffChoose a project first",
+        "1": "\ufeffChoose a project first",
+        "2": "\ufeffChoose a project first"
+    },
+    "Choose a stage": {
+        "0": "\ufeffChoose a stage",
+        "1": "\ufeffChoose a stage",
+        "2": "\ufeffChoose a stage"
+    },
+    "Choose a time rate": {
+        "0": "\ufeffChoose a time rate",
+        "1": "\ufeffChoose a time rate",
+        "2": "\ufeffChoose a time rate"
+    },
     "Completed": {
         "0": "\ufeffCompleted",
         "1": "\ufeffCompleted",
         "2": "\ufeffCompleted"
+    },
+    "Critical Path Method (CPM)": {
+        "0": "\ufeffCritical Path Method (CPM)",
+        "1": "\ufeffCritical Path Method (CPM)",
+        "2": "\ufeffCritical Path Method (CPM)"
+    },
+    "Days": {
+        "0": "\ufeffDays",
+        "1": "\ufeffDays",
+        "2": "\ufeffDays"
     },
     "Deadline: %s": {
         "0": "\ufeffDeadline: %s",
         "1": "\ufeffDeadline: %s",
         "2": "\ufeffDeadline: %s"
     },
+    "Defaults to project's end": {
+        "0": "\ufeffDefaults to project's end",
+        "1": "\ufeffDefaults to project's end",
+        "2": "\ufeffDefaults to project's end"
+    },
+    "Defaults to project's start": {
+        "0": "\ufeffDefaults to project's start",
+        "1": "\ufeffDefaults to project's start",
+        "2": "\ufeffDefaults to project's start"
+    },
     "Delphi for": {
         "0": "\ufeffDelphi for",
         "1": "\ufeffDelphi for",
         "2": "\ufeffDelphi for"
+    },
+    "Delphi session and related estimations deleted": {
+        "0": "\ufeffDelphi session and related estimations deleted",
+        "1": "\ufeffDelphi session and related estimations deleted",
+        "2": "\ufeffDelphi session and related estimations deleted"
     },
     "Done": {
         "0": "\ufeffDone",
@@ -69,6 +169,31 @@
         "1": "\ufeffEdit Profile",
         "2": "\ufeffEdit Profile"
     },
+    "Edit project": {
+        "0": "\ufeffEdit project",
+        "1": "\ufeffEdit project",
+        "2": "\ufeffEdit project"
+    },
+    "Estimated (hours)": {
+        "0": "\ufeffEstimated (hours)",
+        "1": "\ufeffEstimated (hours)",
+        "2": "\ufeffEstimated (hours)"
+    },
+    "Estimation is beyond the maximum": {
+        "0": "\ufeffEstimation is beyond the maximum",
+        "1": "\ufeffEstimation is beyond the maximum",
+        "2": "\ufeffEstimation is beyond the maximum"
+    },
+    "Estimation must not exceed %f hours": {
+        "0": "\ufeffEstimation must not exceed %f hours",
+        "1": "\ufeffEstimation must not exceed %f hours",
+        "2": "\ufeffEstimation must not exceed %f hours"
+    },
+    "Estimation submitted": {
+        "0": "\ufeffEstimation submitted",
+        "1": "\ufeffEstimation submitted",
+        "2": "\ufeffEstimation submitted"
+    },
     "Estimations": {
         "0": "\ufeffEstimations",
         "1": "\ufeffEstimations",
@@ -89,8 +214,33 @@
         "1": "\ufeffFor team members",
         "2": "\ufeffFor team members"
     },
+    "From": {
+        "0": "\ufeffFrom",
+        "1": "\ufeffFrom",
+        "2": "\ufeffFrom"
+    },
+    "Gantt chart": {
+        "0": "\ufeffGantt chart",
+        "1": "\ufeffGantt chart",
+        "2": "\ufeffGantt chart"
+    },
     "Hello World from {name}": {
         "0": "Salve Mondo da {name}"
+    },
+    "Hold on... The time for this round is up!": {
+        "0": "\ufeffHold on... The time for this round is up!",
+        "1": "\ufeffHold on... The time for this round is up!",
+        "2": "\ufeffHold on... The time for this round is up!"
+    },
+    "In progress": {
+        "0": "\ufeffIn progress",
+        "1": "\ufeffIn progress",
+        "2": "\ufeffIn progress"
+    },
+    "Kanban board": {
+        "0": "\ufeffKanban board",
+        "1": "\ufeffKanban board",
+        "2": "\ufeffKanban board"
     },
     "LF": {
         "0": "\ufeffLF",
@@ -101,6 +251,26 @@
         "0": "\ufeffLS",
         "1": "\ufeffLS",
         "2": "\ufeffLS"
+    },
+    "Link from parent": {
+        "0": "\ufeffLink from parent",
+        "1": "\ufeffLink from parent",
+        "2": "\ufeffLink from parent"
+    },
+    "Link stored with record id #%d": {
+        "0": "\ufeffLink stored with record id #%d",
+        "1": "\ufeffLink stored with record id #%d",
+        "2": "\ufeffLink stored with record id #%d"
+    },
+    "Link tasks": {
+        "0": "\ufeffLink tasks",
+        "1": "\ufeffLink tasks",
+        "2": "\ufeffLink tasks"
+    },
+    "Link to child": {
+        "0": "\ufeffLink to child",
+        "1": "\ufeffLink to child",
+        "2": "\ufeffLink to child"
     },
     "Log in": {
         "0": "\ufeffLog in",
@@ -122,15 +292,70 @@
         "1": "\ufeffManaged",
         "2": "\ufeffManaged"
     },
+    "Months": {
+        "0": "\ufeffMonths",
+        "1": "\ufeffMonths",
+        "2": "\ufeffMonths"
+    },
+    "Name the task report": {
+        "0": "\ufeffName the task report",
+        "1": "\ufeffName the task report",
+        "2": "\ufeffName the task report"
+    },
     "New": {
         "0": "\ufeffNew",
         "1": "\ufeffNew",
         "2": "\ufeffNew"
     },
+    "New delphi estimation started": {
+        "0": "\ufeffNew delphi estimation started",
+        "1": "\ufeffNew delphi estimation started",
+        "2": "\ufeffNew delphi estimation started"
+    },
     "New delphi session": {
         "0": "\ufeffNew delphi session",
         "1": "\ufeffNew delphi session",
         "2": "\ufeffNew delphi session"
+    },
+    "New status update recorded": {
+        "0": "\ufeffNew status update recorded",
+        "1": "\ufeffNew status update recorded",
+        "2": "\ufeffNew status update recorded"
+    },
+    "No admins removed": {
+        "0": "\ufeffNo admins removed",
+        "1": "\ufeffNo admins removed",
+        "2": "\ufeffNo admins removed"
+    },
+    "No data to build the graph": {
+        "0": "\ufeffNo data to build the graph",
+        "1": "\ufeffNo data to build the graph",
+        "2": "\ufeffNo data to build the graph"
+    },
+    "No delphi session configured for this task": {
+        "0": "\ufeffNo delphi session configured for this task",
+        "1": "\ufeffNo delphi session configured for this task",
+        "2": "\ufeffNo delphi session configured for this task"
+    },
+    "No project selected": {
+        "0": "\ufeffNo project selected",
+        "1": "\ufeffNo project selected",
+        "2": "\ufeffNo project selected"
+    },
+    "No task estimations updated": {
+        "0": "\ufeffNo task estimations updated",
+        "1": "\ufeffNo task estimations updated",
+        "2": "\ufeffNo task estimations updated"
+    },
+    "No team members removed": {
+        "0": "\ufeffNo team members removed",
+        "1": "\ufeffNo team members removed",
+        "2": "\ufeffNo team members removed"
+    },
+    "No users added": {
+        "0": "\ufeffNo users added",
+        "1": "\ufeffNo users added",
+        "2": "\ufeffNo users added"
     },
     "Node": {
         "0": "\ufeffNode",
@@ -142,10 +367,35 @@
         "1": "\ufeffNot available",
         "2": "\ufeffNot available"
     },
+    "Only admins can link tasks": {
+        "0": "\ufeffOnly admins can link tasks",
+        "1": "\ufeffOnly admins can link tasks",
+        "2": "\ufeffOnly admins can link tasks"
+    },
+    "Only admins can update delphi": {
+        "0": "\ufeffOnly admins can update delphi",
+        "1": "\ufeffOnly admins can update delphi",
+        "2": "\ufeffOnly admins can update delphi"
+    },
+    "Only applies for done status; defaults to current time": {
+        "0": "\ufeffOnly applies for done status; defaults to current time",
+        "1": "\ufeffOnly applies for done status; defaults to current time",
+        "2": "\ufeffOnly applies for done status; defaults to current time"
+    },
+    "Pending": {
+        "0": "\ufeffPending",
+        "1": "\ufeffPending",
+        "2": "\ufeffPending"
+    },
     "Phase": {
         "0": "\ufeffPhase",
         "1": "\ufeffPhase",
         "2": "\ufeffPhase"
+    },
+    "Phase. This field is mandatory": {
+        "0": "\ufeffPhase. This field is mandatory",
+        "1": "\ufeffPhase. This field is mandatory",
+        "2": "\ufeffPhase. This field is mandatory"
     },
     "Progress: %s": {
         "0": "\ufeffProgress: %s",
@@ -157,6 +407,36 @@
         "1": "\ufeffProgress: not available",
         "2": "\ufeffProgress: not available"
     },
+    "Project budget": {
+        "0": "\ufeffProject budget",
+        "1": "\ufeffProject budget",
+        "2": "\ufeffProject budget"
+    },
+    "Project created": {
+        "0": "\ufeffProject created",
+        "1": "\ufeffProject created",
+        "2": "\ufeffProject created"
+    },
+    "Project must extend in time to build the s-curve": {
+        "0": "\ufeffProject must extend in time to build the s-curve",
+        "1": "\ufeffProject must extend in time to build the s-curve",
+        "2": "\ufeffProject must extend in time to build the s-curve"
+    },
+    "Project phases": {
+        "0": "\ufeffProject phases",
+        "1": "\ufeffProject phases",
+        "2": "\ufeffProject phases"
+    },
+    "Project selected": {
+        "0": "\ufeffProject selected",
+        "1": "\ufeffProject selected",
+        "2": "\ufeffProject selected"
+    },
+    "Project stages": {
+        "0": "\ufeffProject stages",
+        "1": "\ufeffProject stages",
+        "2": "\ufeffProject stages"
+    },
     "Project status: %s": {
         "0": "\ufeffProject status: %s",
         "1": "\ufeffProject status: %s",
@@ -166,6 +446,11 @@
         "0": "\ufeffProject tasks (no delphi)",
         "1": "\ufeffProject tasks (no delphi)",
         "2": "\ufeffProject tasks (no delphi)"
+    },
+    "Project's log": {
+        "0": "\ufeffProject's log",
+        "1": "\ufeffProject's log",
+        "2": "\ufeffProject's log"
     },
     "Project: %s": {
         "0": "\ufeffProject: %s",
@@ -177,15 +462,50 @@
         "1": "\ufeffProjected curve (Blue Line)",
         "2": "\ufeffProjected curve (Blue Line)"
     },
+    "Remove admin users from %s": {
+        "0": "\ufeffRemove admin users from %s",
+        "1": "\ufeffRemove admin users from %s",
+        "2": "\ufeffRemove admin users from %s"
+    },
+    "Remove admins": {
+        "0": "\ufeffRemove admins",
+        "1": "\ufeffRemove admins",
+        "2": "\ufeffRemove admins"
+    },
+    "Remove team members": {
+        "0": "\ufeffRemove team members",
+        "1": "\ufeffRemove team members",
+        "2": "\ufeffRemove team members"
+    },
+    "Remove team users from %s": {
+        "0": "\ufeffRemove team users from %s",
+        "1": "\ufeffRemove team users from %s",
+        "2": "\ufeffRemove team users from %s"
+    },
+    "Report": {
+        "0": "\ufeffReport",
+        "1": "\ufeffReport",
+        "2": "\ufeffReport"
+    },
     "Round/total": {
         "0": "\ufeffRound/total",
         "1": "\ufeffRound/total",
         "2": "\ufeffRound/total"
     },
+    "S-curve": {
+        "0": "\ufeffS-curve",
+        "1": "\ufeffS-curve",
+        "2": "\ufeffS-curve"
+    },
     "S-curve graph": {
         "0": "\ufeffS-curve graph",
         "1": "\ufeffS-curve graph",
         "2": "\ufeffS-curve graph"
+    },
+    "Set a project start time before checking advance": {
+        "0": "\ufeffSet a project start time before checking advance",
+        "1": "\ufeffSet a project start time before checking advance",
+        "2": "\ufeffSet a project start time before checking advance"
     },
     "Sign up": {
         "0": "\ufeffSign up",
@@ -201,6 +521,11 @@
         "0": "\ufeffStage",
         "1": "\ufeffStage",
         "2": "\ufeffStage"
+    },
+    "Stage. This field is mandatory": {
+        "0": "\ufeffStage. This field is mandatory",
+        "1": "\ufeffStage. This field is mandatory",
+        "2": "\ufeffStage. This field is mandatory"
     },
     "Start": {
         "0": "\ufeffStart",
@@ -222,25 +547,145 @@
         "1": "\ufeffTask",
         "2": "\ufeffTask"
     },
+    "Tasks": {
+        "0": "\ufeffTasks",
+        "1": "\ufeffTasks",
+        "2": "\ufeffTasks"
+    },
     "Team member": {
         "0": "\ufeffTeam member",
         "1": "\ufeffTeam member",
         "2": "\ufeffTeam member"
+    },
+    "The estimation session for this task is over": {
+        "0": "\ufeffThe estimation session for this task is over",
+        "1": "\ufeffThe estimation session for this task is over",
+        "2": "\ufeffThe estimation session for this task is over"
+    },
+    "The task you chose does not belong to the current project": {
+        "0": "\ufeffThe task you chose does not belong to the current project",
+        "1": "\ufeffThe task you chose does not belong to the current project",
+        "2": "\ufeffThe task you chose does not belong to the current project"
     },
     "Time remaining": {
         "0": "\ufeffTime remaining",
         "1": "\ufeffTime remaining",
         "2": "\ufeffTime remaining"
     },
+    "Time window between rounds in days": {
+        "0": "\ufeffTime window between rounds in days",
+        "1": "\ufeffTime window between rounds in days",
+        "2": "\ufeffTime window between rounds in days"
+    },
+    "Time window between rounds in hours": {
+        "0": "\ufeffTime window between rounds in hours",
+        "1": "\ufeffTime window between rounds in hours",
+        "2": "\ufeffTime window between rounds in hours"
+    },
+    "Time window between rounds in minutes": {
+        "0": "\ufeffTime window between rounds in minutes",
+        "1": "\ufeffTime window between rounds in minutes",
+        "2": "\ufeffTime window between rounds in minutes"
+    },
+    "To": {
+        "0": "\ufeffTo",
+        "1": "\ufeffTo",
+        "2": "\ufeffTo"
+    },
     "To Do": {
         "0": "\ufeffTo Do",
         "1": "\ufeffTo Do",
         "2": "\ufeffTo Do"
     },
+    "Type a list of user emails separated by \";\"": {
+        "0": "\ufeffType a list of user emails separated by \";\"",
+        "1": "\ufeffType a list of user emails separated by \";\"",
+        "2": "\ufeffType a list of user emails separated by \";\""
+    },
+    "Type as much tags as you want here, press TAB key to add the to the list": {
+        "0": "\ufeffType as much tags as you want here, press TAB key to add the to the list",
+        "1": "\ufeffType as much tags as you want here, press TAB key to add the to the list",
+        "2": "\ufeffType as much tags as you want here, press TAB key to add the to the list"
+    },
     "Update project estimations": {
         "0": "\ufeffUpdate project estimations",
         "1": "\ufeffUpdate project estimations",
         "2": "\ufeffUpdate project estimations"
+    },
+    "Updated project properties": {
+        "0": "\ufeffUpdated project properties",
+        "1": "\ufeffUpdated project properties",
+        "2": "\ufeffUpdated project properties"
+    },
+    "Weeks": {
+        "0": "\ufeffWeeks",
+        "1": "\ufeffWeeks",
+        "2": "\ufeffWeeks"
+    },
+    "Wideband-delphi": {
+        "0": "\ufeffWideband-delphi",
+        "1": "\ufeffWideband-delphi",
+        "2": "\ufeffWideband-delphi"
+    },
+    "Write some comment on the progress": {
+        "0": "\ufeffWrite some comment on the progress",
+        "1": "\ufeffWrite some comment on the progress",
+        "2": "\ufeffWrite some comment on the progress"
+    },
+    "You do not belong to the estimation team": {
+        "0": "\ufeffYou do not belong to the estimation team",
+        "1": "\ufeffYou do not belong to the estimation team",
+        "2": "\ufeffYou do not belong to the estimation team"
+    },
+    "You must be logged-in to view the dashboard": {
+        "0": "\ufeffYou must be logged-in to view the dashboard",
+        "1": "\ufeffYou must be logged-in to view the dashboard",
+        "2": "\ufeffYou must be logged-in to view the dashboard"
+    },
+    "You must choose a team for the project before asigning the task": {
+        "0": "\ufeffYou must choose a team for the project before asigning the task",
+        "1": "\ufeffYou must choose a team for the project before asigning the task",
+        "2": "\ufeffYou must choose a team for the project before asigning the task"
+    },
+    "You must have project admin rights for this action": {
+        "0": "\ufeffYou must have project admin rights for this action",
+        "1": "\ufeffYou must have project admin rights for this action",
+        "2": "\ufeffYou must have project admin rights for this action"
+    },
+    "You need admin privileges to update project properties": {
+        "0": "\ufeffYou need admin privileges to update project properties",
+        "1": "\ufeffYou need admin privileges to update project properties",
+        "2": "\ufeffYou need admin privileges to update project properties"
+    },
+    "You need project admin rights for managing links": {
+        "0": "\ufeffYou need project admin rights for managing links",
+        "1": "\ufeffYou need project admin rights for managing links",
+        "2": "\ufeffYou need project admin rights for managing links"
+    },
+    "You need project admin rights for managing phases": {
+        "0": "\ufeffYou need project admin rights for managing phases",
+        "1": "\ufeffYou need project admin rights for managing phases",
+        "2": "\ufeffYou need project admin rights for managing phases"
+    },
+    "You need project admin rights for managing stages": {
+        "0": "\ufeffYou need project admin rights for managing stages",
+        "1": "\ufeffYou need project admin rights for managing stages",
+        "2": "\ufeffYou need project admin rights for managing stages"
+    },
+    "You need project admin rights for this action": {
+        "0": "\ufeffYou need project admin rights for this action",
+        "1": "\ufeffYou need project admin rights for this action",
+        "2": "\ufeffYou need project admin rights for this action"
+    },
+    "You need project rights for managing tasks": {
+        "0": "\ufeffYou need project rights for managing tasks",
+        "1": "\ufeffYou need project rights for managing tasks",
+        "2": "\ufeffYou need project rights for managing tasks"
+    },
+    "Your project has no team members": {
+        "0": "\ufeffYour project has no team members",
+        "1": "\ufeffYour project has no team members",
+        "2": "\ufeffYour project has no team members"
     },
     "dog": {
         "0": "\ufeffdog",
