@@ -113,7 +113,7 @@ def index():
                 T=T)
 
 @action("project_create")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def project_create():
     db.project.admins.writable = False
     db.project.admins.readable = False
@@ -136,7 +136,7 @@ def project_select(project):
     redirect(URL("index"))
 
 @action("project_edit")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def project_edit():
     project = db(db.project.id==session.project).select().first()
     if not auth.user_id in (project.admins or []):
@@ -153,7 +153,7 @@ def project_edit():
     return dict(form=form, T=T)
 
 @action("admins_add")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def admins_add():
     project = db(db.project.id == session.project).select().first()
     if project.admins == None:
@@ -191,7 +191,7 @@ def admins_add():
     return dict(form=form, T=T)
 
 @action("team_add")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def team_add():
     project = db(db.project.id == session.project).select().first()
     if project.team == None:
@@ -230,7 +230,7 @@ def team_add():
 
 
 @action("admins_remove")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def admins_remove():
     project = db(db.project.id == session.project).select().first()
     if project.admins == None:
@@ -268,7 +268,7 @@ def admins_remove():
     return dict(form=form, T=T)
 
 @action("team_remove")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def team_remove():
     project = db(db.project.id == session.project).select().first()
     if project.team == None:
@@ -306,7 +306,7 @@ def team_remove():
     return dict(form=form, T=T)
 
 @action("phases")
-@action.uses("generic.html", auth.user, T)
+@action.uses("grid.html", auth.user, T)
 def phases():
     if session.project:
         project = db(db.project.id == session.project).select().first()
@@ -323,7 +323,7 @@ def phases():
         redirect(URL("index"))
 
 @action("stages")
-@action.uses("generic.html", auth.user, T)
+@action.uses("grid.html", auth.user, T)
 def stages():
     if session.project:
         project = db(db.project.id == session.project).select().first()
@@ -395,7 +395,7 @@ def tasks():
         redirect(URL("index"))
 
 @action("links")
-@action.uses("generic.html", auth.user, T)
+@action.uses("links.html", auth.user, T)
 def links():
     if session.project:
         project = db(db.project.id == session.project).select().first()
@@ -404,7 +404,7 @@ def links():
             grid = Grid(query=db.link.project==project.id,
                         create=False,
                         editable=False)
-            return dict(new_link=A("Add link",
+            return dict(new_link=A(T("Add link"),
                                    _href=URL("link")),
                         grid=grid, T=T)
         else:
@@ -415,7 +415,7 @@ def links():
         redirect(URL("index"))
 
 @action("link")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def link():
     if session.project:
         project = db(db.project.id == session.project).select().first()
@@ -492,7 +492,7 @@ def link():
     return dict(form=form, T=T)
 
 @action("delphi/<task_id:int>")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def delphi(task_id):
     # Project time wideband-delphi estimation
     # Here an admin can setup the process
@@ -559,7 +559,7 @@ def delphi(task_id):
     return dict(form=form, T=T)
 
 @action("estimate/<task_id:int>")
-@action.uses("generic.html", auth.user, T)
+@action.uses("estimate.html", auth.user, T)
 def estimate(task_id):
     # get the delphi record
     delphi = db(db.delphi.task == task_id).select().first()
@@ -624,10 +624,6 @@ def estimate(task_id):
                 # convert submitted values to timedelta
                 computed = datetime.timedelta(hours=estimated_compute(form.vars))
 
-                # test if time for this round is up
-                # and in that case, abort record creation
-                # if remaining_window.total_seconds()
-
                 if db.estimation.round.default < rounds_theoretical:
                     flash.set(T("Hold on... The time for this round is up!"))
                     redirect(URL("delphi_panel"))
@@ -647,7 +643,7 @@ def estimate(task_id):
                     remaining_window=remaining_window, task=task, T=T)
 
 @action("estimations")
-@action.uses("generic.html", auth.user, T)
+@action.uses("grid.html", auth.user, T)
 def estimations():
     # A grid of estimations for project admins
     project = db(db.project.id==session.project).select().first()
@@ -664,7 +660,7 @@ def estimations():
     return dict(grid=grid, T=T)
 
 @action("budget")
-@action.uses("generic.html", auth.user, T)
+@action.uses("budget.html", auth.user, T)
 def budget():
     if not session.project:
         flash.set(T("Choose a project first"))
@@ -1172,7 +1168,7 @@ def kanban_board():
 
 
 @action("log")
-@action.uses("generic.html", auth.user, T)
+@action.uses("grid.html", auth.user, T)
 def log():
     # returns a grid of task progress
     if session.project:
@@ -1302,7 +1298,7 @@ def delphi_panel():
                 delphi_tasks=delphi_tasks, T=T)
 
 @action("progress/<task_id:int>")
-@action.uses("generic.html", auth.user, T)
+@action.uses("form.html", auth.user, T)
 def progress(task_id):
     # Check there is an active project
     if session.project:
