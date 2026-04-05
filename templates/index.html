@@ -63,8 +63,8 @@
   [[if project:]]
     <span id="dashboard">
       <h3>[[=T("Project: %s") % project.name]]</h3>
-      <p>Admins: [[=", ".join(admin.username for admin in admins)]]</p>
-      <p>Team: [[=", ".join(t.username for t in team)]]</p>
+      <p>[[=T("Admins")]]: [[=", ".join(admin.username for admin in admins)]]</p>
+      <p>[[=T("Team")]]: [[=", ".join(t.username for t in team)]]</p>
       [[if project.budget != None:]]
         <p>[[=T("Budget: %s") % project.budget]]</p>
       [[else:]]

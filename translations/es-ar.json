@@ -23,6 +23,16 @@
     "(window) minutes": {
         "0": "minutos de la ventana"
     },
+    "Account is blocked": {
+        "0": "\ufeffAccount is blocked",
+        "1": "\ufeffAccount is blocked",
+        "2": "\ufeffAccount is blocked"
+    },
+    "Account needs to be approved": {
+        "0": "\ufeffAccount needs to be approved",
+        "1": "\ufeffAccount needs to be approved",
+        "2": "\ufeffAccount needs to be approved"
+    },
     "Actions": {
         "0": "Acciones"
     },
@@ -35,11 +45,22 @@
     "Add admins": {
         "0": "Agregar administradores"
     },
+    "Add link": {
+        "0": "Agregar v\u00ednculo"
+    },
     "Add team members": {
         "0": "Agregar miembros al equipo"
     },
     "Add team users to %s": {
         "0": "Agregar miembros del equipo a %s"
+    },
+    "Admins": {
+        "0": "Administradores"
+    },
+    "Authentication Code": {
+        "0": "\ufeffAuthentication Code",
+        "1": "\ufeffAuthentication Code",
+        "2": "\ufeffAuthentication Code"
     },
     "Both fields cannot be the same node!": {
         "0": "\u00a1Ambos campos no pueden ser el mismo nodo!"
@@ -49,6 +70,11 @@
     },
     "Budget: not available": {
         "0": "Presupuesto: no disponible"
+    },
+    "By {first_name}, you have been erased from our system": {
+        "0": "\ufeffBy {first_name}, you have been erased from our system",
+        "1": "\ufeffBy {first_name}, you have been erased from our system",
+        "2": "\ufeffBy {first_name}, you have been erased from our system"
     },
     "Change Password": {
         "0": "Cambiar contrase\u00f1a"
@@ -68,8 +94,26 @@
     "Completed": {
         "0": "Finalizada"
     },
+    "Confirm email": {
+        "0": "\ufeffConfirm email",
+        "1": "\ufeffConfirm email",
+        "2": "\ufeffConfirm email"
+    },
+    "Created By": {
+        "0": "\ufeffCreated By",
+        "1": "\ufeffCreated By",
+        "2": "\ufeffCreated By"
+    },
+    "Created On": {
+        "0": "\ufeffCreated On",
+        "1": "\ufeffCreated On",
+        "2": "\ufeffCreated On"
+    },
     "Critical Path Method (CPM)": {
         "0": "M\u00e9todo de la Ruta Cr\u00edtica (CPM)"
+    },
+    "Current total project budget: %s": {
+        "0": "Presupuesto total del proyecto actualizado: %s"
     },
     "Days": {
         "0": "D\u00edas"
@@ -108,6 +152,16 @@
     "Edit project": {
         "0": "Editar proyecto"
     },
+    "Email": {
+        "0": "\ufeffEmail",
+        "1": "\ufeffEmail",
+        "2": "\ufeffEmail"
+    },
+    "Email verified": {
+        "0": "\ufeffEmail verified",
+        "1": "\ufeffEmail verified",
+        "2": "\ufeffEmail verified"
+    },
     "Estimated (hours)": {
         "0": "Tiempo estimado (en horas)"
     },
@@ -126,6 +180,9 @@
     "Estimations grid": {
         "0": "Grilla de estimaciones"
     },
+    "First Name": {
+        "0": "Nombres"
+    },
     "For admins": {
         "0": "Para administradores"
     },
@@ -141,11 +198,21 @@
     "Hello World from {name}": {
         "0": "Hola mundo de {name}"
     },
+    "Hello {first_name}, click {link} to change password": {
+        "0": "\ufeffHello {first_name}, click {link} to change password",
+        "1": "\ufeffHello {first_name}, click {link} to change password",
+        "2": "\ufeffHello {first_name}, click {link} to change password"
+    },
     "Hold on... The time for this round is up!": {
         "0": "Un momento... \u00a1Termin\u00f3 el tiempo de esta ronda!"
     },
     "In progress": {
         "0": "En curso"
+    },
+    "Invalid Credentials": {
+        "0": "\ufeffInvalid Credentials",
+        "1": "\ufeffInvalid Credentials",
+        "2": "\ufeffInvalid Credentials"
     },
     "Kanban board": {
         "0": "Tablero Kanban"
@@ -160,8 +227,18 @@
         "1": "\ufeffLS",
         "2": "\ufeffLS"
     },
+    "Last Name": {
+        "0": "\ufeffLast Name",
+        "1": "\ufeffLast Name",
+        "2": "\ufeffLast Name"
+    },
     "Link from parent": {
         "0": "V\u00ednculo desde nodo padre"
+    },
+    "Link invalid or expired": {
+        "0": "\ufeffLink invalid or expired",
+        "1": "\ufeffLink invalid or expired",
+        "2": "\ufeffLink invalid or expired"
     },
     "Link stored with record id #%d": {
         "0": "Se almacen\u00f3 el v\u00ednculo con id de registro #%d"
@@ -178,13 +255,33 @@
     "Login": {
         "0": "Autenticaci\u00f3n"
     },
+    "Login required": {
+        "0": "\ufeffLogin required",
+        "1": "\ufeffLogin required",
+        "2": "\ufeffLogin required"
+    },
     "Logout": {
         "0": "Cerrar sesi\u00f3n"
+    },
+    "Lost Password": {
+        "0": "\ufeffLost Password",
+        "1": "\ufeffLost Password",
+        "2": "\ufeffLost Password"
     },
     "Managed": {
         "0": "Administrado",
         "1": "Administrado",
         "2": "Administrados"
+    },
+    "Modified By": {
+        "0": "\ufeffModified By",
+        "1": "\ufeffModified By",
+        "2": "\ufeffModified By"
+    },
+    "Modified On": {
+        "0": "\ufeffModified On",
+        "1": "\ufeffModified On",
+        "2": "\ufeffModified On"
     },
     "Months": {
         "0": "Meses"
@@ -196,6 +293,11 @@
         "0": "Nuevo",
         "1": "Nuevo",
         "2": "Nuevos"
+    },
+    "New Password": {
+        "0": "\ufeffNew Password",
+        "1": "\ufeffNew Password",
+        "2": "\ufeffNew Password"
     },
     "New delphi estimation started": {
         "0": "Se inici\u00f3 una nueva sesi\u00f3n Wideband-delphi"
@@ -233,6 +335,11 @@
     "Not available": {
         "0": "No disponible"
     },
+    "Old Password": {
+        "0": "\ufeffOld Password",
+        "1": "\ufeffOld Password",
+        "2": "\ufeffOld Password"
+    },
     "Only admins can link tasks": {
         "0": "S\u00f3lo los administradores pueden vincular tareas"
     },
@@ -242,6 +349,36 @@
     "Only applies for done status; defaults to current time": {
         "0": "S\u00f3lo aplica a estado finalizado; por defecto es el tiempo actual"
     },
+    "Password": {
+        "0": "\ufeffPassword",
+        "1": "\ufeffPassword",
+        "2": "\ufeffPassword"
+    },
+    "Password (again)": {
+        "0": "\ufeffPassword (again)",
+        "1": "\ufeffPassword (again)",
+        "2": "\ufeffPassword (again)"
+    },
+    "Password changed": {
+        "0": "\ufeffPassword changed",
+        "1": "\ufeffPassword changed",
+        "2": "\ufeffPassword changed"
+    },
+    "Password doesn't match": {
+        "0": "\ufeffPassword doesn't match",
+        "1": "\ufeffPassword doesn't match",
+        "2": "\ufeffPassword doesn't match"
+    },
+    "Password reset": {
+        "0": "\ufeffPassword reset",
+        "1": "\ufeffPassword reset",
+        "2": "\ufeffPassword reset"
+    },
+    "Password reset link sent": {
+        "0": "\ufeffPassword reset link sent",
+        "1": "\ufeffPassword reset link sent",
+        "2": "\ufeffPassword reset link sent"
+    },
     "Pending": {
         "0": "Pendiente"
     },
@@ -250,6 +387,19 @@
     },
     "Phase. This field is mandatory": {
         "0": "Fase. Este campo es obligatorio"
+    },
+    "Phone Number": {
+        "0": "\ufeffPhone Number",
+        "1": "\ufeffPhone Number",
+        "2": "\ufeffPhone Number"
+    },
+    "Profile saved": {
+        "0": "\ufeffProfile saved",
+        "1": "\ufeffProfile saved",
+        "2": "\ufeffProfile saved"
+    },
+    "Progress": {
+        "0": "Avance"
     },
     "Progress: %s": {
         "0": "Avance: %s"
@@ -290,6 +440,16 @@
     "Projected curve (Blue Line)": {
         "0": "Curva proyectada (l\u00ednea azul)"
     },
+    "Register": {
+        "0": "\ufeffRegister",
+        "1": "\ufeffRegister",
+        "2": "\ufeffRegister"
+    },
+    "Registration is pending": {
+        "0": "\ufeffRegistration is pending",
+        "1": "\ufeffRegistration is pending",
+        "2": "\ufeffRegistration is pending"
+    },
     "Remove admin users from %s": {
         "0": "Eliminar usuarios adminstrativos de %s"
     },
@@ -305,6 +465,11 @@
     "Report": {
         "0": "Reporte"
     },
+    "Request": {
+        "0": "\ufeffRequest",
+        "1": "\ufeffRequest",
+        "2": "\ufeffRequest"
+    },
     "Round/total": {
         "0": "Ruedas/total"
     },
@@ -316,6 +481,12 @@
     },
     "Set a project start time before checking advance": {
         "0": "Debes establecer un tiempo de inicio del proyecto antes de hacer seguimiento"
+    },
+    "Sign In": {
+        "0": "Ingresar"
+    },
+    "Sign Up": {
+        "0": "Registro"
     },
     "Sign up": {
         "0": "Registro"
@@ -338,11 +509,20 @@
     "Start date: %s": {
         "0": "Fecha de inicio: %s"
     },
+    "Submit": {
+        "0": "Enviar"
+    },
     "Task": {
         "0": "Tarea"
     },
+    "Task: %s": {
+        "0": "Tarea: %s"
+    },
     "Tasks": {
         "0": "Tareas"
+    },
+    "Team": {
+        "0": "Equipo"
     },
     "Team member": {
         "0": "Miembro del equipo"
@@ -355,6 +535,9 @@
     },
     "Time remaining": {
         "0": "Tiempo restante"
+    },
+    "Time remaining (hours) for this round: %f": {
+        "0": "Quedan %f horas de la rueda actual"
     },
     "Time window between rounds in days": {
         "0": "Ventana de tiempo entre rondas en d\u00edas"
@@ -371,11 +554,21 @@
     "To Do": {
         "0": "Por hacer"
     },
+    "Two factor max tries exceeded": {
+        "0": "\ufeffTwo factor max tries exceeded",
+        "1": "\ufeffTwo factor max tries exceeded",
+        "2": "\ufeffTwo factor max tries exceeded"
+    },
     "Type a list of user emails separated by \";\"": {
         "0": "Ingresa una lista de email de usuarios separados por \";\""
     },
     "Type as much tags as you want here, press TAB key to add the to the list": {
         "0": "Puedes agregar tantas etiquetas como quieras, presiona la tecla TAB para agregarlas a la lista"
+    },
+    "Unsubscribe confirmation": {
+        "0": "\ufeffUnsubscribe confirmation",
+        "1": "\ufeffUnsubscribe confirmation",
+        "2": "\ufeffUnsubscribe confirmation"
     },
     "Update project estimations": {
         "0": "Actualizar estimaciones del proyecto"
@@ -383,8 +576,38 @@
     "Updated project properties": {
         "0": "Actualizar las propiedades del proyecto"
     },
+    "User logout": {
+        "0": "\ufeffUser logout",
+        "1": "\ufeffUser logout",
+        "2": "\ufeffUser logout"
+    },
+    "User registered": {
+        "0": "\ufeffUser registered",
+        "1": "\ufeffUser registered",
+        "2": "\ufeffUser registered"
+    },
+    "Username": {
+        "0": "\ufeffUsername",
+        "1": "\ufeffUsername",
+        "2": "\ufeffUsername"
+    },
+    "Username or Email": {
+        "0": "\ufeffUsername or Email",
+        "1": "\ufeffUsername or Email",
+        "2": "\ufeffUsername or Email"
+    },
+    "Verification code does not match": {
+        "0": "\ufeffVerification code does not match",
+        "1": "\ufeffVerification code does not match",
+        "2": "\ufeffVerification code does not match"
+    },
     "Weeks": {
         "0": "Semanas"
+    },
+    "Welcome {first_name}, click {link} to confirm your email": {
+        "0": "\ufeffWelcome {first_name}, click {link} to confirm your email",
+        "1": "\ufeffWelcome {first_name}, click {link} to confirm your email",
+        "2": "\ufeffWelcome {first_name}, click {link} to confirm your email"
     },
     "Wideband-delphi": {
         "0": "Wideband-delphi"
@@ -429,6 +652,36 @@
         "0": "Perro",
         "1": "Perro",
         "2": "Perros"
+    },
+    "invalid": {
+        "0": "\ufeffinvalid",
+        "1": "\ufeffinvalid",
+        "2": "\ufeffinvalid"
+    },
+    "invalid current password": {
+        "0": "\ufeffinvalid current password",
+        "1": "\ufeffinvalid current password",
+        "2": "\ufeffinvalid current password"
+    },
+    "invalid token": {
+        "0": "\ufeffinvalid token",
+        "1": "\ufeffinvalid token",
+        "2": "\ufeffinvalid token"
+    },
+    "new password is the same as previous password": {
+        "0": "\ufeffnew password is the same as previous password",
+        "1": "\ufeffnew password is the same as previous password",
+        "2": "\ufeffnew password is the same as previous password"
+    },
+    "new password was already used": {
+        "0": "\ufeffnew password was already used",
+        "1": "\ufeffnew password was already used",
+        "2": "\ufeffnew password was already used"
+    },
+    "no post payload": {
+        "0": "\ufeffno post payload",
+        "1": "\ufeffno post payload",
+        "2": "\ufeffno post payload"
     },
     "thing": {
         "0": "cosa",

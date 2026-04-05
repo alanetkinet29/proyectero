@@ -8,10 +8,11 @@
 
 <div class="section">
   <div class="vars">
-    <ul>
-      <li>[[=T("Task: %s") % task.name]]</li>
-      <li>[[=T("Time remaining (hours) for this round: %f") % (remaining_window.total_seconds()/3600)]]</li>
-    </ul>
-    <div>[[=form]]</div>
   </div>
 </div>
+
+<ul>
+  <li>[[=T("Task: %s") % task.name]]</li>
+  <li>[[=T("Time remaining (hours) for this round: %f") % (remaining_window.total_seconds()/3600)]]</li>
+</ul>
+<div>[[=form]]</div>

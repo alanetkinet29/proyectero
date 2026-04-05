@@ -99,6 +99,83 @@ auth.param.login_expiration_time = 3600
 auth.param.password_complexity = {"entropy": settings.PASSWORD_ENTROPY}
 auth.param.block_previous_password_num = 3
 auth.param.default_login_enabled = settings.DEFAULT_LOGIN_ENABLED
+
+
+# #######################################################
+# Proyectero project (py4web app): workaround to support
+# internationalization for Auth class
+# #######################################################
+
+auth.param.messages = {
+        "verify_email": {
+            "subject": T("Confirm email"),
+            "body": T("Welcome {first_name}, click {link} to confirm your email"),
+        },
+        "reset_password": {
+            "subject": T("Password reset"),
+            "body": T("Hello {first_name}, click {link} to change password"),
+        },
+        "unsubscribe": {
+            "subject": T("Unsubscribe confirmation"),
+            "body": T("By {first_name}, you have been erased from our system"),
+        },
+        "flash": {
+            "user-registered": T("User registered"),
+            "password-reset-link-sent": T("Password reset link sent"),
+            "password-changed": T("Password changed"),
+            "profile-saved": T("Profile saved"),
+            "user-logout": T("User logout"),
+            "email-verified": T("Email verified"),
+            "link-expired": T("Link invalid or expired"),
+            "login-required": T("Login required"),
+        },
+        "labels": {
+            "username": T("Username"),
+            "email": T("Email"),
+            "first_name": T("First Name"),
+            "last_name": T("Last Name"),
+            "phone_number": T("Phone Number"),
+            "username_or_email": T("Username or Email"),
+            "password": T("Password"),
+            "new_password": T("New Password"),
+            "old_password": T("Old Password"),
+            "login_password": T("Password"),
+            "password_again": T("Password (again)"),
+            "created_on": T("Created On"),
+            "created_by": T("Created By"),
+            "modified on": T("Modified On"),
+            "modified by": T("Modified By"),
+            "two_factor": T("Authentication Code"),
+        },
+        "buttons": {
+            "lost-password": T("Lost Password"),
+            "register": T("Register"),
+            "request": T("Request"),
+            "sign-in": T("Sign In"),
+            "sign-up": T("Sign Up"),
+            "submit": T("Submit"),
+        },
+        "errors": {
+            "registration_is_pending": T("Registration is pending"),
+            "account_is_blocked": T("Account is blocked"),
+            "account_needs_to_be_approved": T("Account needs to be approved"),
+            "invalid_credentials": T("Invalid Credentials"),
+            "invalid_token": T("invalid token"),
+            "password_doesnt_match": T("Password doesn't match"),
+            "invalid_current_password": T("invalid current password"),
+            "new_password_is_the_same_as_previous_password": T("new password is the same as previous password"),
+            "new_password_was_already_used": T("new password was already used"),
+            "invalid": T("invalid"),
+            "no_post_payload": T("no post payload"),
+            "two_factor": T("Verification code does not match"),
+            "two_factor_max_tries": T("Two factor max tries exceeded"),
+        },
+    }
+
+# ##############################################################
+# Instantiate the object and actions that handle auth (2nd part)
+# ##############################################################
+
 auth.define_tables()
 auth.fix_actions()
 auth.logger = logger

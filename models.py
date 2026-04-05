@@ -11,6 +11,7 @@ from yatl.helpers import XML
 import datetime
 from decimal import Decimal
 from .common import T
+from .common import auth
 
 ### Define your table below
 #

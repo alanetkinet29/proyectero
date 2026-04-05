@@ -313,7 +313,7 @@ def phases():
         if auth.user_id in (project.admins or []):
             db.phase.project.default = session.project
             db.phase.project.writable = False
-            grid = Grid(query=db.phase.project==project.id)
+            grid = Grid(query=db.phase.project==project.id, T=T)
             return dict(grid=grid, T=T)
         else:
             flash.set(T("You need project admin rights for managing phases"))
@@ -330,7 +330,7 @@ def stages():
         phases = db(db.phase.project == project.id).select()
         phase_list = [phase.id for phase in phases]
         if auth.user_id in (project.admins or []):
-            grid = Grid(query=db.stage.phase.belongs(phase_list))
+            grid = Grid(query=db.stage.phase.belongs(phase_list), T=T)
             return dict(grid=grid, T=T)
         else:
             flash.set(T("You need project admin rights for managing stages"))
@@ -340,7 +340,7 @@ def stages():
         redirect(URL("index"))
 
 @action("tasks")
-@action.uses("tasks.html", auth.user, T)
+@action.uses("grid.html", auth.user, T)
 def tasks():
     if session.project:
         project = db(db.project.id == session.project).select().first()
@@ -359,17 +359,10 @@ def tasks():
             db.task.team.writable = False
             db.task.team.comment = T("You must choose a team for the project before asigning the task")
         if is_admin or is_team:
-            # too many columns makes the grid go out of
-            # the browser's bounds
-            
-            # db.task.months.readable = db.task.days.readable = \
-            # db.task.hours.readable = \
-            # db.task.minutes.readable = False
-
             columns = [db.task.id, db.task.name, db.task.tags,
                        db.task.stage, db.task.status,
                        db.task.team,
-                       Column("Progress", lambda row: A(T("Report"),
+                       Column(T("Progress"), lambda row: A(T("Report"),
                               _href=URL("progress/%d" % row.id)) \
                                 if auth.user_id in (row.team or [])\
                                 else "-"),
@@ -385,7 +378,7 @@ def tasks():
                         columns=columns,
                         create=is_admin,
                         editable=is_admin,
-                        deletable=is_admin)
+                        deletable=is_admin, T=T)
             return dict(grid=grid, T=T)
         else:
             flash.set(T("You need project rights for managing tasks"))
@@ -403,7 +396,7 @@ def links():
             # db.link.parent_table.readable = False
             grid = Grid(query=db.link.project==project.id,
                         create=False,
-                        editable=False)
+                        editable=False, T=T)
             return dict(new_link=A(T("Add link"),
                                    _href=URL("link")),
                         grid=grid, T=T)
@@ -656,7 +649,7 @@ def estimations():
     tasks = db(db.task.stage.belongs([stage.id for stage in stages])).select()
     query = db.estimation.task.belongs([task.id for task in tasks])
     db.estimation.expert.readable=False
-    grid = Grid(query=query, create=False, editable=False, deletable=False)
+    grid = Grid(query=query, create=False, editable=False, deletable=False, T=T)
     return dict(grid=grid, T=T)
 
 @action("budget")
@@ -673,7 +666,7 @@ def budget():
         # Calculate the total budget
         budget_set = db(db.budget.project == project.id).select()
         total = sum([row.amount for row in budget_set])
-        grid = Grid(query=db.budget.project==project.id)
+        grid = Grid(query=db.budget.project==project.id, T=T)
     return dict(grid=grid, total=total, T=T)
 
 @action("gantt")
@@ -1203,9 +1196,9 @@ def log():
                                      db.task.id,
                                      db.task._format))
 
-    grid=Grid(query=db.log.project==project.id,
+    grid = Grid(query=db.log.project==project.id,
                   create=True, editable=change_log,
-                  deletable=change_log)
+                  deletable=change_log, T=T)
 
     return dict(grid=grid, T=T)
 
