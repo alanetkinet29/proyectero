@@ -179,6 +179,12 @@ def link_cleanup():
     # so any related link is removed
     pass
 
+# Internationalize project field labels
+for table in db:
+    for field in table:
+        if type(field.label) == str:
+            field.label = T(field.label)
+
 db.project.status.default = STATUSES[1]
 db.project.status.requires = IS_IN_SET(STATUSES)
 db.project.name.requires = [IS_NOT_EMPTY(), IS_NOT_IN_DB(db, "project.name")]
@@ -241,6 +247,9 @@ db.estimation.estimated.compute = estimated_compute
 db.estimation.estimated.label = T("Estimated (hours)")
 
 db.stage.phase.comment = T("Phase. This field is mandatory")
+db.stage.phase.requires = [IS_NOT_EMPTY(), IS_IN_DB(db,
+            db.phase.id, db.phase._format)]
+
 
 db.link.id.represent = link_id_represent
 
@@ -256,6 +265,3 @@ db.estimation.task.writable = False
 db.estimation.round.writable = False
 db.estimation.estimated.readable = False
 db.estimation.estimated.writable = False
-
-db.stage.phase.requires = [IS_NOT_EMPTY(), IS_IN_DB(db,
-            db.phase.id, db.phase._format)]

@@ -24,14 +24,10 @@
         "0": "minutos de la ventana"
     },
     "Account is blocked": {
-        "0": "\ufeffAccount is blocked",
-        "1": "\ufeffAccount is blocked",
-        "2": "\ufeffAccount is blocked"
+        "0": "La cuenta est\u00e1 bloqueada"
     },
     "Account needs to be approved": {
-        "0": "\ufeffAccount needs to be approved",
-        "1": "\ufeffAccount needs to be approved",
-        "2": "\ufeffAccount needs to be approved"
+        "0": "La cuenta requiere aprobaci\u00f3n"
     },
     "Actions": {
         "0": "Acciones"
@@ -58,9 +54,7 @@
         "0": "Administradores"
     },
     "Authentication Code": {
-        "0": "\ufeffAuthentication Code",
-        "1": "\ufeffAuthentication Code",
-        "2": "\ufeffAuthentication Code"
+        "0": "C\u00f3digo de autenticaci\u00f3n"
     },
     "Both fields cannot be the same node!": {
         "0": "\u00a1Ambos campos no pueden ser el mismo nodo!"
@@ -72,9 +66,7 @@
         "0": "Presupuesto: no disponible"
     },
     "By {first_name}, you have been erased from our system": {
-        "0": "\ufeffBy {first_name}, you have been erased from our system",
-        "1": "\ufeffBy {first_name}, you have been erased from our system",
-        "2": "\ufeffBy {first_name}, you have been erased from our system"
+        "0": "Has sido eliminado del sistema por {first_name}"
     },
     "Change Password": {
         "0": "Cambiar contrase\u00f1a"
@@ -95,19 +87,13 @@
         "0": "Finalizada"
     },
     "Confirm email": {
-        "0": "\ufeffConfirm email",
-        "1": "\ufeffConfirm email",
-        "2": "\ufeffConfirm email"
+        "0": "Confirmar email"
     },
     "Created By": {
-        "0": "\ufeffCreated By",
-        "1": "\ufeffCreated By",
-        "2": "\ufeffCreated By"
+        "0": "Creado por"
     },
     "Created On": {
-        "0": "\ufeffCreated On",
-        "1": "\ufeffCreated On",
-        "2": "\ufeffCreated On"
+        "0": "Creado el"
     },
     "Critical Path Method (CPM)": {
         "0": "M\u00e9todo de la Ruta Cr\u00edtica (CPM)"
@@ -153,14 +139,10 @@
         "0": "Editar proyecto"
     },
     "Email": {
-        "0": "\ufeffEmail",
-        "1": "\ufeffEmail",
-        "2": "\ufeffEmail"
+        "0": "Email"
     },
     "Email verified": {
-        "0": "\ufeffEmail verified",
-        "1": "\ufeffEmail verified",
-        "2": "\ufeffEmail verified"
+        "0": "Mail verificado"
     },
     "Estimated (hours)": {
         "0": "Tiempo estimado (en horas)"
@@ -199,9 +181,7 @@
         "0": "Hola mundo de {name}"
     },
     "Hello {first_name}, click {link} to change password": {
-        "0": "\ufeffHello {first_name}, click {link} to change password",
-        "1": "\ufeffHello {first_name}, click {link} to change password",
-        "2": "\ufeffHello {first_name}, click {link} to change password"
+        "0": "Hola {first_name}, haz clic en {link} para cambiar la contrase\u00f1a"
     },
     "Hold on... The time for this round is up!": {
         "0": "Un momento... \u00a1Termin\u00f3 el tiempo de esta ronda!"
@@ -210,9 +190,7 @@
         "0": "En curso"
     },
     "Invalid Credentials": {
-        "0": "\ufeffInvalid Credentials",
-        "1": "\ufeffInvalid Credentials",
-        "2": "\ufeffInvalid Credentials"
+        "0": "Datos de acceso inv\u00e1lidos"
     },
     "Kanban board": {
         "0": "Tablero Kanban"
@@ -228,17 +206,13 @@
         "2": "\ufeffLS"
     },
     "Last Name": {
-        "0": "\ufeffLast Name",
-        "1": "\ufeffLast Name",
-        "2": "\ufeffLast Name"
+        "0": "Apellido"
     },
     "Link from parent": {
         "0": "V\u00ednculo desde nodo padre"
     },
     "Link invalid or expired": {
-        "0": "\ufeffLink invalid or expired",
-        "1": "\ufeffLink invalid or expired",
-        "2": "\ufeffLink invalid or expired"
+        "0": "El link no es v\u00e1lido o venci\u00f3"
     },
     "Link stored with record id #%d": {
         "0": "Se almacen\u00f3 el v\u00ednculo con id de registro #%d"
@@ -256,17 +230,13 @@
         "0": "Autenticaci\u00f3n"
     },
     "Login required": {
-        "0": "\ufeffLogin required",
-        "1": "\ufeffLogin required",
-        "2": "\ufeffLogin required"
+        "0": "Se requiere ingreso"
     },
     "Logout": {
         "0": "Cerrar sesi\u00f3n"
     },
     "Lost Password": {
-        "0": "\ufeffLost Password",
-        "1": "\ufeffLost Password",
-        "2": "\ufeffLost Password"
+        "0": "Olvid\u00e9 mi contrase\u00f1a"
     },
     "Managed": {
         "0": "Administrado",
@@ -274,14 +244,10 @@
         "2": "Administrados"
     },
     "Modified By": {
-        "0": "\ufeffModified By",
-        "1": "\ufeffModified By",
-        "2": "\ufeffModified By"
+        "0": "Modificado por"
     },
     "Modified On": {
-        "0": "\ufeffModified On",
-        "1": "\ufeffModified On",
-        "2": "\ufeffModified On"
+        "0": "Modificado el"
     },
     "Months": {
         "0": "Meses"
@@ -295,9 +261,7 @@
         "2": "Nuevos"
     },
     "New Password": {
-        "0": "\ufeffNew Password",
-        "1": "\ufeffNew Password",
-        "2": "\ufeffNew Password"
+        "0": "Nueva contrase\u00f1a"
     },
     "New delphi estimation started": {
         "0": "Se inici\u00f3 una nueva sesi\u00f3n Wideband-delphi"
@@ -336,9 +300,7 @@
         "0": "No disponible"
     },
     "Old Password": {
-        "0": "\ufeffOld Password",
-        "1": "\ufeffOld Password",
-        "2": "\ufeffOld Password"
+        "0": "Contrase\u00f1a anterior"
     },
     "Only admins can link tasks": {
         "0": "S\u00f3lo los administradores pueden vincular tareas"
@@ -350,34 +312,22 @@
         "0": "S\u00f3lo aplica a estado finalizado; por defecto es el tiempo actual"
     },
     "Password": {
-        "0": "\ufeffPassword",
-        "1": "\ufeffPassword",
-        "2": "\ufeffPassword"
+        "0": "Contrase\u00f1a"
     },
     "Password (again)": {
-        "0": "\ufeffPassword (again)",
-        "1": "\ufeffPassword (again)",
-        "2": "\ufeffPassword (again)"
+        "0": "Contrase\u00f1a (de nuevo)"
     },
     "Password changed": {
-        "0": "\ufeffPassword changed",
-        "1": "\ufeffPassword changed",
-        "2": "\ufeffPassword changed"
+        "0": "Se modific\u00f3 la contrase\u00f1a"
     },
     "Password doesn't match": {
-        "0": "\ufeffPassword doesn't match",
-        "1": "\ufeffPassword doesn't match",
-        "2": "\ufeffPassword doesn't match"
+        "0": "La contrasse\u00f1a no coincide"
     },
     "Password reset": {
-        "0": "\ufeffPassword reset",
-        "1": "\ufeffPassword reset",
-        "2": "\ufeffPassword reset"
+        "0": "Blanqueo de contrase\u00f1a"
     },
     "Password reset link sent": {
-        "0": "\ufeffPassword reset link sent",
-        "1": "\ufeffPassword reset link sent",
-        "2": "\ufeffPassword reset link sent"
+        "0": "Se envi\u00f3 un link para blanquear la contrase\u00f1a"
     },
     "Pending": {
         "0": "Pendiente"
@@ -389,14 +339,10 @@
         "0": "Fase. Este campo es obligatorio"
     },
     "Phone Number": {
-        "0": "\ufeffPhone Number",
-        "1": "\ufeffPhone Number",
-        "2": "\ufeffPhone Number"
+        "0": "N\u00famero de tel\u00e9fono"
     },
     "Profile saved": {
-        "0": "\ufeffProfile saved",
-        "1": "\ufeffProfile saved",
-        "2": "\ufeffProfile saved"
+        "0": "Perfil guardado"
     },
     "Progress": {
         "0": "Avance"
@@ -441,14 +387,10 @@
         "0": "Curva proyectada (l\u00ednea azul)"
     },
     "Register": {
-        "0": "\ufeffRegister",
-        "1": "\ufeffRegister",
-        "2": "\ufeffRegister"
+        "0": "Registro"
     },
     "Registration is pending": {
-        "0": "\ufeffRegistration is pending",
-        "1": "\ufeffRegistration is pending",
-        "2": "\ufeffRegistration is pending"
+        "0": "Registro pendiente"
     },
     "Remove admin users from %s": {
         "0": "Eliminar usuarios adminstrativos de %s"
@@ -466,9 +408,7 @@
         "0": "Reporte"
     },
     "Request": {
-        "0": "\ufeffRequest",
-        "1": "\ufeffRequest",
-        "2": "\ufeffRequest"
+        "0": "Solicitud"
     },
     "Round/total": {
         "0": "Ruedas/total"
@@ -555,9 +495,7 @@
         "0": "Por hacer"
     },
     "Two factor max tries exceeded": {
-        "0": "\ufeffTwo factor max tries exceeded",
-        "1": "\ufeffTwo factor max tries exceeded",
-        "2": "\ufeffTwo factor max tries exceeded"
+        "0": "Se alcanz\u00f3 el m\u00e1ximo de intentos de dos factores"
     },
     "Type a list of user emails separated by \";\"": {
         "0": "Ingresa una lista de email de usuarios separados por \";\""
@@ -566,9 +504,7 @@
         "0": "Puedes agregar tantas etiquetas como quieras, presiona la tecla TAB para agregarlas a la lista"
     },
     "Unsubscribe confirmation": {
-        "0": "\ufeffUnsubscribe confirmation",
-        "1": "\ufeffUnsubscribe confirmation",
-        "2": "\ufeffUnsubscribe confirmation"
+        "0": "Confirmar baja"
     },
     "Update project estimations": {
         "0": "Actualizar estimaciones del proyecto"
@@ -577,37 +513,25 @@
         "0": "Actualizar las propiedades del proyecto"
     },
     "User logout": {
-        "0": "\ufeffUser logout",
-        "1": "\ufeffUser logout",
-        "2": "\ufeffUser logout"
+        "0": "Cerrar sesi\u00f3n"
     },
     "User registered": {
-        "0": "\ufeffUser registered",
-        "1": "\ufeffUser registered",
-        "2": "\ufeffUser registered"
+        "0": "Usuario registrado"
     },
     "Username": {
-        "0": "\ufeffUsername",
-        "1": "\ufeffUsername",
-        "2": "\ufeffUsername"
+        "0": "Nombre de usuario"
     },
     "Username or Email": {
-        "0": "\ufeffUsername or Email",
-        "1": "\ufeffUsername or Email",
-        "2": "\ufeffUsername or Email"
+        "0": "Nombre de usuario o correo"
     },
     "Verification code does not match": {
-        "0": "\ufeffVerification code does not match",
-        "1": "\ufeffVerification code does not match",
-        "2": "\ufeffVerification code does not match"
+        "0": "El c\u00f3digo de verificaci\u00f3n no coincide"
     },
     "Weeks": {
         "0": "Semanas"
     },
     "Welcome {first_name}, click {link} to confirm your email": {
-        "0": "\ufeffWelcome {first_name}, click {link} to confirm your email",
-        "1": "\ufeffWelcome {first_name}, click {link} to confirm your email",
-        "2": "\ufeffWelcome {first_name}, click {link} to confirm your email"
+        "0": "Bienvenido {first_name}, haz clic en {link} para confirmar tu correo"
     },
     "Wideband-delphi": {
         "0": "Wideband-delphi"
@@ -654,34 +578,22 @@
         "2": "Perros"
     },
     "invalid": {
-        "0": "\ufeffinvalid",
-        "1": "\ufeffinvalid",
-        "2": "\ufeffinvalid"
+        "0": "Inv\u00e1lido"
     },
     "invalid current password": {
-        "0": "\ufeffinvalid current password",
-        "1": "\ufeffinvalid current password",
-        "2": "\ufeffinvalid current password"
+        "0": "Contrase\u00f1a actual inv\u00e1lida"
     },
     "invalid token": {
-        "0": "\ufeffinvalid token",
-        "1": "\ufeffinvalid token",
-        "2": "\ufeffinvalid token"
+        "0": "Token inv\u00e1lido"
     },
     "new password is the same as previous password": {
-        "0": "\ufeffnew password is the same as previous password",
-        "1": "\ufeffnew password is the same as previous password",
-        "2": "\ufeffnew password is the same as previous password"
+        "0": "La nueva contrase\u00f1a es igual a la anterior"
     },
     "new password was already used": {
-        "0": "\ufeffnew password was already used",
-        "1": "\ufeffnew password was already used",
-        "2": "\ufeffnew password was already used"
+        "0": "La contrase\u00f1a nueva ya est\u00e1 en uso"
     },
     "no post payload": {
-        "0": "\ufeffno post payload",
-        "1": "\ufeffno post payload",
-        "2": "\ufeffno post payload"
+        "0": "No se detect\u00f3 carga POST"
     },
     "thing": {
         "0": "cosa",
