@@ -179,11 +179,15 @@ def link_cleanup():
     # so any related link is removed
     pass
 
-# Internationalize project field labels
+#############################################################
+# field name translations
+# Note: this approach does not update translation files
+# Discussion: py4web users group: Main utils and the T object
+#############################################################
 for table in db:
     for field in table:
         if type(field.label) == str:
-            field.label = T(field.label)
+            field.label = T(str(field.label))
 
 db.project.status.default = STATUSES[1]
 db.project.status.requires = IS_IN_SET(STATUSES)

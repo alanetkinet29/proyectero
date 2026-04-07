@@ -1370,3 +1370,4 @@ def acumulated_lookup(date, obj):
             value = obj[k]
     return value
 
+
