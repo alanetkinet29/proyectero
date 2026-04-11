@@ -29,6 +29,7 @@
     "Account needs to be approved": {
         "0": "La cuenta requiere aprobaci\u00f3n"
     },
+    "Action Token": {},
     "Actions": {
         "0": "Acciones"
     },
@@ -53,12 +54,16 @@
     "Admins": {
         "0": "Administradores"
     },
+    "Amount": {},
     "Authentication Code": {
         "0": "C\u00f3digo de autenticaci\u00f3n"
     },
+    "Author": {},
+    "Body": {},
     "Both fields cannot be the same node!": {
         "0": "\u00a1Ambos campos no pueden ser el mismo nodo!"
     },
+    "Budget": {},
     "Budget: %s": {
         "0": "Presupuesto: %s"
     },
@@ -68,9 +73,12 @@
     "By {first_name}, you have been erased from our system": {
         "0": "Has sido eliminado del sistema por {first_name}"
     },
+    "Cathegory": {},
     "Change Password": {
         "0": "Cambiar contrase\u00f1a"
     },
+    "Child Id": {},
+    "Child Table": {},
     "Choose a project": {
         "0": "Seleccionar un proyecto"
     },
@@ -101,9 +109,11 @@
     "Current total project budget: %s": {
         "0": "Presupuesto total del proyecto actualizado: %s"
     },
+    "Date": {},
     "Days": {
         "0": "D\u00edas"
     },
+    "Deadline": {},
     "Deadline: %s": {
         "0": "Plazo de entrega: %s"
     },
@@ -119,6 +129,7 @@
     "Delphi session and related estimations deleted": {
         "0": "Se eliminaron las sesiones Delphi y sus estimaciones"
     },
+    "Description": {},
     "Done": {
         "0": "Hecho"
     },
@@ -144,6 +155,9 @@
     "Email verified": {
         "0": "Mail verificado"
     },
+    "End": {},
+    "Entry": {},
+    "Estimated": {},
     "Estimated (hours)": {
         "0": "Tiempo estimado (en horas)"
     },
@@ -162,6 +176,9 @@
     "Estimations grid": {
         "0": "Grilla de estimaciones"
     },
+    "Expert": {},
+    "Experts": {},
+    "Finish": {},
     "First Name": {
         "0": "Nombres"
     },
@@ -186,6 +203,8 @@
     "Hold on... The time for this round is up!": {
         "0": "Un momento... \u00a1Termin\u00f3 el tiempo de esta ronda!"
     },
+    "Hours": {},
+    "Id": {},
     "In progress": {
         "0": "En curso"
     },
@@ -205,9 +224,11 @@
         "1": "\ufeffLS",
         "2": "\ufeffLS"
     },
+    "Label": {},
     "Last Name": {
         "0": "Apellido"
     },
+    "Last Password Change": {},
     "Link from parent": {
         "0": "V\u00ednculo desde nodo padre"
     },
@@ -243,6 +264,7 @@
         "1": "Administrado",
         "2": "Administrados"
     },
+    "Minutes": {},
     "Modified By": {
         "0": "Modificado por"
     },
@@ -252,6 +274,7 @@
     "Months": {
         "0": "Meses"
     },
+    "Name": {},
     "Name the task report": {
         "0": "Nombre para el reporte de la tarea"
     },
@@ -311,6 +334,9 @@
     "Only applies for done status; defaults to current time": {
         "0": "S\u00f3lo aplica a estado finalizado; por defecto es el tiempo actual"
     },
+    "Organization": {},
+    "Parent Id": {},
+    "Parent Table": {},
     "Password": {
         "0": "Contrase\u00f1a"
     },
@@ -329,6 +355,7 @@
     "Password reset link sent": {
         "0": "Se envi\u00f3 un link para blanquear la contrase\u00f1a"
     },
+    "Past Passwords Hash": {},
     "Pending": {
         "0": "Pendiente"
     },
@@ -353,6 +380,7 @@
     "Progress: not available": {
         "0": "Avance: no disponible"
     },
+    "Project": {},
     "Project budget": {
         "0": "Presupuesto del proyecto"
     },
@@ -386,6 +414,8 @@
     "Projected curve (Blue Line)": {
         "0": "Curva proyectada (l\u00ednea azul)"
     },
+    "Quantity": {},
+    "Record Id": {},
     "Register": {
         "0": "Registro"
     },
@@ -410,9 +440,11 @@
     "Request": {
         "0": "Solicitud"
     },
+    "Round": {},
     "Round/total": {
         "0": "Ruedas/total"
     },
+    "Rounds": {},
     "S-curve": {
         "0": "Curva de avance"
     },
@@ -434,6 +466,7 @@
     "Slack": {
         "0": "Holgura"
     },
+    "Sso Id": {},
     "Stage": {
         "0": "Etapa"
     },
@@ -449,9 +482,12 @@
     "Start date: %s": {
         "0": "Fecha de inicio: %s"
     },
+    "Status": {},
     "Submit": {
         "0": "Enviar"
     },
+    "Tagpath": {},
+    "Tags": {},
     "Task": {
         "0": "Tarea"
     },
@@ -488,6 +524,7 @@
     "Time window between rounds in minutes": {
         "0": "Ventana de tiempo entre rondas en minutos"
     },
+    "Title": {},
     "To": {
         "0": "Hasta"
     },
@@ -503,6 +540,7 @@
     "Type as much tags as you want here, press TAB key to add the to the list": {
         "0": "Puedes agregar tantas etiquetas como quieras, presiona la tecla TAB para agregarlas a la lista"
     },
+    "Unit": {},
     "Unsubscribe confirmation": {
         "0": "Confirmar baja"
     },
@@ -536,6 +574,7 @@
     "Wideband-delphi": {
         "0": "Wideband-delphi"
     },
+    "Window": {},
     "Write some comment on the progress": {
         "0": "Escribe un comentario sobre el avance"
     },
@@ -572,11 +611,16 @@
     "Your project has no team members": {
         "0": "Tu proyecto no tiene equipo"
     },
+    "auth_user": {},
+    "auth_user_tag_groups": {},
+    "budget": {},
+    "delphi": {},
     "dog": {
         "0": "Perro",
         "1": "Perro",
         "2": "Perros"
     },
+    "estimation": {},
     "invalid": {
         "0": "Inv\u00e1lido"
     },
@@ -586,6 +630,8 @@
     "invalid token": {
         "0": "Token inv\u00e1lido"
     },
+    "link": {},
+    "log": {},
     "new password is the same as previous password": {
         "0": "La nueva contrase\u00f1a es igual a la anterior"
     },
@@ -595,6 +641,10 @@
     "no post payload": {
         "0": "No se detect\u00f3 carga POST"
     },
+    "phase": {},
+    "project": {},
+    "stage": {},
+    "task": {},
     "thing": {
         "0": "cosa",
         "1": "cosa",

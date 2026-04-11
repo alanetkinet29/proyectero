@@ -179,16 +179,6 @@ def link_cleanup():
     # so any related link is removed
     pass
 
-#############################################################
-# field name translations
-# Note: this approach does not update translation files
-# Discussion: py4web users group: Main utils and the T object
-#############################################################
-for table in db:
-    for field in table:
-        if type(field.label) == str:
-            field.label = T(str(field.label))
-
 db.project.status.default = STATUSES[1]
 db.project.status.requires = IS_IN_SET(STATUSES)
 db.project.name.requires = [IS_NOT_EMPTY(), IS_NOT_IN_DB(db, "project.name")]
@@ -269,3 +259,22 @@ db.estimation.task.writable = False
 db.estimation.round.writable = False
 db.estimation.estimated.readable = False
 db.estimation.estimated.writable = False
+
+#############################################################
+# field name translations
+# Discussion: py4web users group: Main utils and the T object
+# This should be run only checking a TRANSLATE_MODEL flag in settings
+#############################################################
+
+t_new_words = set()
+for table in db:
+    t_new_words.add(table._tablename)
+    # This line throws an error
+    # table._tablename = T(table._tablename)
+    for field in table:
+        if type(field.label) == str:
+            t_new_words.add(field.label)
+            field.label = T(field.label)
+
+T.update_languages(list(t_new_words))
+T.save(T.folder)

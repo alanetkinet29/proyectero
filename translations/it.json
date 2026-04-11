@@ -49,6 +49,7 @@
         "1": "\ufeffAccount needs to be approved",
         "2": "\ufeffAccount needs to be approved"
     },
+    "Action Token": {},
     "Actions": {
         "0": "\ufeffActions",
         "1": "\ufeffActions",
@@ -89,16 +90,20 @@
         "1": "\ufeffAdmins",
         "2": "\ufeffAdmins"
     },
+    "Amount": {},
     "Authentication Code": {
         "0": "\ufeffAuthentication Code",
         "1": "\ufeffAuthentication Code",
         "2": "\ufeffAuthentication Code"
     },
+    "Author": {},
+    "Body": {},
     "Both fields cannot be the same node!": {
         "0": "\ufeffBoth fields cannot be the same node!",
         "1": "\ufeffBoth fields cannot be the same node!",
         "2": "\ufeffBoth fields cannot be the same node!"
     },
+    "Budget": {},
     "Budget: %s": {
         "0": "\ufeffBudget: %s",
         "1": "\ufeffBudget: %s",
@@ -114,11 +119,14 @@
         "1": "\ufeffBy {first_name}, you have been erased from our system",
         "2": "\ufeffBy {first_name}, you have been erased from our system"
     },
+    "Cathegory": {},
     "Change Password": {
         "0": "\ufeffChange Password",
         "1": "\ufeffChange Password",
         "2": "\ufeffChange Password"
     },
+    "Child Id": {},
+    "Child Table": {},
     "Choose a project": {
         "0": "\ufeffChoose a project",
         "1": "\ufeffChoose a project",
@@ -169,11 +177,13 @@
         "1": "\ufeffCurrent total project budget: %s",
         "2": "\ufeffCurrent total project budget: %s"
     },
+    "Date": {},
     "Days": {
         "0": "\ufeffDays",
         "1": "\ufeffDays",
         "2": "\ufeffDays"
     },
+    "Deadline": {},
     "Deadline: %s": {
         "0": "\ufeffDeadline: %s",
         "1": "\ufeffDeadline: %s",
@@ -199,6 +209,7 @@
         "1": "\ufeffDelphi session and related estimations deleted",
         "2": "\ufeffDelphi session and related estimations deleted"
     },
+    "Description": {},
     "Done": {
         "0": "\ufeffDone",
         "1": "\ufeffDone",
@@ -234,6 +245,9 @@
         "1": "\ufeffEmail verified",
         "2": "\ufeffEmail verified"
     },
+    "End": {},
+    "Entry": {},
+    "Estimated": {},
     "Estimated (hours)": {
         "0": "\ufeffEstimated (hours)",
         "1": "\ufeffEstimated (hours)",
@@ -264,6 +278,9 @@
         "1": "\ufeffEstimations grid",
         "2": "\ufeffEstimations grid"
     },
+    "Expert": {},
+    "Experts": {},
+    "Finish": {},
     "First Name": {
         "0": "\ufeffFirst Name",
         "1": "\ufeffFirst Name",
@@ -302,6 +319,8 @@
         "1": "\ufeffHold on... The time for this round is up!",
         "2": "\ufeffHold on... The time for this round is up!"
     },
+    "Hours": {},
+    "Id": {},
     "In progress": {
         "0": "\ufeffIn progress",
         "1": "\ufeffIn progress",
@@ -327,11 +346,13 @@
         "1": "\ufeffLS",
         "2": "\ufeffLS"
     },
+    "Label": {},
     "Last Name": {
         "0": "\ufeffLast Name",
         "1": "\ufeffLast Name",
         "2": "\ufeffLast Name"
     },
+    "Last Password Change": {},
     "Link from parent": {
         "0": "\ufeffLink from parent",
         "1": "\ufeffLink from parent",
@@ -387,6 +408,7 @@
         "1": "\ufeffManaged",
         "2": "\ufeffManaged"
     },
+    "Minutes": {},
     "Modified By": {
         "0": "\ufeffModified By",
         "1": "\ufeffModified By",
@@ -402,6 +424,7 @@
         "1": "\ufeffMonths",
         "2": "\ufeffMonths"
     },
+    "Name": {},
     "Name the task report": {
         "0": "\ufeffName the task report",
         "1": "\ufeffName the task report",
@@ -497,6 +520,9 @@
         "1": "\ufeffOnly applies for done status; defaults to current time",
         "2": "\ufeffOnly applies for done status; defaults to current time"
     },
+    "Organization": {},
+    "Parent Id": {},
+    "Parent Table": {},
     "Password": {
         "0": "\ufeffPassword",
         "1": "\ufeffPassword",
@@ -527,6 +553,7 @@
         "1": "\ufeffPassword reset link sent",
         "2": "\ufeffPassword reset link sent"
     },
+    "Past Passwords Hash": {},
     "Pending": {
         "0": "\ufeffPending",
         "1": "\ufeffPending",
@@ -567,6 +594,7 @@
         "1": "\ufeffProgress: not available",
         "2": "\ufeffProgress: not available"
     },
+    "Project": {},
     "Project budget": {
         "0": "\ufeffProject budget",
         "1": "\ufeffProject budget",
@@ -622,6 +650,8 @@
         "1": "\ufeffProjected curve (Blue Line)",
         "2": "\ufeffProjected curve (Blue Line)"
     },
+    "Quantity": {},
+    "Record Id": {},
     "Register": {
         "0": "\ufeffRegister",
         "1": "\ufeffRegister",
@@ -662,11 +692,13 @@
         "1": "\ufeffRequest",
         "2": "\ufeffRequest"
     },
+    "Round": {},
     "Round/total": {
         "0": "\ufeffRound/total",
         "1": "\ufeffRound/total",
         "2": "\ufeffRound/total"
     },
+    "Rounds": {},
     "S-curve": {
         "0": "\ufeffS-curve",
         "1": "\ufeffS-curve",
@@ -702,6 +734,7 @@
         "1": "\ufeffSlack",
         "2": "\ufeffSlack"
     },
+    "Sso Id": {},
     "Stage": {
         "0": "\ufeffStage",
         "1": "\ufeffStage",
@@ -727,11 +760,14 @@
         "1": "\ufeffStart date: %s",
         "2": "\ufeffStart date: %s"
     },
+    "Status": {},
     "Submit": {
         "0": "\ufeffSubmit",
         "1": "\ufeffSubmit",
         "2": "\ufeffSubmit"
     },
+    "Tagpath": {},
+    "Tags": {},
     "Task": {
         "0": "\ufeffTask",
         "1": "\ufeffTask",
@@ -792,6 +828,7 @@
         "1": "\ufeffTime window between rounds in minutes",
         "2": "\ufeffTime window between rounds in minutes"
     },
+    "Title": {},
     "To": {
         "0": "\ufeffTo",
         "1": "\ufeffTo",
@@ -817,6 +854,7 @@
         "1": "\ufeffType as much tags as you want here, press TAB key to add the to the list",
         "2": "\ufeffType as much tags as you want here, press TAB key to add the to the list"
     },
+    "Unit": {},
     "Unsubscribe confirmation": {
         "0": "\ufeffUnsubscribe confirmation",
         "1": "\ufeffUnsubscribe confirmation",
@@ -872,6 +910,7 @@
         "1": "\ufeffWideband-delphi",
         "2": "\ufeffWideband-delphi"
     },
+    "Window": {},
     "Write some comment on the progress": {
         "0": "\ufeffWrite some comment on the progress",
         "1": "\ufeffWrite some comment on the progress",
@@ -932,11 +971,16 @@
         "1": "\ufeffYour project has no team members",
         "2": "\ufeffYour project has no team members"
     },
+    "auth_user": {},
+    "auth_user_tag_groups": {},
+    "budget": {},
+    "delphi": {},
     "dog": {
         "0": "\ufeffdog",
         "1": "\ufeffdog",
         "2": "\ufeffdog"
     },
+    "estimation": {},
     "invalid": {
         "0": "\ufeffinvalid",
         "1": "\ufeffinvalid",
@@ -952,6 +996,8 @@
         "1": "\ufeffinvalid token",
         "2": "\ufeffinvalid token"
     },
+    "link": {},
+    "log": {},
     "new password is the same as previous password": {
         "0": "\ufeffnew password is the same as previous password",
         "1": "\ufeffnew password is the same as previous password",
@@ -967,6 +1013,10 @@
         "1": "\ufeffno post payload",
         "2": "\ufeffno post payload"
     },
+    "phase": {},
+    "project": {},
+    "stage": {},
+    "task": {},
     "thing": {
         "0": "cosa",
         "1": "cose"
