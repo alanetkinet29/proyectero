@@ -29,7 +29,9 @@
     "Account needs to be approved": {
         "0": "La cuenta requiere aprobaci\u00f3n"
     },
-    "Action Token": {},
+    "Action Token": {
+        "0": "Token de acci\u00f3n"
+    },
     "Actions": {
         "0": "Acciones"
     },
@@ -54,16 +56,24 @@
     "Admins": {
         "0": "Administradores"
     },
-    "Amount": {},
+    "Amount": {
+        "0": "Monto"
+    },
     "Authentication Code": {
         "0": "C\u00f3digo de autenticaci\u00f3n"
     },
-    "Author": {},
-    "Body": {},
+    "Author": {
+        "0": "Autor"
+    },
+    "Body": {
+        "0": "Cuerpo"
+    },
     "Both fields cannot be the same node!": {
         "0": "\u00a1Ambos campos no pueden ser el mismo nodo!"
     },
-    "Budget": {},
+    "Budget": {
+        "0": "Presupuesto"
+    },
     "Budget: %s": {
         "0": "Presupuesto: %s"
     },
@@ -73,12 +83,18 @@
     "By {first_name}, you have been erased from our system": {
         "0": "Has sido eliminado del sistema por {first_name}"
     },
-    "Cathegory": {},
+    "Cathegory": {
+        "0": "Categor\u00eda"
+    },
     "Change Password": {
         "0": "Cambiar contrase\u00f1a"
     },
-    "Child Id": {},
-    "Child Table": {},
+    "Child Id": {
+        "0": "Id de hijo"
+    },
+    "Child Table": {
+        "0": "Tabla de hijo"
+    },
     "Choose a project": {
         "0": "Seleccionar un proyecto"
     },
@@ -109,11 +125,17 @@
     "Current total project budget: %s": {
         "0": "Presupuesto total del proyecto actualizado: %s"
     },
-    "Date": {},
+    "Date": {
+        "0": "Fecha"
+    },
     "Days": {
         "0": "D\u00edas"
     },
-    "Deadline": {},
+    "Deadline": {
+        "0": "\ufeffDeadline",
+        "1": "\ufeffDeadline",
+        "2": "\ufeffDeadline"
+    },
     "Deadline: %s": {
         "0": "Plazo de entrega: %s"
     },
@@ -129,7 +151,9 @@
     "Delphi session and related estimations deleted": {
         "0": "Se eliminaron las sesiones Delphi y sus estimaciones"
     },
-    "Description": {},
+    "Description": {
+        "0": "Descripci\u00f3n"
+    },
     "Done": {
         "0": "Hecho"
     },
@@ -155,9 +179,15 @@
     "Email verified": {
         "0": "Mail verificado"
     },
-    "End": {},
-    "Entry": {},
-    "Estimated": {},
+    "End": {
+        "0": "Fin"
+    },
+    "Entry": {
+        "0": "Asiento"
+    },
+    "Estimated": {
+        "0": "Estimado"
+    },
     "Estimated (hours)": {
         "0": "Tiempo estimado (en horas)"
     },
@@ -176,9 +206,15 @@
     "Estimations grid": {
         "0": "Grilla de estimaciones"
     },
-    "Expert": {},
-    "Experts": {},
-    "Finish": {},
+    "Expert": {
+        "0": "Experto"
+    },
+    "Experts": {
+        "0": "Expertos"
+    },
+    "Finish": {
+        "0": "Fin"
+    },
     "First Name": {
         "0": "Nombres"
     },
@@ -203,8 +239,12 @@
     "Hold on... The time for this round is up!": {
         "0": "Un momento... \u00a1Termin\u00f3 el tiempo de esta ronda!"
     },
-    "Hours": {},
-    "Id": {},
+    "Hours": {
+        "0": "Horas"
+    },
+    "Id": {
+        "0": "Id"
+    },
     "In progress": {
         "0": "En curso"
     },
@@ -224,11 +264,13 @@
         "1": "\ufeffLS",
         "2": "\ufeffLS"
     },
-    "Label": {},
+    "Label": {
+        "0": "Etiqueta"
+    },
     "Last Name": {
         "0": "Apellido"
     },
-    "Last Password Change": {},
+    "Last Password Change": {"0": "Último cambio de contraseña"},
     "Link from parent": {
         "0": "V\u00ednculo desde nodo padre"
     },
@@ -264,7 +306,9 @@
         "1": "Administrado",
         "2": "Administrados"
     },
-    "Minutes": {},
+    "Minutes": {
+        "0": "Minutos"
+    },
     "Modified By": {
         "0": "Modificado por"
     },
@@ -274,7 +318,7 @@
     "Months": {
         "0": "Meses"
     },
-    "Name": {},
+    "Name": {"0": "Nombre"},
     "Name the task report": {
         "0": "Nombre para el reporte de la tarea"
     },
@@ -334,9 +378,9 @@
     "Only applies for done status; defaults to current time": {
         "0": "S\u00f3lo aplica a estado finalizado; por defecto es el tiempo actual"
     },
-    "Organization": {},
-    "Parent Id": {},
-    "Parent Table": {},
+    "Organization": {"0": "Organización"},
+    "Parent Id": {"0": "Id del padre"},
+    "Parent Table": {"0": "Tabla del padre"},
     "Password": {
         "0": "Contrase\u00f1a"
     },
@@ -355,7 +399,7 @@
     "Password reset link sent": {
         "0": "Se envi\u00f3 un link para blanquear la contrase\u00f1a"
     },
-    "Past Passwords Hash": {},
+    "Past Passwords Hash": {"0": "Hash de contraseña previo"},
     "Pending": {
         "0": "Pendiente"
     },
@@ -380,7 +424,7 @@
     "Progress: not available": {
         "0": "Avance: no disponible"
     },
-    "Project": {},
+    "Project": {"0": "Proyecto"},
     "Project budget": {
         "0": "Presupuesto del proyecto"
     },
@@ -414,8 +458,8 @@
     "Projected curve (Blue Line)": {
         "0": "Curva proyectada (l\u00ednea azul)"
     },
-    "Quantity": {},
-    "Record Id": {},
+    "Quantity": {"0": "Cantidad"},
+    "Record Id": {"0": "Id de registro"},
     "Register": {
         "0": "Registro"
     },
@@ -440,11 +484,11 @@
     "Request": {
         "0": "Solicitud"
     },
-    "Round": {},
+    "Round": {"0": "Rueda"},
     "Round/total": {
         "0": "Ruedas/total"
     },
-    "Rounds": {},
+    "Rounds": {"0": "Ruedas"},
     "S-curve": {
         "0": "Curva de avance"
     },
@@ -466,7 +510,7 @@
     "Slack": {
         "0": "Holgura"
     },
-    "Sso Id": {},
+    "Sso Id": {"0": "Id de sso"},
     "Stage": {
         "0": "Etapa"
     },
@@ -482,12 +526,12 @@
     "Start date: %s": {
         "0": "Fecha de inicio: %s"
     },
-    "Status": {},
+    "Status": {"0": "Estado"},
     "Submit": {
         "0": "Enviar"
     },
-    "Tagpath": {},
-    "Tags": {},
+    "Tagpath": {"0": "Ruta de etiqueta"},
+    "Tags": {"0": "Etiquetas"},
     "Task": {
         "0": "Tarea"
     },
@@ -524,7 +568,7 @@
     "Time window between rounds in minutes": {
         "0": "Ventana de tiempo entre rondas en minutos"
     },
-    "Title": {},
+    "Title": {"0": "Título"},
     "To": {
         "0": "Hasta"
     },

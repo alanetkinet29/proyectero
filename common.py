@@ -25,7 +25,9 @@ from pydal.tools.tags import Tags
 
 from py4web import DAL, Cache, Field, Flash, Session, Translator, action
 from py4web.server_adapters.logging_utils import make_logger
+
 from py4web.utils.auth import Auth
+
 from py4web.utils.downloader import downloader
 from py4web.utils.factories import ActionFactory
 from py4web.utils.mailer import Mailer
@@ -89,6 +91,7 @@ elif settings.SESSION_TYPE == "database":
 # #######################################################
 # Instantiate the object and actions that handle auth
 # #######################################################
+
 auth = Auth(session, db, define_tables=False)
 auth.use_username = True
 auth.param.registration_requires_confirmation = settings.VERIFY_EMAIL
@@ -100,9 +103,8 @@ auth.param.password_complexity = {"entropy": settings.PASSWORD_ENTROPY}
 auth.param.block_previous_password_num = 3
 auth.param.default_login_enabled = settings.DEFAULT_LOGIN_ENABLED
 
-
 # #######################################################
-# Proyectero project (py4web app): workaround to support
+# Workaround to support
 # internationalization for Auth class
 # #######################################################
 
@@ -171,10 +173,6 @@ auth.param.messages = {
             "two_factor_max_tries": T("Two factor max tries exceeded"),
         },
     }
-
-# ##############################################################
-# Instantiate the object and actions that handle auth (2nd part)
-# ##############################################################
 
 auth.define_tables()
 auth.fix_actions()
