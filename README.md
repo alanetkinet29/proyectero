@@ -2,7 +2,7 @@ Proyectero is a management web app implemented for py4web framework that allows 
 
 How to try this project
 
-For detailed instructions, see [Admin manual] (https://github.com/alanetkinet29/proyectero/wiki/Admin-manual)
+For detailed instructions, see the Admin manual at https://github.com/alanetkinet29/proyectero/wiki/Admin-manual
 
 - First, you must have a development py4web environment running in your system
 - Then, copy or unzip proyectero files to the [route to py4web]/apps/proyectero folder
@@ -12,6 +12,6 @@ For detailed instructions, see [Admin manual] (https://github.com/alanetkinet29/
 
 Note: py4web requires a Python interpreter to run
 
-Also, see the [proyectero user's manual] (https://github.com/alanetkinet29/proyectero/wiki/User's-manual)
+For end users, see the proyectero user's manual https://github.com/alanetkinet29/proyectero/wiki/User's-manual
 
 Released under AGPLv3. See https://github.com/alanetkinet29/proyectero/blob/main/LICENSE
