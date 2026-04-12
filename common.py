@@ -106,8 +106,11 @@ auth.param.default_login_enabled = settings.DEFAULT_LOGIN_ENABLED
 # #######################################################
 # Workaround to support
 # internationalization for Auth class
+# Note: commented out since new versions of py4web
+# break the method
 # #######################################################
 
+"""
 auth.param.messages = {
         "verify_email": {
             "subject": T("Confirm email"),
@@ -173,7 +176,8 @@ auth.param.messages = {
             "two_factor_max_tries": T("Two factor max tries exceeded"),
         },
     }
-
+"""
+    
 auth.define_tables()
 auth.fix_actions()
 auth.logger = logger

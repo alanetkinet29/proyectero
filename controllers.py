@@ -68,7 +68,7 @@ ADMIN_ACTIONS = {"project_edit": T("Edit project"),
                  "team_remove": T("Remove team members"),
                  "phases": T("Project phases"),
                  "stages": T("Project stages"),
-                 "link": T("Link tasks"),
+                 "links": T("Link tasks"),
                  "budget": T("Project budget")}
 
 @action("index")
