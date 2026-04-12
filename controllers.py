@@ -47,6 +47,7 @@ from py4web import Field
 from pydal.validators import (IS_EMAIL, IS_IN_SET, IS_IN_DB,
 IS_NOT_EMPTY, IS_INT_IN_RANGE, IS_FLOAT_IN_RANGE, IS_EMPTY_OR)
 from py4web.utils.grid import *
+from .models import STATUSES
 
 import datetime
 import math
@@ -111,7 +112,8 @@ def index():
                 as_team=as_team, session=session, user=user,
                 team_actions=TEAM_ACTIONS,
                 admin_actions=ADMIN_ACTIONS,
-                T=T)
+                T=T,
+                STATUSES=STATUSES)
 
 @action("project_create")
 @action.uses("form.html", auth.user, T)

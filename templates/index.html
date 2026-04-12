@@ -71,7 +71,7 @@
         <p>[[=T("Budget: not available")]]</p>
       [[pass]]
       <p>[[=T("Start date: %s") % (project.start or T("Not available"))]]</p>
-      <p>[[=T("Project status: %s") % project.status]]</p>
+      <p>[[=T("Project status: %s") % STATUSES[project.status]]]</p>
       <p>[[=T("Deadline: %s") % (project.deadline or T("Not available"))]]</p>
       [[if project.progress != None:]]
         <p>[[=T("Progress: %s") % project.progress]]</p>
