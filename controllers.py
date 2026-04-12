@@ -50,7 +50,7 @@ from py4web.utils.grid import *
 
 import datetime
 import math
-from apps.proyectero.models import (task_stage_format,
+from .models import (task_stage_format,
                                     estimated_compute)
 import statistics
 
@@ -725,7 +725,7 @@ def cpm():
     from pyCritical.src import critical_path_method
 
     # import a DAG sort class (that uses DSF)
-    from apps.proyectero.dagsort import Graph
+    from .dagsort import Graph
 
     if not session.project:
         flash.set(T("Choose a project first"))
