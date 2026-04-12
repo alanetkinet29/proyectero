@@ -147,6 +147,11 @@
         "1": "\ufeffChoose a time rate",
         "2": "\ufeffChoose a time rate"
     },
+    "Closed": {
+        "0": "\ufeffClosed",
+        "1": "\ufeffClosed",
+        "2": "\ufeffClosed"
+    },
     "Completed": {
         "0": "\ufeffCompleted",
         "1": "\ufeffCompleted",
@@ -321,6 +326,11 @@
     },
     "Hours": {},
     "Id": {},
+    "In Progress": {
+        "0": "\ufeffIn Progress",
+        "1": "\ufeffIn Progress",
+        "2": "\ufeffIn Progress"
+    },
     "In progress": {
         "0": "\ufeffIn progress",
         "1": "\ufeffIn progress",
@@ -911,6 +921,11 @@
         "2": "\ufeffWideband-delphi"
     },
     "Window": {},
+    "Work in progress": {
+        "0": "\ufeffWork in progress",
+        "1": "\ufeffWork in progress",
+        "2": "\ufeffWork in progress"
+    },
     "Write some comment on the progress": {
         "0": "\ufeffWrite some comment on the progress",
         "1": "\ufeffWrite some comment on the progress",
@@ -971,6 +986,11 @@
         "1": "\ufeffYour project has no team members",
         "2": "\ufeffYour project has no team members"
     },
+    "advice": {
+        "0": "\ufeffadvice",
+        "1": "\ufeffadvice",
+        "2": "\ufeffadvice"
+    },
     "auth_user": {},
     "auth_user_tag_groups": {},
     "budget": {},
@@ -979,6 +999,11 @@
         "0": "\ufeffdog",
         "1": "\ufeffdog",
         "2": "\ufeffdog"
+    },
+    "equipment": {
+        "0": "\ufeffequipment",
+        "1": "\ufeffequipment",
+        "2": "\ufeffequipment"
     },
     "estimation": {},
     "invalid": {
@@ -997,6 +1022,11 @@
         "2": "\ufeffinvalid token"
     },
     "link": {},
+    "loans": {
+        "0": "\ufeffloans",
+        "1": "\ufeffloans",
+        "2": "\ufeffloans"
+    },
     "log": {},
     "new password is the same as previous password": {
         "0": "\ufeffnew password is the same as previous password",
@@ -1013,10 +1043,40 @@
         "1": "\ufeffno post payload",
         "2": "\ufeffno post payload"
     },
+    "other": {
+        "0": "\ufeffother",
+        "1": "\ufeffother",
+        "2": "\ufeffother"
+    },
     "phase": {},
     "project": {},
+    "purchases": {
+        "0": "\ufeffpurchases",
+        "1": "\ufeffpurchases",
+        "2": "\ufeffpurchases"
+    },
+    "services": {
+        "0": "\ufeffservices",
+        "1": "\ufeffservices",
+        "2": "\ufeffservices"
+    },
+    "staff": {
+        "0": "\ufeffstaff",
+        "1": "\ufeffstaff",
+        "2": "\ufeffstaff"
+    },
     "stage": {},
+    "supplies": {
+        "0": "\ufeffsupplies",
+        "1": "\ufeffsupplies",
+        "2": "\ufeffsupplies"
+    },
     "task": {},
+    "taxes": {
+        "0": "\ufefftaxes",
+        "1": "\ufefftaxes",
+        "2": "\ufefftaxes"
+    },
     "thing": {
         "0": "cosa",
         "1": "cose"

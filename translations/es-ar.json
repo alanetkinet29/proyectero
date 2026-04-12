@@ -107,6 +107,9 @@
     "Choose a time rate": {
         "0": "Seleccionar una frecuencia de tiempo"
     },
+    "Closed": {
+        "0": "cerrado"
+    },
     "Completed": {
         "0": "Finalizada"
     },
@@ -132,9 +135,7 @@
         "0": "D\u00edas"
     },
     "Deadline": {
-        "0": "\ufeffDeadline",
-        "1": "\ufeffDeadline",
-        "2": "\ufeffDeadline"
+        "0": "Plazo de entrega"
     },
     "Deadline: %s": {
         "0": "Plazo de entrega: %s"
@@ -245,6 +246,9 @@
     "Id": {
         "0": "Id"
     },
+    "In Progress": {
+        "0": "En curso"
+    },
     "In progress": {
         "0": "En curso"
     },
@@ -270,7 +274,9 @@
     "Last Name": {
         "0": "Apellido"
     },
-    "Last Password Change": {"0": "Último cambio de contraseña"},
+    "Last Password Change": {
+        "0": "\u00daltimo cambio de contrase\u00f1a"
+    },
     "Link from parent": {
         "0": "V\u00ednculo desde nodo padre"
     },
@@ -318,7 +324,9 @@
     "Months": {
         "0": "Meses"
     },
-    "Name": {"0": "Nombre"},
+    "Name": {
+        "0": "Nombre"
+    },
     "Name the task report": {
         "0": "Nombre para el reporte de la tarea"
     },
@@ -378,9 +386,15 @@
     "Only applies for done status; defaults to current time": {
         "0": "S\u00f3lo aplica a estado finalizado; por defecto es el tiempo actual"
     },
-    "Organization": {"0": "Organización"},
-    "Parent Id": {"0": "Id del padre"},
-    "Parent Table": {"0": "Tabla del padre"},
+    "Organization": {
+        "0": "Organizaci\u00f3n"
+    },
+    "Parent Id": {
+        "0": "Id del padre"
+    },
+    "Parent Table": {
+        "0": "Tabla del padre"
+    },
     "Password": {
         "0": "Contrase\u00f1a"
     },
@@ -399,7 +413,9 @@
     "Password reset link sent": {
         "0": "Se envi\u00f3 un link para blanquear la contrase\u00f1a"
     },
-    "Past Passwords Hash": {"0": "Hash de contraseña previo"},
+    "Past Passwords Hash": {
+        "0": "Hash de contrase\u00f1a previo"
+    },
     "Pending": {
         "0": "Pendiente"
     },
@@ -424,7 +440,9 @@
     "Progress: not available": {
         "0": "Avance: no disponible"
     },
-    "Project": {"0": "Proyecto"},
+    "Project": {
+        "0": "Proyecto"
+    },
     "Project budget": {
         "0": "Presupuesto del proyecto"
     },
@@ -458,8 +476,12 @@
     "Projected curve (Blue Line)": {
         "0": "Curva proyectada (l\u00ednea azul)"
     },
-    "Quantity": {"0": "Cantidad"},
-    "Record Id": {"0": "Id de registro"},
+    "Quantity": {
+        "0": "Cantidad"
+    },
+    "Record Id": {
+        "0": "Id de registro"
+    },
     "Register": {
         "0": "Registro"
     },
@@ -484,11 +506,15 @@
     "Request": {
         "0": "Solicitud"
     },
-    "Round": {"0": "Rueda"},
+    "Round": {
+        "0": "Rueda"
+    },
     "Round/total": {
         "0": "Ruedas/total"
     },
-    "Rounds": {"0": "Ruedas"},
+    "Rounds": {
+        "0": "Ruedas"
+    },
     "S-curve": {
         "0": "Curva de avance"
     },
@@ -510,7 +536,9 @@
     "Slack": {
         "0": "Holgura"
     },
-    "Sso Id": {"0": "Id de sso"},
+    "Sso Id": {
+        "0": "Id de sso"
+    },
     "Stage": {
         "0": "Etapa"
     },
@@ -526,12 +554,18 @@
     "Start date: %s": {
         "0": "Fecha de inicio: %s"
     },
-    "Status": {"0": "Estado"},
+    "Status": {
+        "0": "Estado"
+    },
     "Submit": {
         "0": "Enviar"
     },
-    "Tagpath": {"0": "Ruta de etiqueta"},
-    "Tags": {"0": "Etiquetas"},
+    "Tagpath": {
+        "0": "Ruta de etiqueta"
+    },
+    "Tags": {
+        "0": "Etiquetas"
+    },
     "Task": {
         "0": "Tarea"
     },
@@ -568,7 +602,9 @@
     "Time window between rounds in minutes": {
         "0": "Ventana de tiempo entre rondas en minutos"
     },
-    "Title": {"0": "Título"},
+    "Title": {
+        "0": "T\u00edtulo"
+    },
     "To": {
         "0": "Hasta"
     },
@@ -584,7 +620,9 @@
     "Type as much tags as you want here, press TAB key to add the to the list": {
         "0": "Puedes agregar tantas etiquetas como quieras, presiona la tecla TAB para agregarlas a la lista"
     },
-    "Unit": {},
+    "Unit": {
+        "0": "Unidad de medida"
+    },
     "Unsubscribe confirmation": {
         "0": "Confirmar baja"
     },
@@ -618,7 +656,12 @@
     "Wideband-delphi": {
         "0": "Wideband-delphi"
     },
-    "Window": {},
+    "Window": {
+        "0": "Ventana"
+    },
+    "Work in progress": {
+        "0": "En curso"
+    },
     "Write some comment on the progress": {
         "0": "Escribe un comentario sobre el avance"
     },
@@ -655,16 +698,32 @@
     "Your project has no team members": {
         "0": "Tu proyecto no tiene equipo"
     },
-    "auth_user": {},
-    "auth_user_tag_groups": {},
-    "budget": {},
-    "delphi": {},
+    "advice": {
+        "0": "consultor\u00eda"
+    },
+    "auth_user": {
+        "0": "usuarios"
+    },
+    "auth_user_tag_groups": {
+        "0": "grupos de usuarios"
+    },
+    "budget": {
+        "0": "presupuesto"
+    },
+    "delphi": {
+        "0": "delphi"
+    },
     "dog": {
         "0": "Perro",
         "1": "Perro",
         "2": "Perros"
     },
-    "estimation": {},
+    "equipment": {
+        "0": "equipamiento"
+    },
+    "estimation": {
+        "0": "estimaci\u00f3n"
+    },
     "invalid": {
         "0": "Inv\u00e1lido"
     },
@@ -674,8 +733,15 @@
     "invalid token": {
         "0": "Token inv\u00e1lido"
     },
-    "link": {},
-    "log": {},
+    "link": {
+        "0": "v\u00ednculo"
+    },
+    "loans": {
+        "0": "alquileres"
+    },
+    "log": {
+        "0": "bit\u00e1cora"
+    },
     "new password is the same as previous password": {
         "0": "La nueva contrase\u00f1a es igual a la anterior"
     },
@@ -685,10 +751,38 @@
     "no post payload": {
         "0": "No se detect\u00f3 carga POST"
     },
-    "phase": {},
-    "project": {},
-    "stage": {},
-    "task": {},
+    "other": {
+        "0": "otro",
+        "1": "otro",
+        "2": "otros"
+    },
+    "phase": {
+        "0": "fase"
+    },
+    "project": {
+        "0": "proyecto"
+    },
+    "purchases": {
+        "0": "compras"
+    },
+    "services": {
+        "0": "servicios"
+    },
+    "staff": {
+        "0": "personal"
+    },
+    "stage": {
+        "0": "etapa"
+    },
+    "supplies": {
+        "0": "insumos"
+    },
+    "task": {
+        "0": "tarea"
+    },
+    "taxes": {
+        "0": "impuestos"
+    },
     "thing": {
         "0": "cosa",
         "1": "cosa",
