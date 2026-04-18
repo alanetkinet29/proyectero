@@ -56,7 +56,8 @@ from .models import (task_stage_format,
 import statistics
 
 from .auxiliary import (TEAM_ACTIONS, ADMIN_ACTIONS,
-                       accumulated, accumulated_lookup)
+                       accumulated, accumulated_lookup,
+                       t_wrapper)
 
 @action("index")
 @action.uses("index.html", auth, T)
@@ -110,7 +111,7 @@ def project_create():
     db.project.team.readable = False
     db.project.admins.default = [auth.user_id,]
 
-    form = Form(db.project, submit_value=T("Submit"))
+    form = t_wrapper(Form(db.project, submit_value=T("Submit")))
 
     if form.accepted:
         flash.set(T("Project created"))
@@ -135,7 +136,7 @@ def project_edit():
         db.project.budget.writable = db.project.progress.writable = \
         db.project.admins.writable = db.project.team.writable = \
         db.project.budget.writable = db.project.progress.writable = False
-        form = Form(db.project, project.id, submit_value=T("Submit"))
+        form = t_wrapper(Form(db.project, project.id, submit_value=T("Submit")))
         if form.accepted:
             flash.set(T("Updated project properties"))
             redirect(URL("index"))
@@ -151,7 +152,7 @@ def admins_add():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Add admin users to %s") % project.name
-        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
+        form = t_wrapper(Form([field,], submit_value=T("Submit"))) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -189,7 +190,7 @@ def team_add():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Add team users to %s") % project.name
-        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
+        form = t_form(Form([field,], submit_value=T("Submit"))) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -228,7 +229,7 @@ def admins_remove():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Remove admin users from %s") % project.name
-        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
+        form = t_wrapper(Form([field,], submit_value=T("Submit"))) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -266,7 +267,7 @@ def team_remove():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Remove team users from %s") % project.name
-        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
+        form = t_wrapper(Form([field,], submit_value=T("Submit"))) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -302,7 +303,7 @@ def phases():
         if auth.user_id in (project.admins or []):
             db.phase.project.default = session.project
             db.phase.project.writable = False
-            grid = Grid(query=db.phase.project==project.id, T=T)
+            grid = t_wrapper(Grid(query=db.phase.project==project.id, T=T))
             return dict(grid=grid, T=T)
         else:
             flash.set(T("You need project admin rights for managing phases"))
@@ -319,7 +320,7 @@ def stages():
         phases = db(db.phase.project == project.id).select()
         phase_list = [phase.id for phase in phases]
         if auth.user_id in (project.admins or []):
-            grid = Grid(query=db.stage.phase.belongs(phase_list), T=T)
+            grid = t_wrapper(Grid(query=db.stage.phase.belongs(phase_list), T=T))
             return dict(grid=grid, T=T)
         else:
             flash.set(T("You need project admin rights for managing stages"))
@@ -363,11 +364,11 @@ def tasks():
                         db.stage.id,
                         task_stage_format)]
             stage_list = [row.id for row in stage_set.select()]
-            grid = Grid(query=db.task.stage.belongs(stage_list),
+            grid = t_wrapper(Grid(query=db.task.stage.belongs(stage_list),
                         columns=columns,
                         create=is_admin,
                         editable=is_admin,
-                        deletable=is_admin, T=T)
+                        deletable=is_admin, T=T))
             return dict(grid=grid, T=T)
         else:
             flash.set(T("You need project rights for managing tasks"))
@@ -383,9 +384,9 @@ def links():
         project = db(db.project.id == session.project).select().first()
         if auth.user_id in (project.admins or []):
             # db.link.parent_table.readable = False
-            grid = Grid(query=db.link.project==project.id,
+            grid = t_wrapper(Grid(query=db.link.project==project.id,
                         create=False,
-                        editable=False, T=T)
+                        editable=False, T=T))
             return dict(new_link=A(T("Add link"),
                                    _href=URL("link")),
                         grid=grid, T=T)
@@ -437,7 +438,7 @@ def link():
     child = Field("child")
     child.requires = IS_IN_SET(options)
     child.label = T("Link to child")
-    form = Form([parent, child], submit_value=T("Submit"))
+    form = t_wrapper(Form([parent, child], submit_value=T("Submit")))
 
     if form.accepted:
         # a node cannot link to himself
@@ -516,7 +517,7 @@ def delphi(task_id):
     
         db.delphi.start.default = NOW
         
-        form = Form(db.delphi, submit_value=T("Submit"))
+        form = t_wrapper(Form(db.delphi, submit_value=T("Submit")))
     # otherwise, show record data and allow session
     # abort (and only that)
     else:
@@ -525,7 +526,7 @@ def delphi(task_id):
         db.delphi.days.writable = False
         db.delphi.hours.writable = False
         db.delphi.minutes.writable = False
-        form = Form(db.delphi, delphi.id, submit_value=T("Submit"))
+        form = t_wrapper(Form(db.delphi, delphi.id, submit_value=T("Submit")))
 
     if form.accepted:
         if form.record == None:
@@ -601,7 +602,7 @@ def estimate(task_id):
             db.estimation.task.default = task_id
             db.estimation.round.default = rounds_current
 
-            form = Form(db.estimation, dbio=False, submit_value=T("Submit"))
+            form = t_wrapper(Form(db.estimation, dbio=False, submit_value=T("Submit")))
             if form.accepted:
                 # convert submitted values to timedelta
                 computed = datetime.timedelta(hours=estimated_compute(form.vars))
@@ -620,8 +621,8 @@ def estimate(task_id):
         else:
             # There is an estimation for this round already,
             # so just show the contents
-            form = Form(db.estimation, estimation.id, readonly=True,
-                        submit_value=T("Submit"))
+            form = t_wrapper(Form(db.estimation, estimation.id, readonly=True,
+                        submit_value=T("Submit")))
         return dict(form=form, maximum=maximum,
                     remaining_window=remaining_window, task=task, T=T)
 
@@ -639,7 +640,7 @@ def estimations():
     tasks = db(db.task.stage.belongs([stage.id for stage in stages])).select()
     query = db.estimation.task.belongs([task.id for task in tasks])
     db.estimation.expert.readable=False
-    grid = Grid(query=query, create=False, editable=False, deletable=False, T=T)
+    grid = t_wrapper(Grid(query=query, create=False, editable=False, deletable=False, T=T))
     return dict(grid=grid, T=T)
 
 @action("budget")
@@ -656,7 +657,7 @@ def budget():
         # Calculate the total budget
         budget_set = db(db.budget.project == project.id).select()
         total = sum([row.amount for row in budget_set])
-        grid = Grid(query=db.budget.project==project.id, T=T)
+        grid = t_wrapper(Grid(query=db.budget.project==project.id, T=T))
     return dict(grid=grid, total=total, T=T)
 
 @action("gantt")
@@ -960,7 +961,7 @@ def s_curve():
         redirect(URL("index"))
 
     # ask the user for some options
-    form = Form([Field("step",
+    form = t_wrapper(Form([Field("step",
                       requires=IS_IN_SET({"day": T("Days"),
                           "week": T("Weeks"), "month": T("Months")}),
                       default="week",
@@ -972,7 +973,7 @@ def s_curve():
                 Field("date_to", "datetime",
                       default=project_end,
                       comment=T("Defaults to project's end"),
-                      label=T("To"))], submit_value=T("Submit"))
+                      label=T("To"))], submit_value=T("Submit")))
 
     if form.accepted:
         # set the time boundaries
@@ -1133,8 +1134,8 @@ def kanban_board():
         stage_label = stage.label or stage.name
         options[stage.id] = "%s -> %s" % (phase_label, stage_label)
 
-    form = Form([Field("stage", "integer", requires=IS_IN_SET(options),
-                       label=T("Choose a stage")),], submit_value=T("Submit"))
+    form = t_wrapper(Form([Field("stage", "integer", requires=IS_IN_SET(options),
+                       label=T("Choose a stage")),], submit_value=T("Submit")))
 
     if form.accepted:
         tasks = db(db.task.stage==form.vars["stage"]).select().as_dict()
@@ -1186,9 +1187,9 @@ def log():
                                      db.task.id,
                                      db.task._format))
 
-    grid = Grid(query=db.log.project==project.id,
+    grid = t_wrapper(Grid(query=db.log.project==project.id,
                   create=True, editable=change_log,
-                  deletable=change_log, T=T)
+                  deletable=change_log, T=T))
 
     return dict(grid=grid, T=T)
 
@@ -1312,11 +1313,11 @@ def progress(task_id):
 
     # Autopopulate form with task status and other stuff
 
-    form = Form([db.task.status,
+    form = t_wrapper(Form([db.task.status,
                 db.task.end,
                 db.log.title,
                 db.log.body,
-                db.log.tags], submit_value=T("Submit"))
+                db.log.tags], submit_value=T("Submit")))
     
     # On form accept, make changes if neccesary,
     # update the task and add the log
@@ -1340,5 +1341,3 @@ def progress(task_id):
         flash.set(T("New status update recorded"))
         redirect(URL("tasks"))
     return dict(form=form, T=T)
-
-

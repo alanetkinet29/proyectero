@@ -11,6 +11,7 @@ Auxiliar module: for storing non-mvc taxative stuff
 """
 
 from .common import T
+from py4web.utils.grid import *
 
 TEAM_ACTIONS = {"tasks": T("Tasks"), "gantt": T("Gantt chart"),
                 "delphi_panel": T("Wideband-delphi"),
@@ -48,3 +49,19 @@ def accumulated_lookup(date, obj):
             value = obj[k]
     return value
 
+def t_wrapper(obj):
+    # A workaround for elements that
+    # do not support translations
+    if type(obj) == Grid:
+        f = obj.form
+        if not f:
+            return obj
+    else:
+        f = obj
+    inputs = f.structure.find("input[type=submit]")
+    if inputs:
+        inputs[0].attributes["_value"] = T("Submit")
+    labels = f.structure.find("label.help")
+    if labels:
+        labels[0].children = " " + T("Check to delete")            
+    return obj
