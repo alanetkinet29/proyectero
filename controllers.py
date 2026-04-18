@@ -41,12 +41,12 @@ from .common import (
     unauthenticated,
 )
 
-# custom imports
 from py4web.utils.form import Form
 from py4web import Field
 from pydal.validators import (IS_EMAIL, IS_IN_SET, IS_IN_DB,
 IS_NOT_EMPTY, IS_INT_IN_RANGE, IS_FLOAT_IN_RANGE, IS_EMPTY_OR)
 from py4web.utils.grid import *
+
 from .models import (STATUSES, NOW)
 
 import datetime
@@ -110,7 +110,7 @@ def project_create():
     db.project.team.readable = False
     db.project.admins.default = [auth.user_id,]
 
-    form = Form(db.project)
+    form = Form(db.project, submit_value=T("Submit"))
 
     if form.accepted:
         flash.set(T("Project created"))
@@ -135,7 +135,7 @@ def project_edit():
         db.project.budget.writable = db.project.progress.writable = \
         db.project.admins.writable = db.project.team.writable = \
         db.project.budget.writable = db.project.progress.writable = False
-        form = Form(db.project, project.id)
+        form = Form(db.project, project.id, submit_value=T("Submit"))
         if form.accepted:
             flash.set(T("Updated project properties"))
             redirect(URL("index"))
@@ -151,7 +151,7 @@ def admins_add():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Add admin users to %s") % project.name
-        form = Form([field,]) # custom form with textarea for adding users by mail
+        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -189,7 +189,7 @@ def team_add():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Add team users to %s") % project.name
-        form = Form([field,]) # custom form with textarea for adding users by mail
+        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -228,7 +228,7 @@ def admins_remove():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Remove admin users from %s") % project.name
-        form = Form([field,]) # custom form with textarea for adding users by mail
+        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -266,7 +266,7 @@ def team_remove():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Remove team users from %s") % project.name
-        form = Form([field,]) # custom form with textarea for adding users by mail
+        form = Form([field,], submit_value=T("Submit")) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
@@ -437,7 +437,7 @@ def link():
     child = Field("child")
     child.requires = IS_IN_SET(options)
     child.label = T("Link to child")
-    form = Form([parent, child])
+    form = Form([parent, child], submit_value=T("Submit"))
 
     if form.accepted:
         # a node cannot link to himself
@@ -516,7 +516,7 @@ def delphi(task_id):
     
         db.delphi.start.default = NOW
         
-        form = Form(db.delphi)
+        form = Form(db.delphi, submit_value=T("Submit"))
     # otherwise, show record data and allow session
     # abort (and only that)
     else:
@@ -525,7 +525,7 @@ def delphi(task_id):
         db.delphi.days.writable = False
         db.delphi.hours.writable = False
         db.delphi.minutes.writable = False
-        form = Form(db.delphi, delphi.id)
+        form = Form(db.delphi, delphi.id, submit_value=T("Submit"))
 
     if form.accepted:
         if form.record == None:
@@ -601,7 +601,7 @@ def estimate(task_id):
             db.estimation.task.default = task_id
             db.estimation.round.default = rounds_current
 
-            form = Form(db.estimation, dbio=False)
+            form = Form(db.estimation, dbio=False, submit_value=T("Submit"))
             if form.accepted:
                 # convert submitted values to timedelta
                 computed = datetime.timedelta(hours=estimated_compute(form.vars))
@@ -620,7 +620,8 @@ def estimate(task_id):
         else:
             # There is an estimation for this round already,
             # so just show the contents
-            form = Form(db.estimation, estimation.id, readonly=True)
+            form = Form(db.estimation, estimation.id, readonly=True,
+                        submit_value=T("Submit"))
         return dict(form=form, maximum=maximum,
                     remaining_window=remaining_window, task=task, T=T)
 
@@ -971,7 +972,7 @@ def s_curve():
                 Field("date_to", "datetime",
                       default=project_end,
                       comment=T("Defaults to project's end"),
-                      label=T("To"))])
+                      label=T("To"))], submit_value=T("Submit"))
 
     if form.accepted:
         # set the time boundaries
@@ -1016,10 +1017,10 @@ def s_curve():
 
         # update with sum for step
         for date in projected:
-            projected_data[date] = acumulated(date, projected)
+            projected_data[date] = accumulated(date, projected)
 
         for date in actual:
-            actual_data[date] = acumulated(date, actual)
+            actual_data[date] = accumulated(date, actual)
 
         # Now we need an ordered list of project days,
         # other for projected progress, and other for actual,
@@ -1073,7 +1074,7 @@ def s_curve():
                 if (current_day_string in projected_data):
                     projected_dataset_value = projected_data[current_day_string]
                 else:
-                    projected_dataset_value = acumulated_lookup(
+                    projected_dataset_value = accumulated_lookup(
                         current_day_string, projected_data)
                 
                 if (current_day_string in actual_data):
@@ -1082,7 +1083,7 @@ def s_curve():
                     # for actual_dataset make a lookup (auxiliary function)
                     # to get the better progress in case there is no value
                     # for that day                        
-                    actual_dataset_value = acumulated_lookup(
+                    actual_dataset_value = accumulated_lookup(
                         current_day_string, actual_data)
 
                 labels.append(current_day_string)
@@ -1133,7 +1134,7 @@ def kanban_board():
         options[stage.id] = "%s -> %s" % (phase_label, stage_label)
 
     form = Form([Field("stage", "integer", requires=IS_IN_SET(options),
-                       label=T("Choose a stage")),])
+                       label=T("Choose a stage")),], submit_value=T("Submit"))
 
     if form.accepted:
         tasks = db(db.task.stage==form.vars["stage"]).select().as_dict()
@@ -1315,7 +1316,7 @@ def progress(task_id):
                 db.task.end,
                 db.log.title,
                 db.log.body,
-                db.log.tags])
+                db.log.tags], submit_value=T("Submit"))
     
     # On form accept, make changes if neccesary,
     # update the task and add the log

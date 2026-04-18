@@ -4,6 +4,11 @@
         "1": "\ufeff (active)",
         "2": "\ufeff (active)"
     },
+    " check to delete": {
+        "0": "\ufeff check to delete",
+        "1": "\ufeff check to delete",
+        "2": "\ufeff check to delete"
+    },
     "%s admins removed": {
         "0": "\ufeff%s admins removed",
         "1": "\ufeff%s admins removed",
@@ -97,6 +102,11 @@
         "2": "\ufeffAuthentication Code"
     },
     "Author": {},
+    "Back": {
+        "0": "\ufeffBack",
+        "1": "\ufeffBack",
+        "2": "\ufeffBack"
+    },
     "Body": {},
     "Both fields cannot be the same node!": {
         "0": "\ufeffBoth fields cannot be the same node!",
@@ -125,6 +135,11 @@
         "1": "\ufeffChange Password",
         "2": "\ufeffChange Password"
     },
+    "Check to delete": {
+        "0": "\ufeffCheck to delete",
+        "1": "\ufeffCheck to delete",
+        "2": "\ufeffCheck to delete"
+    },
     "Child Id": {},
     "Child Table": {},
     "Choose a project": {
@@ -147,6 +162,11 @@
         "1": "\ufeffChoose a time rate",
         "2": "\ufeffChoose a time rate"
     },
+    "Clear": {
+        "0": "\ufeffClear",
+        "1": "\ufeffClear",
+        "2": "\ufeffClear"
+    },
     "Closed": {
         "0": "\ufeffClosed",
         "1": "\ufeffClosed",
@@ -156,6 +176,11 @@
         "0": "\ufeffCompleted",
         "1": "\ufeffCompleted",
         "2": "\ufeffCompleted"
+    },
+    "Confirm Delete": {
+        "0": "\ufeffConfirm Delete",
+        "1": "\ufeffConfirm Delete",
+        "2": "\ufeffConfirm Delete"
     },
     "Confirm email": {
         "0": "\ufeffConfirm email",
@@ -204,6 +229,11 @@
         "1": "\ufeffDefaults to project's start",
         "2": "\ufeffDefaults to project's start"
     },
+    "Delete": {
+        "0": "\ufeffDelete",
+        "1": "\ufeffDelete",
+        "2": "\ufeffDelete"
+    },
     "Delphi for": {
         "0": "\ufeffDelphi for",
         "1": "\ufeffDelphi for",
@@ -215,6 +245,16 @@
         "2": "\ufeffDelphi session and related estimations deleted"
     },
     "Description": {},
+    "Details": {
+        "0": "\ufeffDetails",
+        "1": "\ufeffDetails",
+        "2": "\ufeffDetails"
+    },
+    "Displaying rows %s thru %s of %s": {
+        "0": "\ufeffDisplaying rows %s thru %s of %s",
+        "1": "\ufeffDisplaying rows %s thru %s of %s",
+        "2": "\ufeffDisplaying rows %s thru %s of %s"
+    },
     "Done": {
         "0": "\ufeffDone",
         "1": "\ufeffDone",
@@ -229,6 +269,11 @@
         "0": "\ufeffES",
         "1": "\ufeffES",
         "2": "\ufeffES"
+    },
+    "Edit": {
+        "0": "\ufeffEdit",
+        "1": "\ufeffEdit",
+        "2": "\ufeffEdit"
     },
     "Edit Profile": {
         "0": "\ufeffEdit Profile",
@@ -485,6 +530,11 @@
         "1": "\ufeffNo project selected",
         "2": "\ufeffNo project selected"
     },
+    "No rows to display": {
+        "0": "\ufeffNo rows to display",
+        "1": "\ufeffNo rows to display",
+        "2": "\ufeffNo rows to display"
+    },
     "No task estimations updated": {
         "0": "\ufeffNo task estimations updated",
         "1": "\ufeffNo task estimations updated",
@@ -672,6 +722,11 @@
         "1": "\ufeffRegistration is pending",
         "2": "\ufeffRegistration is pending"
     },
+    "Remove": {
+        "0": "\ufeffRemove",
+        "1": "\ufeffRemove",
+        "2": "\ufeffRemove"
+    },
     "Remove admin users from %s": {
         "0": "\ufeffRemove admin users from %s",
         "1": "\ufeffRemove admin users from %s",
@@ -718,6 +773,11 @@
         "0": "\ufeffS-curve graph",
         "1": "\ufeffS-curve graph",
         "2": "\ufeffS-curve graph"
+    },
+    "Search": {
+        "0": "\ufeffSearch",
+        "1": "\ufeffSearch",
+        "2": "\ufeffSearch"
     },
     "Set a project start time before checking advance": {
         "0": "\ufeffSet a project start time before checking advance",
