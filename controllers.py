@@ -47,7 +47,7 @@ from py4web import Field
 from pydal.validators import (IS_EMAIL, IS_IN_SET, IS_IN_DB,
 IS_NOT_EMPTY, IS_INT_IN_RANGE, IS_FLOAT_IN_RANGE, IS_EMPTY_OR)
 from py4web.utils.grid import *
-from .models import STATUSES
+from .models import (STATUSES, NOW)
 
 import datetime
 import math
@@ -55,22 +55,8 @@ from .models import (task_stage_format,
                                     estimated_compute)
 import statistics
 
-TEAM_ACTIONS = {"tasks": T("Tasks"), "gantt": T("Gantt chart"),
-                "delphi_panel": T("Wideband-delphi"),
-                "cpm": T("Critical Path Method (CPM)"),
-                "s_curve": T("S-curve"),
-                "kanban_board": T("Kanban board"),
-                "log": T("Project's log")}
-
-ADMIN_ACTIONS = {"project_edit": T("Edit project"),
-                 "admins_add": T("Add admins"),
-                 "team_add": T("Add team members"),
-                 "admins_remove": T("Remove admins"),
-                 "team_remove": T("Remove team members"),
-                 "phases": T("Project phases"),
-                 "stages": T("Project stages"),
-                 "links": T("Link tasks"),
-                 "budget": T("Project budget")}
+from .auxiliary import (TEAM_ACTIONS, ADMIN_ACTIONS,
+                       accumulated, accumulated_lookup)
 
 @action("index")
 @action.uses("index.html", auth, T)
@@ -95,7 +81,7 @@ def index():
     
         # some data of interest
         if project.start:
-            elapsed = datetime.datetime.now() - project.start
+            elapsed = NOW - project.start
         team = db(db.auth_user.id.belongs(project.team or [])).select()
         admins = db(db.auth_user.id.belongs(project.admins or [])).select()
         phases = db(db.phase.project==project.id).select()
@@ -528,7 +514,7 @@ def delphi(task_id):
                     db.auth_user._format,
                     multiple=True)]
     
-        db.delphi.start.default = datetime.datetime.now()
+        db.delphi.start.default = NOW
         
         form = Form(db.delphi)
     # otherwise, show record data and allow session
@@ -568,7 +554,7 @@ def estimate(task_id):
         redirect(URL("index"))        
     else:
         # test for which round the team is at
-        elapsed_delta = datetime.datetime.now() -delphi.start
+        elapsed_delta = NOW -delphi.start
         window_delta = datetime.timedelta(hours=delphi.window)
 
         rounds_elapsed = (elapsed_delta.total_seconds()/window_delta.total_seconds()) +1
@@ -857,7 +843,7 @@ def delphi_update():
     tasks = db(db.task.stage.belongs(stage_ids)).select()
     task_ids = [task.id for task in tasks]
 
-    now = datetime.datetime.now()
+    now = NOW
 
     delphies_set = db.delphi.task.belongs(task_ids)
     delphies_set &= db.delphi.estimated == None
@@ -1093,7 +1079,7 @@ def s_curve():
                 if (current_day_string in actual_data):
                     actual_dataset_value = actual_data[current_day_string]
                 else:
-                    # for actual_dataset make a lookup (auxiliar function)
+                    # for actual_dataset make a lookup (auxiliary function)
                     # to get the better progress in case there is no value
                     # for that day                        
                     actual_dataset_value = acumulated_lookup(
@@ -1185,7 +1171,7 @@ def log():
     db.log.project.writable = False
     db.log.author.default = auth.user_id
     db.log.author.writable = False
-    db.log.date.default = datetime.datetime.now()
+    db.log.date.default = NOW
     db.log.date.writable = False
     change_log = auth.user_id in (project.admins or [])
 
@@ -1241,7 +1227,7 @@ def delphi_panel():
     estimations_query = db.estimation.task.belongs(task_ids)
     estimation_data = db(estimations_query).select().as_dict()
 
-    now = datetime.datetime.now()
+    now = NOW
 
     delphi_data = dict()
 
@@ -1305,7 +1291,7 @@ def progress(task_id):
 
     task = db(db.task.id==task_id).select().first()
 
-    now = datetime.datetime.now()
+    now = NOW
 
     # Also check user rights
     is_admin = auth.user_id in (project.admins or [])
@@ -1347,30 +1333,11 @@ def progress(task_id):
             title=form.vars["title"],
             body=form.vars["body"],
             task=task.id,
-            date=datetime.datetime.now(),
+            date=NOW,
             project=project.id,
             tags=form.vars["tags"])
         flash.set(T("New status update recorded"))
         redirect(URL("tasks"))
     return dict(form=form, T=T)
-
-# auxiliar function of s_curve
-# returns the sum of anything in obj before or as to date
-def acumulated(date, obj):
-    total = 0.0
-    for key in obj:
-        if key <= date:
-            total += obj[key]
-    return total
-
-# auxiliar function to search for the better
-# progress state before a date
-# for s_curve
-def acumulated_lookup(date, obj):
-    value = 0.0
-    for k in obj:
-        if ((k < date) and (obj[k] > value)):
-            value = obj[k]
-    return value
 
 
