@@ -1,4 +1,4 @@
-Proyectero is a management web app implemented for py4web framework that allows to manage small projects. It is devised as a tool for students and teachers in technical education (IT); Developed at Escuela Técnica 29 DE 6 "Reconquista" (Buenos Aires - Argentina)
+Proyectero is a project planning and management web app implemented for py4web framework that allows to manage small projects. It is devised as a tool for students and teachers in technical education (IT); Developed at Escuela Técnica 29 DE 6 "Reconquista" (Buenos Aires - Argentina)
 
 How to try this project
 
