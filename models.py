@@ -26,6 +26,9 @@ NOW = datetime.datetime.now()
 STATUSES = {"closed": T("Closed"),
             "in_progress": T("Work in progress")}
 
+TASK_STATUSES = {"pending": T("Pending"), "in_progress": T("In progress"),
+                                     "done": T("Done")}
+
 CATHEGORIES = {"taxes": T("taxes"), "services": T("services"),
                "staff": T("staff"), "advice": T("advice"),
                "loans": T("loans"), "equipment": T("equipment"),
@@ -218,8 +221,8 @@ db.task.tags.comment = T("Type as much tags as you want here, press TAB key to a
 db.task.estimated.compute = estimated_compute
 db.task.stage.comment = T("Stage. This field is mandatory")
 db.task.stage.represent = task_stage_represent
-db.task.status.requires = IS_IN_SET({"pending": T("Pending"), "in_progress": T("In progress"),
-                                     "done": T("Done")})
+db.task.status.requires = IS_IN_SET(TASK_STATUSES)
+db.task.status.represent = lambda v, r: TASK_STATUSES[v]
 db.task.status.default = "pending"
 
 db.delphi.days.requires = IS_INT_IN_RANGE(0, 31)
