@@ -190,7 +190,7 @@ def team_add():
         field = Field("users", "text")
         field.comment = T('Type a list of user emails separated by ";"')
         field.label = T("Add team users to %s") % project.name
-        form = t_form(Form([field,], submit_value=T("Submit"))) # custom form with textarea for adding users by mail
+        form = t_wrapper(Form([field,], submit_value=T("Submit"))) # custom form with textarea for adding users by mail
         if form.accepted:
             # create a list with emails entered
             # checking they are well-formed
